@@ -1,7 +1,9 @@
+import { Hero } from '@/components/common/hero'
+
 export default function Home() {
   return (
     <main>
-      <span className="text-red font-bold">Installed</span>
+      <Hero />
     </main>
   )
 }
