@@ -527,6 +527,7 @@
 .md\:w-xl{width:36rem;}
 .md\:text-3xl{font-size:1.875rem;line-height:2.25rem;}
 .md\:text-5xl{font-size:3rem;line-height:1;}
+.md\:text-sm{font-size:0.875rem;line-height:1.25rem;}
 }
 @media (min-width: 1024px){
 .lg\:w-xl{width:36rem;}
