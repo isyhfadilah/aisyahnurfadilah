@@ -3,6 +3,7 @@ import { IoMdDocument } from 'react-icons/io'
 
 export const Sidebar = () => {
   return (
+    // posisi masih belum aman, belum center jika dilihat dari sisi komputer
     <nav className="fixed shadow-2xl px-1 h-1/2 ml-2 md:ml-10 my-30 rounded-full flex justify-center items-center">
       <ul className="space-y-8">
         <li className="rounded-full p-2 shadow-xl">
