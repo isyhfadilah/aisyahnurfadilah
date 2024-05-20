@@ -1,6 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import { Sidebar } from '@/components/common/sidebar'
+import { Footer } from '@/components/common/footer'
 
 export const metadata: Metadata = {
   title: "Aisyah's branding",
@@ -12,6 +13,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <React.Fragment>
       <Sidebar />
       {children}
+      <Footer />
     </React.Fragment>
   )
 }
