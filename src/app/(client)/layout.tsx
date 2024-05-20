@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <React.Fragment>
+      <Footer />
       <Sidebar />
       {children}
-      <Footer />
     </React.Fragment>
   )
 }

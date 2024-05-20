@@ -448,6 +448,7 @@
 .rounded-xl{border-radius:0.75rem;}
 .\!rounded-l-none{border-top-left-radius:0 !important;border-bottom-left-radius:0 !important;}
 .\!rounded-r-none{border-top-right-radius:0 !important;border-bottom-right-radius:0 !important;}
+.rounded-b-xl{border-bottom-left-radius:0.75rem;border-bottom-right-radius:0.75rem;}
 .\!bg-dark{--un-bg-opacity:1 !important;background-color:rgba(24,24,24,var(--un-bg-opacity)) !important;}
 .\!bg-dark-gray,
 .hover\:\!bg-dark-gray:hover{--un-bg-opacity:1 !important;background-color:rgba(32,33,35,var(--un-bg-opacity)) !important;}
