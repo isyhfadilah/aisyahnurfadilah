@@ -3,6 +3,7 @@ import { IoMdDocument } from 'react-icons/io'
 
 export const Sidebar = () => {
   return (
+    // cursor pointer dan links belum di atur
     <nav className="fixed ml-2 md:ml-10 rounded-full flex justify-center items-center h-full">
       <div className="shadow-2xl px-1 py-6 rounded-full">
         <ul className="space-y-8">
