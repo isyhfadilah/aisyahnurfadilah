@@ -453,6 +453,7 @@
 .hover\:\!bg-dark-gray:hover{--un-bg-opacity:1 !important;background-color:rgba(32,33,35,var(--un-bg-opacity)) !important;}
 .bg-dark{--un-bg-opacity:1;background-color:rgba(24,24,24,var(--un-bg-opacity));}
 .bg-dark-gray{--un-bg-opacity:1;background-color:rgba(32,33,35,var(--un-bg-opacity));}
+.bg-indigo-50{--un-bg-opacity:1;background-color:rgba(238,242,255,var(--un-bg-opacity));}
 .bg-primary{--un-bg-opacity:1;background-color:rgba(205,157,67,var(--un-bg-opacity));}
 .bg-red-400{--un-bg-opacity:1;background-color:rgba(248,113,113,var(--un-bg-opacity));}
 .bg-red\/15{background-color:rgba(248,113,113,0.15);}

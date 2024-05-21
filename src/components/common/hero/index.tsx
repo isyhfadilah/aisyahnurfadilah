@@ -2,7 +2,7 @@ import Button from '@/components/ui/button'
 
 export const Hero = () => {
   return (
-    <section className="">
+    <section className="bg-indigo-50">
       <div className="bg-red/15 w-sm h-sm md:w-xl md:h-md rounded-full absolute z-1 -top-10 -left-30 blur-3xl"></div>
       <div className="bg-red/15 md:w-sm md:h-sm rounded-full absolute z-1 -bottom-10 right-0 blur-3xl"></div>
       <section className="flex justify-center items-center h-screen">
