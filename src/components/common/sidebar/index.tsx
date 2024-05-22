@@ -8,10 +8,14 @@ export const Sidebar = () => {
       <div className="shadow-2xl px-1 py-6 rounded-full">
         <ul className="space-y-8">
           <li className="rounded-full p-2 shadow-xl">
-            <FaHome className="text-red-400 text-2xl md:text-3xl" />
+            <a href="#home">
+              <FaHome className="text-red-400 text-2xl md:text-3xl" />
+            </a>
           </li>
           <li className="rounded-full p-2 shadow-xl">
-            <FaUser className="text-red-400 text-2xl md:text-3xl" />
+            <a href="#about">
+              <FaUser className="text-red-400 text-2xl md:text-3xl" />
+            </a>
           </li>
           <li className="rounded-full p-2 shadow-xl">
             <IoMdDocument className="text-red-400 text-2xl md:text-3xl" />
