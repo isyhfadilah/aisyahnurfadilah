@@ -1,4 +1,5 @@
 import Container from '../layouts/Container'
+import { CardExperience } from '@/components/ui/cards/experience'
 
 export const About = () => {
   return (
@@ -17,10 +18,10 @@ export const About = () => {
       </Container>
 
       {/* alihkan ke section baru dan perbaiki struktur code supaya best practice */}
-      {/* <Container className="grid md:grid-cols-2 gap-8 mt-10">
+      <Container className="grid md:grid-cols-2 gap-8 mt-10">
         <CardExperience />
         <CardExperience />
-      </Container> */}
+      </Container>
     </section>
   )
 }
