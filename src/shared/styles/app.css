@@ -475,6 +475,7 @@
 .bg-dark-gray{--un-bg-opacity:1;background-color:rgba(32,33,35,var(--un-bg-opacity));}
 .bg-gray-200{--un-bg-opacity:1;background-color:rgba(229,231,235,var(--un-bg-opacity));}
 .bg-indigo-50{--un-bg-opacity:1;background-color:rgba(238,242,255,var(--un-bg-opacity));}
+.bg-orange-500{--un-bg-opacity:1;background-color:rgba(249,115,22,var(--un-bg-opacity));}
 .bg-primary{--un-bg-opacity:1;background-color:rgba(205,157,67,var(--un-bg-opacity));}
 .bg-red-100{--un-bg-opacity:1;background-color:rgba(254,226,226,var(--un-bg-opacity));}
 .bg-red-400{--un-bg-opacity:1;background-color:rgba(248,113,113,var(--un-bg-opacity));}
