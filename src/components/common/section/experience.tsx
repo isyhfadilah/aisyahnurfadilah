@@ -1,13 +1,12 @@
 import Container from '../layouts/Container'
 import { Timeline } from '../timeline'
+import { GradientText } from '@/components/ui/title/gradient'
 
 export const Experience = () => {
   return (
     <section className="py-26 bg-white">
       <Container className="space-y-6">
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-red-400 to-orange-500 inline-block text-transparent bg-clip-text">
-          Explore My Experience
-        </h1>
+        <GradientText text="Explore My Experience" sizes="text-3xl" />
         <Timeline />
       </Container>
     </section>
