@@ -4,8 +4,8 @@ import { IoMdDocument } from 'react-icons/io'
 export const Sidebar = () => {
   return (
     // perbaiki struktur code
-    // belum smooth dan links kehalang backdrop blur
-    <nav className="fixed ml-2 md:ml-10 rounded-full flex justify-center items-center h-full">
+    // belum smooth
+    <nav className="fixed ml-2 md:ml-10 rounded-full flex justify-center items-center h-full z-2">
       <div className="shadow-2xl px-1 py-6 rounded-full">
         <ul className="space-y-8">
           <li className="rounded-full p-2 shadow-xl">
