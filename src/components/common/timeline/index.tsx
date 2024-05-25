@@ -24,7 +24,7 @@ export const Timeline = () => {
     // z index nya masih nyantol
     <ol className="items-center sm:flex">
       {experiences.map((item, index) => (
-        <li key={index} className="relative mb-6 sm:mb-0">
+        <li key={index} className="mb-6 sm:mb-0">
           <div className="flex items-center">
             <div className="flex items-center justify-center w-6 h-6 bg-red-100 rounded-full ring-0 ring-white shrink-0">
               <IoTimeSharp className="text-lg text-red" />
