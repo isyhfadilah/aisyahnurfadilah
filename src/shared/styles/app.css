@@ -479,6 +479,7 @@
 .bg-primary{--un-bg-opacity:1;background-color:rgba(205,157,67,var(--un-bg-opacity));}
 .bg-red-100{--un-bg-opacity:1;background-color:rgba(254,226,226,var(--un-bg-opacity));}
 .bg-red-400{--un-bg-opacity:1;background-color:rgba(248,113,113,var(--un-bg-opacity));}
+.bg-red-400\/50{background-color:rgba(248,113,113,0.5);}
 .bg-red\/15{background-color:rgba(248,113,113,0.15);}
 .bg-secondary{--un-bg-opacity:1;background-color:rgba(130,106,249,var(--un-bg-opacity));}
 .bg-transparent{background-color:transparent;}
@@ -543,6 +544,7 @@
 .text-red,
 .text-red-400{--un-text-opacity:1;color:rgba(248,113,113,var(--un-text-opacity));}
 .text-transparent{color:transparent;}
+.text-white\/50{color:rgba(255,255,255,0.5);}
 .\!disabled\:text-opacity-10:disabled{--un-text-opacity:0.1 !important;}
 .\!text-opacity-50{--un-text-opacity:0.5 !important;}
 .disabled\:text-opacity-10:disabled{--un-text-opacity:0.1;}
