@@ -21,7 +21,6 @@ const experiences = [
 
 export const Timeline = () => {
   return (
-    // z index nya masih nyantol
     <ol className="items-center sm:flex">
       {experiences.map((item, index) => (
         <li key={index} className="mb-6 sm:mb-0">
