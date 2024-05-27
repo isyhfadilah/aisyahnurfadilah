@@ -395,6 +395,7 @@
 .mb-2{margin-bottom:0.5rem;}
 .mb-6{margin-bottom:1.5rem;}
 .ml-2{margin-left:0.5rem;}
+.ml-5{margin-left:1.25rem;}
 .mt-10{margin-top:2.5rem;}
 .mt-3{margin-top:0.75rem;}
 .mt-8{margin-top:2rem;}
@@ -437,7 +438,6 @@
 .gap-4{grid-gap:1rem;gap:1rem;}
 .gap-8{grid-gap:2rem;gap:2rem;}
 .space-x-10>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(2.5rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(2.5rem * var(--un-space-x-reverse));}
-.space-x-2xl>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(1.5rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(1.5rem * var(--un-space-x-reverse));}
 .space-x-3>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(0.75rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(0.75rem * var(--un-space-x-reverse));}
 .space-y-1>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(0.25rem * var(--un-space-y-reverse));}
 .space-y-2>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(0.5rem * var(--un-space-y-reverse));}
@@ -544,6 +544,7 @@
 .text-white{--un-text-opacity:1;color:rgba(255,255,255,var(--un-text-opacity));}
 .text-\[\#8C8CA1\]{--un-text-opacity:1;color:rgba(140,140,161,var(--un-text-opacity));}
 .text-black\/50{color:rgba(0,0,0,0.5);}
+.text-black\/60{color:rgba(0,0,0,0.6);}
 .text-gray-900{--un-text-opacity:1;color:rgba(17,24,39,var(--un-text-opacity));}
 .text-red,
 .text-red-400{--un-text-opacity:1;color:rgba(248,113,113,var(--un-text-opacity));}
@@ -580,10 +581,13 @@
 .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
 .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
 .md\:ml-10{margin-left:2.5rem;}
+.md\:mt-0{margin-top:0;}
 .md\:h-md{height:28rem;}
 .md\:h-sm{height:24rem;}
 .md\:w-sm{width:24rem;}
 .md\:w-xl{width:36rem;}
+.md\:flex{display:flex;}
+.md\:space-x-2xl>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(1.5rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(1.5rem * var(--un-space-x-reverse));}
 .md\:text-3xl{font-size:1.875rem;line-height:2.25rem;}
 .md\:text-5xl{font-size:3rem;line-height:1;}
 .md\:text-sm{font-size:0.875rem;line-height:1.25rem;}
