@@ -2,7 +2,7 @@ import Container from '../layouts/Container'
 import { GradientText } from '@/components/ui/title/gradient'
 import Image from 'next/image'
 
-export const Achievement = () => {
+export const AchievementDifest = () => {
   return (
     <section className="my-26">
       <Container>
