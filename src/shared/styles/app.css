@@ -594,6 +594,5 @@
 .md\:text-sm{font-size:0.875rem;line-height:1.25rem;}
 }
 @media (min-width: 1024px){
-.lg\:w-xl{width:36rem;}
-.lg\:text-6xl{font-size:3.75rem;line-height:1;}
+.lg\:w-2xl{width:42rem;}
 }
