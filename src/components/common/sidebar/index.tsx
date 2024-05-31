@@ -27,9 +27,11 @@ const menuItems = [
 
 export const Sidebar = () => {
   return (
+    // buat versi responsive
+    // masih di hidden manual
     <nav className="fixed ml-2 md:ml-10 rounded-full flex justify-center items-center h-full z-2">
       <div className="shadow-2xl px-1 py-6 rounded-full">
-        <ul className="space-y-8">
+        <ul className="space-y-6 hidden md:block">
           {menuItems.map((item, index) => (
             <li key={index} className="flex flex-col justify-center items-center">
               <a href={item.link} className="rounded-full p-2 shadow-xl hover:bg-white/50">

@@ -255,7 +255,6 @@
 .space-y-2>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(0.5rem * var(--un-space-y-reverse));}
 .space-y-4>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(1rem * var(--un-space-y-reverse));}
 .space-y-6>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(1.5rem * var(--un-space-y-reverse));}
-.space-y-8>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(2rem * var(--un-space-y-reverse));}
 .space-y-lg>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(1.125rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(1.125rem * var(--un-space-y-reverse));}
 .\!border{border-width:1px !important;}
 .border,
@@ -392,6 +391,7 @@
 .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
 .md\:ml-10{margin-left:2.5rem;}
 .md\:mt-0{margin-top:0;}
+.md\:block{display:block;}
 .md\:h-md{height:28rem;}
 .md\:h-sm{height:24rem;}
 .md\:w-sm{width:24rem;}
