@@ -1,10 +1,10 @@
-import Container from '../layouts/Container'
+import Container from '../../layouts/Container'
 import { CardExperience } from '@/components/ui/cards/experience'
 import { GradientText } from '@/components/ui/title/gradient'
 
-export const About = () => {
+export const AboutDesk = () => {
   return (
-    <section className="pt-26 shadow-2xl shadow-black" id="about">
+    <section className="py-26" id="about">
       <Container className="grid gap-10 md:grid-cols-3 place-content-between justify-between items-center w-full">
         <GradientText text="I wanna be a progressional person" sizes="text-4xl md:text-5xl" />
         <div className="md:col-span-2">

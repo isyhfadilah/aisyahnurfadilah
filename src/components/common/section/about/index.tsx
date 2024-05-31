@@ -1,0 +1,1 @@
+export { AboutDesk } from './about'

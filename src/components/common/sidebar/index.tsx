@@ -5,29 +5,28 @@ import { IoMdDocument } from 'react-icons/io'
 const menuItems = [
   {
     label: 'Home',
-    link: '#home',
+    link: '/',
     icon: <FaHome className="text-red-400 text-2xl md:text-3xl" />
   },
   {
     label: 'About',
-    link: '#about',
+    link: '/about',
     icon: <FaUser className="text-red-400 text-2xl md:text-3xl" />
   },
   {
     label: 'resume',
-    link: '#resume',
+    link: '/resume',
     icon: <IoMdDocument className="text-red-400 text-2xl md:text-3xl" />
   },
   {
     label: 'contact',
-    link: '#contact',
+    link: '/contact',
     icon: <FaEnvelope className="text-red-400 text-2xl md:text-3xl" />
   }
 ]
 
 export const Sidebar = () => {
   return (
-    // belum smooth
     <nav className="fixed ml-2 md:ml-10 rounded-full flex justify-center items-center h-full z-2">
       <div className="shadow-2xl px-1 py-6 rounded-full">
         <ul className="space-y-8">
