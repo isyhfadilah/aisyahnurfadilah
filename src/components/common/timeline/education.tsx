@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 export const TimeEducation = () => {
   return (
+    // masih mepet di mobile
     <ol className="relative border-s border-gray-200">
       <li className="mb-10 ms-6">
         <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
