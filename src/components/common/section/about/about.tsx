@@ -5,6 +5,8 @@ import { FaMapPin } from 'react-icons/fa'
 export const AboutDesk = () => {
   return (
     <section className="py-26" id="about">
+      <div className="bg-red/15 md:w-sm md:h-sm rounded-full absolute z-1 top-0 right-0 blur-3xl"></div>
+
       {/* make a tittle */}
       <div className="flex justify-center">
         <GradientText text="ABOUT ME" sizes="text-3xl" className="text-center mb-6" />
