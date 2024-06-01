@@ -319,6 +319,7 @@
 .px-3{padding-left:0.75rem;padding-right:0.75rem;}
 .px-4{padding-left:1rem;padding-right:1rem;}
 .px-5{padding-left:1.25rem;padding-right:1.25rem;}
+.px-6{padding-left:1.5rem;padding-right:1.5rem;}
 .px-8{padding-left:2rem;padding-right:2rem;}
 .px-9{padding-left:2.25rem;padding-right:2.25rem;}
 .py-0\.6rem{padding-top:0.6rem;padding-bottom:0.6rem;}
@@ -329,8 +330,8 @@
 .py-3{padding-top:0.75rem;padding-bottom:0.75rem;}
 .py-6{padding-top:1.5rem;padding-bottom:1.5rem;}
 .py-8{padding-top:2rem;padding-bottom:2rem;}
-.pl-10{padding-left:2.5rem;}
 .pl-11{padding-left:2.75rem;}
+.pl-2{padding-left:0.5rem;}
 .pl-4{padding-left:1rem;}
 .pr-4{padding-right:1rem;}
 .text-center{text-align:center;}
@@ -406,6 +407,8 @@
 .md\:w-xl{width:36rem;}
 .md\:flex{display:flex;}
 .md\:space-x-2xl>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(1.5rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(1.5rem * var(--un-space-x-reverse));}
+.md\:px-10{padding-left:2.5rem;padding-right:2.5rem;}
+.md\:pl-10{padding-left:2.5rem;}
 .md\:text-2xl{font-size:1.5rem;line-height:2rem;}
 .md\:text-3xl{font-size:1.875rem;line-height:2.25rem;}
 .md\:text-4xl{font-size:2.25rem;line-height:2.5rem;}
