@@ -1,21 +1,24 @@
-import { IoTimeSharp } from 'react-icons/io5'
+import Image from 'next/image'
 
 const experiences = [
   {
     position: 'Front-end Development',
     time: 'Internship PT. Sawala Inovasi Indonesia (Juni – Oktober 2023)',
     detail:
-      'Berkontribusi dari sisi client dengan beberapa project seperti Ghia Farm, Pionicon, Pionicon Creative Agency, Yayasan Biodiversitas Indonesia (Bionesia), dan Ikea-Instellar.'
+      'Berkontribusi dari sisi client dengan beberapa project seperti Ghia Farm, Pionicon, Pionicon Creative Agency, Yayasan Biodiversitas Indonesia (Bionesia), dan Ikea-Instellar.',
+    image: '/images/sawala.jpeg'
   },
   {
     position: 'Juara 1 Desain Website',
     time: 'Digital Festival Nasional 2023 (Maret 2023)',
-    detail: 'Membuat sebuah desain website yg membahas tentang metaverse lorem ipsum lorem iprum lorem ipsum lorem ipsum.'
+    detail: 'Membuat sebuah desain website yg membahas tentang metaverse lorem ipsum lorem iprum lorem ipsum lorem ipsum.',
+    image: '/images/polsub.png'
   },
   {
     position: 'Juara 2 Desain Website',
     time: 'SMK Pusat Keunggulan Telkom (November – Desember 2022)',
-    detail: 'Membuat sebuah desain website yg membahas tentang metaverse lorem ipsum lorem iprum lorem ipsum lorem ipsum.'
+    detail: 'Membuat sebuah desain website yg membahas tentang metaverse lorem ipsum lorem iprum lorem ipsum lorem ipsum.',
+    image: '/images/itdri.png'
   }
 ]
 
@@ -25,8 +28,8 @@ export const Timeline = () => {
       {experiences.map((item, index) => (
         <li key={index} className="mb-6 sm:mb-0">
           <div className="flex items-center">
-            <div className="flex items-center justify-center w-6 h-6 bg-red-100 rounded-full ring-0 ring-white shrink-0">
-              <IoTimeSharp className="text-lg text-red" />
+            <div className="flex items-center justify-center bg-white rounded-full ring-0 ring-white shrink-0 p-3">
+              <Image src={item.image} alt={item.image} height={50} width={50} className="rounded-full" />
             </div>
             <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
           </div>
