@@ -32,12 +32,12 @@ export const Timeline = () => {
             <div className="flex items-center justify-center bg-white rounded-full ring-0 ring-white shrink-0 p-3">
               <Image src={item.image} alt={item.image} height={50} width={50} className="rounded-full" />
             </div>
-            <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+            <div className="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
           </div>
-          <div className="mt-3 sm:pe-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.position}</h3>
-            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{item.time}</time>
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">{item.detail}</p>
+          <div className="mt-3">
+            <h3 className="text-lg font-semibold text-gray-900">{item.position}</h3>
+            <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.time}</time>
+            <p className="text-base font-normal text-gray-500">{item.detail}</p>
           </div>
         </li>
       ))}
