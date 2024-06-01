@@ -4,7 +4,7 @@ import { GradientText } from '@/components/ui/title/gradient'
 
 export const ResumeTimeline = () => {
   return (
-    <section className="py-26 bg-white">
+    <section className="py-16 bg-white">
       <div className="flex justify-center">
         <GradientText text="RESUME" sizes="text-3xl" />
       </div>

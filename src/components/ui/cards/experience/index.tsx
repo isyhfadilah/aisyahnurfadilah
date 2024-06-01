@@ -14,8 +14,8 @@ const column2 = experiences.slice(3)
 
 export const CardExperience = () => {
   return (
-    <div className="border border-1 border-red rounded-lg space-y-4 py-6 px-10">
-      <h1 className="font-semibold capitalize text-lg text-red">explore my experience</h1>
+    <div className="border-l-2 border-l-red border-b-2 border-b-orange rounded-lg space-y-4 py-6 px-10 bg-red/5">
+      <h1 className="font-semibold capitalize text-lg text-red">explore my skills</h1>
       <div className="flex space-x-10">
         <ul className="space-y-2">
           {column1.map((item, index) => (
