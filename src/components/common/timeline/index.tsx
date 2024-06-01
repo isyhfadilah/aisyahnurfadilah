@@ -24,6 +24,7 @@ const experiences = [
 
 export const Timeline = () => {
   return (
+    // masih menyon garisnya
     <ol className="items-center sm:flex">
       {experiences.map((item, index) => (
         <li key={index} className="mb-6 sm:mb-0">
