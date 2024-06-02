@@ -1,6 +1,7 @@
 import Container from '../../layouts/Container'
 import { GradientText } from '@/components/ui/title/gradient'
 import { FaMapPin } from 'react-icons/fa'
+import Image from 'next/image'
 
 export const AboutDesk = () => {
   return (
@@ -8,11 +9,11 @@ export const AboutDesk = () => {
       <div className="bg-red/15 md:w-sm md:h-sm rounded-full absolute z-1 top-0 right-0 blur-3xl"></div>
 
       {/* make a tittle */}
-      <div className="flex justify-center mb-16">
+      <div className="flex justify-center mb-6">
         <GradientText text="ABOUT ME" sizes="text-3xl" className="text-center" />
       </div>
 
-      <Container className="grid gap-10 md:grid-cols-2 place-content-between justify-between items-center w-full">
+      <Container className="grid gap-10 md:grid-cols-2 place-content-between place-items-center w-full">
         <div>
           <h1 className="text-xl font-semibold">Aisyah Nur Fadilah</h1>
           <div className="flex text-sm mb-4">
@@ -26,9 +27,7 @@ export const AboutDesk = () => {
           </p>
         </div>
 
-        <div className="bg-white md:border-b-2 md:border-b-red rounded-lg h-full flex justify-center items-center">
-          <GradientText text="I wanna be a progressional person" sizes="text-3xl md:text-4xl" className="text-center" />
-        </div>
+        <Image src="/images/progress.svg" alt="progressional person" height={400} width={400} />
       </Container>
     </section>
   )

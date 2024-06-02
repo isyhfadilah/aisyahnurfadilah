@@ -252,6 +252,7 @@
 .cursor-pointer{cursor:pointer;}
 .list-disc{list-style-type:disc;}
 .place-content-between{place-content:space-between;}
+.place-items-center{place-items:center;}
 .items-center{align-items:center;}
 .justify-center{justify-content:center;}
 .justify-between{justify-content:space-between;}
@@ -421,13 +422,10 @@
 .md\:w-xl{width:36rem;}
 .md\:flex{display:flex;}
 .md\:space-x-2xl>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(1.5rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(1.5rem * var(--un-space-x-reverse));}
-.md\:border-b-2{border-bottom-width:2px;}
-.md\:border-b-red{--un-border-opacity:1;--un-border-bottom-opacity:var(--un-border-opacity);border-bottom-color:rgba(248,113,113,var(--un-border-bottom-opacity));}
 .md\:px-10{padding-left:2.5rem;padding-right:2.5rem;}
 .md\:pl-10{padding-left:2.5rem;}
 .md\:text-2xl{font-size:1.5rem;line-height:2rem;}
 .md\:text-3xl{font-size:1.875rem;line-height:2.25rem;}
-.md\:text-4xl{font-size:2.25rem;line-height:2.5rem;}
 .md\:text-sm{font-size:0.875rem;line-height:1.25rem;}
 }
 @media (min-width: 1024px){
