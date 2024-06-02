@@ -1,4 +1,12 @@
+// import { title } from 'process'
 import { BsFillPatchCheckFill } from 'react-icons/bs'
+
+// // buat menjadi dinamis
+// interface SkillProps {
+//   title: string
+//   skill?: string
+//   level?: string
+// }
 
 const experiences = [
   { skill: 'HTML 5', level: 'experienced' },
