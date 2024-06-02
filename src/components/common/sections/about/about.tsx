@@ -4,12 +4,12 @@ import { FaMapPin } from 'react-icons/fa'
 
 export const AboutDesk = () => {
   return (
-    <section className="py-26" id="about">
+    <section className="py-16" id="about">
       <div className="bg-red/15 md:w-sm md:h-sm rounded-full absolute z-1 top-0 right-0 blur-3xl"></div>
 
       {/* make a tittle */}
-      <div className="flex justify-center">
-        <GradientText text="ABOUT ME" sizes="text-3xl" className="text-center mb-6" />
+      <div className="flex justify-center mb-16">
+        <GradientText text="ABOUT ME" sizes="text-3xl" className="text-center" />
       </div>
 
       <Container className="grid gap-10 md:grid-cols-2 place-content-between justify-between items-center w-full">
@@ -26,7 +26,9 @@ export const AboutDesk = () => {
           </p>
         </div>
 
-        <GradientText text="I wanna be a progressional person" sizes="text-3xl md:text-4xl" className="text-center" />
+        <div className="bg-white md:border-b-2 md:border-b-red rounded-lg h-full flex justify-center items-center">
+          <GradientText text="I wanna be a progressional person" sizes="text-3xl md:text-4xl" className="text-center" />
+        </div>
       </Container>
     </section>
   )

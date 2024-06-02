@@ -421,6 +421,8 @@
 .md\:w-xl{width:36rem;}
 .md\:flex{display:flex;}
 .md\:space-x-2xl>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(1.5rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(1.5rem * var(--un-space-x-reverse));}
+.md\:border-b-2{border-bottom-width:2px;}
+.md\:border-b-red{--un-border-opacity:1;--un-border-bottom-opacity:var(--un-border-opacity);border-bottom-color:rgba(248,113,113,var(--un-border-bottom-opacity));}
 .md\:px-10{padding-left:2.5rem;padding-right:2.5rem;}
 .md\:pl-10{padding-left:2.5rem;}
 .md\:text-2xl{font-size:1.5rem;line-height:2rem;}
