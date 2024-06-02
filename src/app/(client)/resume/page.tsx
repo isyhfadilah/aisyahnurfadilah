@@ -1,4 +1,4 @@
-import { ResumeTimeline, ResumeSkills, ResumeEducation } from '@/components/common/section/resume'
+import { ResumeTimeline, ResumeSkills, ResumeEducation } from '@/components/common/sections/resume'
 
 export default function Resume() {
   return (

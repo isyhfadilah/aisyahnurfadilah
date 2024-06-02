@@ -20,8 +20,8 @@ const menuItems = [
     icon: <IoMdDocument className="text-red-400 text-2xl md:text-3xl" />
   },
   {
-    label: 'contact',
-    link: '/contact',
+    label: 'portfolio',
+    link: '/portfolio',
     icon: <FaEnvelope className="text-red-400 text-2xl md:text-3xl" />
   }
 ]
