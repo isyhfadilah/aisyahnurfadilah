@@ -13,7 +13,7 @@ export const TimeEducation = () => {
           Juli 2021 - May 2024
         </time>
         <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">SMKN 2 Sumedang</h3>
-        <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Majoring Software Engineering</p>
+        <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Software Engineering Major</p>
       </li>
     </ol>
   )
