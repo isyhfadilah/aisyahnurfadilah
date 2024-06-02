@@ -9,11 +9,11 @@ export const AboutDesk = () => {
       <div className="bg-red/15 md:w-sm md:h-sm rounded-full absolute z-1 top-0 right-0 blur-3xl"></div>
 
       {/* make a tittle */}
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-2">
         <GradientText text="ABOUT ME" sizes="text-3xl" className="text-center" />
       </div>
 
-      <Container className="grid gap-10 md:grid-cols-2 place-content-between place-items-center w-full">
+      <Container className="flex flex-col-reverse md:flex-row justify-between items-center gap-6">
         <div>
           <h1 className="text-xl font-semibold">Aisyah Nur Fadilah</h1>
           <div className="flex text-sm mb-4">
