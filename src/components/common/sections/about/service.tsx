@@ -6,10 +6,10 @@ export const AboutService = () => {
   return (
     <section className="mb-26">
       <Container>
-        <div className="bg-orange/5 px-6 md:px-10 py-8 rounded-lg shadow shadow-sm space-y-6 border-l-2 border-l-orange border-b-2 border-b-orange">
-          <div className="flex flex-col border-l-2 border-l-orange pl-2 md:pl-10">
+        <div className="bg-red/8 px-6 md:px-10 py-8 rounded-lg shadow shadow-sm space-y-6 border-l-2 border-l-orange border-b-2 border-b-orange">
+          <div className="flex flex-col border-l-2 border-l-orange pl-6">
             <GradientText text="What Actually I Do" sizes="text-xl" />
-            <GradientText text="My Service" sizes="text-3xl" />
+            <GradientText text="My Service" sizes="text-2xl" />
           </div>
 
           <div className="md:flex items-center space-x-2 group">
