@@ -1,3 +1,4 @@
+// kualitas image masih buruk
 export const projects = [
   {
     title: 'Official Website SMKN 2 Sumedang',
