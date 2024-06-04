@@ -1,0 +1,29 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
+export interface CardProps {
+  image: string
+  title: string
+  detail?: string
+  link: string
+}
+
+export const CardPortfolio = ({ image, title, detail, link }: CardProps) => {
+  return (
+    <Link href={link} className="group relative overflow-hidden rounded-lg border-b-8 border-orange ">
+      <Image
+        src={image}
+        alt={title}
+        height={600}
+        width={300}
+        className="bg-cover bg-center bg-no-repeat relative  transition-transform duration-300 group-hover:scale-110"
+      />
+      <div className="text-white mt-auto h-40 absolute bottom-0 right-0 left-0 p-4 bg-gradient-to-b from-transparent to-red">
+        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+          <h1 className="text-xl">{title}</h1>
+          <p>{detail}</p>
+        </div>
+      </div>
+    </Link>
+  )
+}
