@@ -2,51 +2,61 @@ export const projects = [
   {
     title: 'Official Website SMKN 2 Sumedang',
     link: 'https://smkn2sumedang.vercel.app/',
-    image: ''
+    image: '/images/projects/smkn2.png',
+    detail: ''
   },
   {
     title: 'E-Voting Osis',
     link: 'https://voting-osis.vercel.app/',
-    image: ''
+    image: '/images/projects/voting.png',
+    detail: ''
   },
   {
     title: 'Instellar dan IKEA Social Entrepreneurship Indonesia Accelerator',
     link: 'https://isea.instellar.id/',
-    image: ''
+    image: '/images/projects/isea.png',
+    detail: ''
   },
   {
     title: 'Yayasan Biodiversitas Indonesia (BIONESIA)',
     link: 'https://bionesia-html.vercel.app/',
-    image: ''
+    image: '/images/projects/bionesia.png',
+    detail: ''
   },
   {
     title: 'Ghia Farm',
     link: 'https://ghia-farm-sawala-tech.vercel.app/',
-    image: ''
+    image: '/images/projects/ghia.png',
+    detail: ''
   },
   {
     title: 'Pionicon',
     link: 'https://pionicon.vercel.app/',
-    image: ''
+    image: '/images/projects/pionicon.png',
+    detail: ''
   },
   {
     title: 'Pionicon Creative Agency',
     link: 'https://pionicon.com/',
-    image: ''
+    image: '/images/projects/pionicon-creative.png',
+    detail: ''
   },
   {
     title: 'MEVERS',
     link: 'https://difest23-mevers.netlify.app/',
-    image: ''
+    image: '/images/projects/mevers.png',
+    detail: ''
   },
   {
     title: 'GroJunio',
     link: 'https://www.figma.com/design/H1PAY2zMseOFKEfkf59uEb/ITDRI?node-id=0-1&t=l20ao9mXUgadSWaP-0',
-    image: ''
+    image: '/images/projects/grojunio.png',
+    detail: ''
   },
   {
     title: 'JanGi',
     link: 'https://www.figma.com/proto/cZ236dzljCpn4JxnMlGj3m/dinamik17?scaling=min-zoom&page-id=0%3A1&node-id=48-10211',
-    image: ''
+    image: '/images/projects/jangi.png',
+    detail: ''
   }
 ]
