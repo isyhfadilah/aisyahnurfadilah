@@ -27,7 +27,7 @@ export const AboutDesk = () => {
           </p>
         </div>
 
-        <Image src="/images/progress.svg" alt="progressional person" height={400} width={400} />
+        <Image src="/images/bust.png" alt="progressional person" height={1000} width={1000} />
       </Container>
     </section>
   )
