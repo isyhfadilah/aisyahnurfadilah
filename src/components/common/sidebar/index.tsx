@@ -1,7 +1,11 @@
-import { FaHome, FaUser, FaEnvelope } from 'react-icons/fa'
-import { IoMdDocument } from 'react-icons/io'
+'use client'
+
+import { useState } from 'react'
+
 import Link from 'next/link'
 import Container from '../layouts/Container'
+import { FaHome, FaUser, FaEnvelope } from 'react-icons/fa'
+import { IoMdDocument } from 'react-icons/io'
 
 // nanti switch ke new file khusus
 const menuItems = [
@@ -28,6 +32,12 @@ const menuItems = [
 ]
 
 export const Sidebar = () => {
+  const [isClicked, setIsClicked] = useState(false)
+
+  const handleClicked = () => {
+    setIsClicked(!isClicked)
+  }
+
   return (
     <nav className="w-full">
       <div className="fixed h-full flex justify-center items-center ml-2 md:ml-10 rounded-full z-2">
@@ -50,7 +60,13 @@ export const Sidebar = () => {
           <ul className="flex items-center justify-between">
             {menuItems.map((item, index) => (
               <li key={index} className="flex flex-col justify-center items-center">
-                <Link href={item.link}>{item.icon}</Link>
+                {/* transisi to rotate masih ke looping */}
+                <Link
+                  href={item.link}
+                  onClick={handleClicked}
+                  className={`transform transition duration-200 ease-in-out ${isClicked ? 'rotate-45' : ''}`}>
+                  {item.icon}
+                </Link>
                 <span className="text-xs text-red-400 text-center">{item.label}</span>
               </li>
             ))}
