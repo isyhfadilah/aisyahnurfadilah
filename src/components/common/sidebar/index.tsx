@@ -47,7 +47,7 @@ export const Sidebar = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white/50 backdrop-blur-lg fixed bottom-0 py-1 rounded-t-lg shadow-xl shadow-black md:hidden">
+      <div className="w-full z-1 bg-white fixed rounded-t-2xl bottom-0 py-2 rounded-t-lg shadow-xl shadow-black md:hidden">
         <Container>
           <ul className="flex items-center justify-between">
             {menuItems.map((item, index) => (
