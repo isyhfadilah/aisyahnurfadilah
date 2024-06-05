@@ -1,14 +1,11 @@
 import Container from '../../layouts/Container'
-import { CardExperience } from '@/components/ui/cards/experience'
+import { HomeExperience } from '@/components/ui/cards/experience/home'
 
 export const ResumeSkills = () => {
   return (
     <section className="mb-16">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <CardExperience />
-          <CardExperience />
-        </div>
+        <HomeExperience />
       </Container>
     </section>
   )

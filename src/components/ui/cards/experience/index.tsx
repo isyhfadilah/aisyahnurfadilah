@@ -1,30 +1,23 @@
-// import { title } from 'process'
 import { BsFillPatchCheckFill } from 'react-icons/bs'
 
-// // buat menjadi dinamis
-// interface SkillProps {
-//   title: string
-//   skill?: string
-//   level?: string
-// }
+interface Skill {
+  skill: string
+  level?: string
+}
 
-const experiences = [
-  { skill: 'HTML 5', level: 'experienced' },
-  { skill: 'CSS', level: 'experienced' },
-  { skill: 'TypeScript', level: 'experienced' },
-  { skill: 'PHP', level: 'experienced' },
-  { skill: 'JavaScript', level: 'basic' }
-]
+interface SkillProps {
+  title: string
+  skills: Skill[]
+}
 
-// pelajari slice ya
-const column1 = experiences.slice(0, 3)
-const column2 = experiences.slice(3)
+export const CardExperience = ({ title, skills }: SkillProps) => {
+  const column1 = skills.slice(0, 3)
+  const column2 = skills.slice(3)
 
-export const CardExperience = () => {
   return (
-    <div className="border-l-2 border-l-red border-b-2 border-b-orange rounded-lg space-y-4 py-6 px-10 bg-red/5">
-      <h1 className="font-semibold capitalize text-lg text-red">explore my skills</h1>
-      <div className="flex space-x-10">
+    <div className="border-l-2 border-l-red border-b-2 border-b-orange rounded-lg space-y-4 py-6 px-5 md:px-10 bg-red/5">
+      <h1 className="font-semibold capitalize text-lg text-red">{title}</h1>
+      <div className="flex space-x-5 md:space-x-10">
         <ul className="space-y-2">
           {column1.map((item, index) => (
             <li key={index}>
