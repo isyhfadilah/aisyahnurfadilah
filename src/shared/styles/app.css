@@ -208,7 +208,6 @@
 .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
 .mx-auto{margin-left:auto;margin-right:auto;}
 .my{margin-top:1rem;margin-bottom:1rem;}
-.my-16{margin-top:4rem;margin-bottom:4rem;}
 .my-26{margin-top:6.5rem;margin-bottom:6.5rem;}
 .mb-1{margin-bottom:0.25rem;}
 .mb-10{margin-bottom:2.5rem;}
@@ -220,6 +219,7 @@
 .ml-2{margin-left:0.5rem;}
 .ml-5{margin-left:1.25rem;}
 .ms-6{margin-inline-start:1.5rem;}
+.mt-16{margin-top:4rem;}
 .mt-3{margin-top:0.75rem;}
 .mt-6{margin-top:1.5rem;}
 .mt-8{margin-top:2rem;}
@@ -440,6 +440,7 @@
 @media (min-width: 768px){
 .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
 .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.md\:my-16{margin-top:4rem;margin-bottom:4rem;}
 .md\:ml-10{margin-left:2.5rem;}
 .md\:mt-0{margin-top:0;}
 .md\:block{display:block;}
