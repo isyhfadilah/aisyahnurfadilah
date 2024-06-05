@@ -3,7 +3,7 @@ import Container from '../layouts/Container'
 
 export const Hero = () => {
   return (
-    <section className="bg-indigo-50" id="home">
+    <section className="bg-white">
       <div className="bg-red/15 w-sm h-sm md:w-xl md:h-md rounded-full absolute z-1 -top-10 -left-30 blur-3xl"></div>
       <div className="bg-red/15 md:w-sm md:h-sm rounded-full absolute z-1 bottom-0 right-0 blur-3xl"></div>
 
