@@ -20,7 +20,7 @@ export const CardPortfolio = ({ image, title, detail, link }: CardProps) => {
       />
       <div className="text-white mt-auto h-40 absolute bottom-0 right-0 left-0 p-4 bg-gradient-to-b from-transparent to-red">
         <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
-          <h1 className="text-xl">{title}</h1>
+          <h1 className="md:text-xl">{title}</h1>
           <p>{detail}</p>
         </div>
       </div>
