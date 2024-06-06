@@ -201,6 +201,7 @@
 .top-7{top:1.75rem;}
 .top-8{top:2rem;}
 .top-9{top:2.25rem;}
+.z-0{z-index:0;}
 .z-1{z-index:1;}
 .z-2{z-index:2;}
 .grid{display:grid;}
@@ -237,6 +238,7 @@
 .h-full{height:100%;}
 .h-screen{height:100vh;}
 .h-sm{height:24rem;}
+.h-xs{height:20rem;}
 .w-100{width:25rem;}
 .w-12{width:3rem;}
 .w-4{width:1rem;}
@@ -244,6 +246,7 @@
 .w-full{width:100%;}
 .w-md{width:28rem;}
 .w-sm{width:24rem;}
+.w-xs{width:20rem;}
 .flex{display:flex;}
 .inline-flex{display:inline-flex;}
 .flex-shrink-0,
@@ -451,6 +454,7 @@
 .md\:h-80{height:20rem;}
 .md\:h-md{height:28rem;}
 .md\:h-sm{height:24rem;}
+.md\:w-lg{width:32rem;}
 .md\:w-sm{width:24rem;}
 .md\:w-xl{width:36rem;}
 .md\:flex{display:flex;}
