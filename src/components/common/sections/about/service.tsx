@@ -12,8 +12,9 @@ export const AboutService = () => {
             <GradientText text="My Service" sizes="text-2xl" />
           </div>
 
+          {/* perbaiki struktur dan datanya*/}
           <div className="md:flex items-center space-x-2 group">
-            <Image src="/images/computer.jpg" alt="web development" height={80} width={80} className="rounded-full" />
+            <Image src="/icons/web.svg" alt="web development" height={80} width={80} className="rounded-full" />
             <div className="flex flex-col">
               <h1 className="text-lg font-semibold group-hover:text-red">Front-End Web Development</h1>
               <p className="text-sm">Build a home page</p>
@@ -21,7 +22,7 @@ export const AboutService = () => {
           </div>
 
           <div className="md:flex items-center space-x-2 group">
-            <Image src="/images/computer.jpg" alt="web development" height={80} width={80} className="rounded-full" />
+            <Image src="/icons/web.svg" alt="web development" height={80} width={80} className="rounded-full" />
             <div className="flex flex-col">
               <h1 className="text-lg font-semibold group-hover:text-red">UI Web Designer</h1>
               <p className="text-sm">Build a home page</p>
