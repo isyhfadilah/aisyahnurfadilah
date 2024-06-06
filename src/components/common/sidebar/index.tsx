@@ -32,10 +32,10 @@ const menuItems = [
 ]
 
 export const Sidebar = () => {
-  const [isClicked, setIsClicked] = useState(false)
+  const [isClicked, setIsClicked] = useState<number | null>(null)
 
-  const handleClicked = () => {
-    setIsClicked(!isClicked)
+  const handleClicked = (index: number) => {
+    setIsClicked(index)
   }
 
   return (
@@ -60,11 +60,10 @@ export const Sidebar = () => {
           <ul className="flex items-center justify-between">
             {menuItems.map((item, index) => (
               <li key={index} className="flex flex-col justify-center items-center">
-                {/* transisi to rotate masih ke looping */}
                 <Link
                   href={item.link}
-                  onClick={handleClicked}
-                  className={`transform transition duration-200 ease-in-out ${isClicked ? 'rotate-45' : ''}`}>
+                  onClick={() => handleClicked(index)}
+                  className={`transform transition duration-200 ease-in-out ${isClicked === index ? 'rotate-30' : ''}`}>
                   {item.icon}
                 </Link>
                 <span className="text-xs text-red-400 text-center">{item.label}</span>
