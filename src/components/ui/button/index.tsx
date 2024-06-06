@@ -58,7 +58,7 @@ export const Button: React.FC<ButtonProps> = ({
       classNames.push('text-white bg-dark')
       break
     case 'outline':
-      classNames.push('text-white border border-#3A3A3A')
+      classNames.push('text-red border border-orange')
       break
     case 'none':
       classNames.push('text-white')
