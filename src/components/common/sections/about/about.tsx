@@ -21,9 +21,9 @@ export const AboutDesk = () => {
             <span>Sumedang, Indonesia</span>
           </div>
           <p className="text-justify">
-            I&apos;m Aisyah Nur Fadilah (19), a Fresh Graduate majoring in Software Engineering from State Vocational High
-            School of 2 Sumedang. I have a keen interest in pursuing a career in technology, particularly in front-end
-            development. I have gained various experiences in this field since 2022, as outlined in my project portfolio.
+            As a Fresh Graduate in Software Engineering major, I would like to build a long-term career in Web Development or
+            Website User Interface Design to develop new skills while strengthening the skills I already have. I have gained
+            various experiences in this field since 2022, as outlined in my project portfolio.
           </p>
         </div>
 
