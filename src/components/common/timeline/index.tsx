@@ -4,7 +4,8 @@ import { experiences } from '@/data/experience'
 export const Timeline = () => {
   return (
     // masih menyon garisnya
-    <ol className="items-center sm:flex">
+    // menyon ketika posisi hendak ke mobile
+    <ol className="md:flex items-center justify-center">
       {experiences.map((item, index) => (
         <li key={index} className="mb-6 sm:mb-0">
           <div className="flex items-center">
@@ -15,7 +16,7 @@ export const Timeline = () => {
           </div>
           <div className="mt-3">
             <h3 className="text-lg font-semibold text-gray-900">{item.position}</h3>
-            <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.time}</time>
+            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 line-clamp-2">{item.time}</time>
             <p className="text-base font-normal text-gray-500">{item.detail}</p>
           </div>
         </li>

@@ -1,7 +1,7 @@
 export const experiences = [
   {
     position: 'Front-end Development',
-    time: 'Internship PT. Sawala Inovasi Indonesia (Juni – Oktober 2023)',
+    time: 'Internship PT. Sawala Inovasi Indonesia',
     detail:
       'Develop UI/UX design into a real and interactive website using TypeScript programming language and several frameworks and libraries such as Next.js, React.js, Tailwind CSS, and Uno CSS. Performed testing to ensure all features were working properly. Manage code using Git and GitHub to monitor code changes and collaborate with the team.',
     image: '/images/sawala.jpeg'
