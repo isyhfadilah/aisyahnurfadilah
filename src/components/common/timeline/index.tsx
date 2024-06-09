@@ -1,26 +1,5 @@
 import Image from 'next/image'
-
-const experiences = [
-  {
-    position: 'Front-end Development',
-    time: 'Internship PT. Sawala Inovasi Indonesia (Juni – Oktober 2023)',
-    detail:
-      'Berkontribusi dari sisi client dengan beberapa project seperti Ghia Farm, Pionicon, Pionicon Creative Agency, Yayasan Biodiversitas Indonesia (Bionesia), dan Ikea-Instellar.',
-    image: '/images/sawala.jpeg'
-  },
-  {
-    position: 'Juara 1 Desain Website',
-    time: 'Digital Festival Nasional 2023 (Maret 2023)',
-    detail: 'Membuat sebuah desain website yg membahas tentang metaverse lorem ipsum lorem iprum lorem ipsum lorem ipsum.',
-    image: '/images/polsub.png'
-  },
-  {
-    position: 'Juara 2 Desain Website',
-    time: 'SMK Pusat Keunggulan Telkom (November – Desember 2022)',
-    detail: 'Membuat sebuah desain website yg membahas tentang metaverse lorem ipsum lorem iprum lorem ipsum lorem ipsum.',
-    image: '/images/itdri.png'
-  }
-]
+import { experiences } from '@/data/experience'
 
 export const Timeline = () => {
   return (
