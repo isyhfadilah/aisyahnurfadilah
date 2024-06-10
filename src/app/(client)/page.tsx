@@ -14,10 +14,5 @@ export default function Home() {
     return () => clearTimeout(timer)
   }, [])
 
-  return (
-    <main>
-      {isLoading ? <SplashScreen /> : <Hero />}
-      {/* <SplashScreen /> */}
-    </main>
-  )
+  return <main>{isLoading ? <SplashScreen /> : <Hero />}</main>
 }
