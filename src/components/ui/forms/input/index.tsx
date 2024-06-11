@@ -42,7 +42,7 @@ export const Input: React.FC<InputProps> = ({
   return (
     <div className={cn('flex flex-col space-y-2', containerClass, type === 'hidden' && 'hidden')}>
       {label && (
-        <label className={cn('text-sm text-left', theme.labelColor, labelClassname)}>
+        <label className={cn('text-sm text-left', theme.hintColor, labelClassname)}>
           {label} {required && <span className="text-danger">*</span>}
         </label>
       )}
@@ -53,7 +53,7 @@ export const Input: React.FC<InputProps> = ({
         <input
           type={type}
           className={cn(
-            'rounded-xl bg-dark focus:outline-none border w-full disabled:border-opacity-10 disabled:text-opacity-10',
+            'rounded-xl bg-white focus:outline-none border border-red w-full disabled:border-opacity-10 disabled:text-opacity-10',
             `placeholder:${theme.hintColor} placeholder:text-opacity-80`,
             theme.borderColor,
             sizes,

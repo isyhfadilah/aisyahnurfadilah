@@ -19,7 +19,7 @@ export const Hero = () => {
                 I can work as <b>Front-End Web Developer</b>
               </h1>
             </div>
-            <Button text="Hire Me" rounded="full" />
+            <Button text="Hire Me" rounded="full" url="/contact" className="z-1" />
           </div>
         </section>
       </Container>
