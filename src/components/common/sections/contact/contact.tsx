@@ -13,9 +13,9 @@ export const ContactForm = () => {
       <Container className="flex justify-between items-center gap-6">
         <Image src="/images/bust.png" alt="contact me" height={500} width={500} className="hidden md:block" />
         <form action="" className="w-full space-y-4">
-          <Input label="email" />
-          <Input label="email" />
-          <TextArea label="message" />
+          <Input label="Name" type="text" />
+          <Input label="Email" type="email" />
+          <TextArea label="Message" />
           <Button text="submit" className="w-full" rounded="full" />
         </form>
       </Container>
