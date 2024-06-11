@@ -1,7 +1,9 @@
 import React from 'react'
+import { Suspense } from 'react'
+
 import { Metadata } from 'next'
 import { Sidebar } from '@/components/common/sidebar'
-// import { Footer } from '@/components/common/footer'
+import SplashScreen from '@/components/common/splash'
 
 export const metadata: Metadata = {
   title: "Aisyah's branding",
@@ -11,9 +13,8 @@ export const metadata: Metadata = {
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <React.Fragment>
-      {/* <Footer /> */}
       <Sidebar />
-      {children}
+      <Suspense fallback={<SplashScreen />}>{children}</Suspense>
     </React.Fragment>
   )
 }
