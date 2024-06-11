@@ -209,7 +209,6 @@
 .grid{display:grid;}
 .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
 .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
-.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
 .mx-auto{margin-left:auto;margin-right:auto;}
 .my{margin-top:1rem;margin-bottom:1rem;}
 .my-10{margin-top:2.5rem;margin-bottom:2.5rem;}
@@ -285,8 +284,6 @@
 .space-y-4>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(1rem * var(--un-space-y-reverse));}
 .space-y-6>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(1.5rem * var(--un-space-y-reverse));}
 .space-y-8>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(2rem * var(--un-space-y-reverse));}
-.divide-x>:not([hidden])~:not([hidden]){--un-divide-x-reverse:0;border-left-width:calc(1px * calc(1 - var(--un-divide-x-reverse)));border-right-width:calc(1px * var(--un-divide-x-reverse));}
-.divide-black\/50>:not([hidden])~:not([hidden]){border-color:rgba(0,0,0,0.5);}
 .overflow-hidden{overflow:hidden;}
 .\!border{border-width:1px !important;}
 .border{border-width:1px;}
@@ -462,12 +459,18 @@
 .md\:w-xl{width:36rem;}
 .md\:flex{display:flex;}
 .md\:flex-row{flex-direction:row;}
+.md\:gap-6{grid-gap:1.5rem;gap:1.5rem;}
 .md\:space-x-10>:not([hidden])~:not([hidden]){--un-space-x-reverse:0;margin-left:calc(2.5rem * calc(1 - var(--un-space-x-reverse)));margin-right:calc(2.5rem * var(--un-space-x-reverse));}
+.md\:space-y-0>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(0px * var(--un-space-y-reverse));}
+.md\:divide-x>:not([hidden])~:not([hidden]){--un-divide-x-reverse:0;border-left-width:calc(1px * calc(1 - var(--un-divide-x-reverse)));border-right-width:calc(1px * var(--un-divide-x-reverse));}
+.md\:divide-black\/50>:not([hidden])~:not([hidden]){border-color:rgba(0,0,0,0.5);}
 .md\:p-6{padding:1.5rem;}
 .md\:px-10{padding-left:2.5rem;padding-right:2.5rem;}
+.md\:px-4{padding-left:1rem;padding-right:1rem;}
 .md\:text-2xl{font-size:1.5rem;line-height:2rem;}
 .md\:text-3xl{font-size:1.875rem;line-height:2.25rem;}
 .md\:text-4xl{font-size:2.25rem;line-height:2.5rem;}
+.md\:text-base{font-size:1rem;line-height:1.5rem;}
 .md\:text-sm{font-size:0.875rem;line-height:1.25rem;}
 .md\:text-xl{font-size:1.25rem;line-height:1.75rem;}
 }
