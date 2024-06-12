@@ -1,5 +1,5 @@
 export const skills = {
-  title: 'explore my skills',
+  title: 'programming language skills',
   skills: [
     { skill: 'HTML 5', level: 'experienced' },
     { skill: 'CSS', level: 'experienced' },
@@ -10,6 +10,11 @@ export const skills = {
 }
 
 export const language = {
-  title: 'explore my language skills',
-  skills: [{ skill: 'Bahasa Inggris' }, { skill: 'Bahasa Indonesia' }]
+  title: 'frameworks skills',
+  skills: [
+    { skill: 'Next.js 13', level: 'experienced' },
+    { skill: 'React', level: 'experienced' },
+    { skill: 'Laravel 10', level: 'experienced' },
+    { skill: 'Code Igniter', level: 'basic' }
+  ]
 }
