@@ -40,7 +40,8 @@
     "react-use": "^17.4.0",
     "sass": "^1.60.0",
     "swr": "^2.1.5",
-    "tailwind-merge": "^1.13.0"
+    "tailwind-merge": "^1.13.0",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",

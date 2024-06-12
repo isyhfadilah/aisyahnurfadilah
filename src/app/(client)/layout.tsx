@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 import { Sidebar } from '@/components/common/sidebar'
 import SplashScreen from '@/components/common/splash'
 
-import '@/shared/css/scrollbar.css'
+import '@/shared/styles/css/scrollbar.css'
 
 export const metadata: Metadata = {
   title: "Aisyah's branding",
