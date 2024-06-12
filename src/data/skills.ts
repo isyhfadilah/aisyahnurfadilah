@@ -15,6 +15,8 @@ export const language = {
     { skill: 'Next.js 13', level: 'experienced' },
     { skill: 'React', level: 'experienced' },
     { skill: 'Laravel 10', level: 'experienced' },
-    { skill: 'Code Igniter', level: 'basic' }
+    { skill: 'Code Igniter', level: 'basic' },
+    { skill: 'Tailwind CSS', level: 'experiences' },
+    { skill: 'Uno CSS', level: 'experiences' }
   ]
 }
