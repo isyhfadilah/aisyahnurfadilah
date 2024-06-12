@@ -10,7 +10,7 @@ export const skills = {
 }
 
 export const language = {
-  title: 'frameworks skills',
+  title: 'frameworks and libraries skills',
   skills: [
     { skill: 'Next.js 13', level: 'experienced' },
     { skill: 'React', level: 'experienced' },
