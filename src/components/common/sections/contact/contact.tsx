@@ -7,7 +7,7 @@ import Button from '@/components/ui/button'
 export const ContactForm = () => {
   return (
     <section className="py-16">
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-16">
         <GradientText text="CONTACT" sizes="text-3xl" />
       </div>
       <Container className="flex justify-between items-center gap-6">
