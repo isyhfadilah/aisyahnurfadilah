@@ -19,7 +19,8 @@ export const Hero = () => {
                 I can work as <b>Front-End Web Developer</b>
               </h1>
             </div>
-            <Button text="Hire Me" rounded="full" url="/contact" className="z-1" />
+            <Button text="Contact Me" rounded="full" url="/contact" className="z-1" />
+            <Button text="Hire Me" rounded="full" url="/contact" className="z-1" variant="outline" />
           </div>
         </section>
       </Container>
