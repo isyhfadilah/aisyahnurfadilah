@@ -9,9 +9,9 @@ export const Hero = () => {
 
       <Container>
         <section className="flex justify-center items-center h-screen">
-          <div className="flex flex-wrap items-center w-md lg:w-2xl gap-4">
+          <div className="flex flex-wrap justify-center items-center w-md lg:w-2xl gap-4">
             {/* buat effect typing */}
-            <div className="space-y-1">
+            <div className="space-y-1 text-center">
               <h1 className="text-xl md:text-2xl bg-gradient-to-r from-red-400 to-orange-500 inline-block text-transparent bg-clip-text">
                 Hello I&apos;m Aisyah Nur Fadilah
               </h1>
