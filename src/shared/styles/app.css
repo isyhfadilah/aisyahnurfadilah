@@ -413,6 +413,7 @@
 .text-\[\#8C8CA1\]{--un-text-opacity:1;color:rgba(140,140,161,var(--un-text-opacity));}
 .text-black\/50{color:rgba(0,0,0,0.5);}
 .text-gray-900{--un-text-opacity:1;color:rgba(17,24,39,var(--un-text-opacity));}
+.text-orange{--un-text-opacity:1;color:rgba(251,146,60,var(--un-text-opacity));}
 .text-transparent{color:transparent;}
 .\!disabled\:text-opacity-10:disabled{--un-text-opacity:0.1 !important;}
 .\!text-opacity-50{--un-text-opacity:0.5 !important;}
