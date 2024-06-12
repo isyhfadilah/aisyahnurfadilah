@@ -7,7 +7,7 @@ import { CardContact } from '.'
 const contact = [
   {
     title: 'phone',
-    detail: '(+62)853434343',
+    detail: '(+62)82123937972',
     icon: <FaPhoneAlt className="text-white text-3xl" />
   },
   {
