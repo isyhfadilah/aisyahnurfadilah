@@ -10,14 +10,14 @@ export const experiences = [
     position: '1st place in Website Design',
     time: 'Digital Festival (DIFEST) Nasional 2023',
     detail:
-      'My team and I participated in the national website design competition at the 2023 National Digital Festival, organized by the Informatics Management Student Association of Politeknik Negeri Subang, with the theme "Increase Your Creativity and Brilliant Generation with Technology."',
+      'Participated and won 1st place in the national website design competition at the National Digital Festival 2023, organized by the Informatics Management Student Association of Subang State Polytechnic, with the theme "Increase Your Creativity and Create a Brilliant Generation with Technology."',
     image: '/images/polsub.png'
   },
   {
     position: '2nd place in Website Design',
     time: 'ITDRI Conference & Festival 2022',
     detail:
-      'The national competition among Telkom Center of Excellence Vocational Schools, organized by Telkom-ITDRI (Indonesia Telecommunication & Digital Research Institute), included a sub-competition in web design with the theme "Innovation for Indonesia." My team and I participated in this sub-competition.',
+      'Participated and won 2nd in the national competition between SMK Telkom Center of Excellence, organized by Telkom-ITDRI (Indonesia Telecommunication & Digital Research Institute) with the theme "Innovation for Indonesia" in the website design sub-competition.',
     image: '/images/itdri.png'
   }
 ]
