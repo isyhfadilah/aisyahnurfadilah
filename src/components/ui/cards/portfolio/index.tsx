@@ -14,8 +14,8 @@ export const CardPortfolio = ({ image, title, detail, link }: CardProps) => {
       <Image
         src={image}
         alt={title}
-        height={300}
-        width={300}
+        height={1000}
+        width={1000}
         className="w-100 h-50 md:h-80 bg-cover bg-center bg-no-repeat relative  transition-transform duration-300 group-hover:scale-110 object-cover"
       />
       <div className="text-white mt-auto h-40 absolute bottom-0 right-0 left-0 p-4 bg-gradient-to-b from-transparent to-red">
