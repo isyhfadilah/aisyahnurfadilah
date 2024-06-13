@@ -15,10 +15,12 @@ export const CardService = ({ image, title, detail }: CardProps) => {
         alt={title}
         height={100}
         width={100}
-        className="rounded-full w-18 h-18 group-hover:shadow group-hover:shadow-lg"
+        className="rounded-full w-18 h-18 transition duration-300 ease-in-out group-hover:shadow group-hover:shadow-lg"
       />
       <div className="flex flex-col">
-        <h1 className="text-lg text-dark font-semibold group-hover:text-primary">{title}</h1>
+        <h1 className="text-lg text-dark font-semibold transition duration-300 ease-in-out group-hover:text-primary">
+          {title}
+        </h1>
         <p className="text-sm text-dark-gray">{detail}</p>
       </div>
     </div>
