@@ -8,8 +8,8 @@ import SplashScreen from '@/components/common/splash'
 import '@/shared/styles/css/scrollbar.css'
 
 export const metadata: Metadata = {
-  title: "Aisyah's branding",
-  description: 'she is progressional women'
+  title: 'Aisyah Nur Fadilah | Front-End Web Developer | UI Web Designer',
+  description: 'she is a progressional woman'
 }
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
