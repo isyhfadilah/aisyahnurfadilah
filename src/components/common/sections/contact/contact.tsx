@@ -16,7 +16,7 @@ export const ContactForm = () => {
           <Input label="Name" type="text" />
           <Input label="Email" type="email" />
           <TextArea label="Message" />
-          <Button text="submit" className="w-full" rounded="full" />
+          <Button text="Submit" className="w-full" rounded="full" />
         </form>
       </Container>
     </section>

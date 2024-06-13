@@ -43,7 +43,7 @@ export const Hero = () => {
             </h1>
           </div>
           <div className="flex gap-4">
-            <Button text="Contact Me" rounded="full" url="/contact" className="z-1" size="sm" variant="secondary" />
+            <Button text="Contact Me" rounded="full" url="/contact" className="z-1" size="sm" />
             <Button text="Hire Me" rounded="full" url="/contact" className="z-1" variant="outline" size="sm" />
           </div>
         </section>

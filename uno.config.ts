@@ -18,8 +18,8 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: '#f87171',
-      secondary: '#fb923c',
+      primary: '#ef4444',
+      secondary: '#fecaca',
       dark: '#181818',
       'dark-gray': '#202123',
       stoke: '#3A3A3A'
