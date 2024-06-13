@@ -1,6 +1,6 @@
 body {
-    --sb-track-color: #fee2e2;
-    --sb-thumb-color: #f87171;
+    --sb-track-color:#fef2f2;
+    --sb-thumb-color: linear-gradient(#ef4444, #fca5a5);
     --sb-size: 12px;
   }
   
