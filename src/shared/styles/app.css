@@ -231,6 +231,7 @@
 .hidden{display:none;}
 .\!w-full{width:100% !important;}
 .h-0\.5{height:0.125rem;}
+.h-18{height:4.5rem;}
 .h-26{height:6.5rem;}
 .h-4{height:1rem;}
 .h-40{height:10rem;}
@@ -242,6 +243,7 @@
 .h-xs{height:20rem;}
 .w-100{width:25rem;}
 .w-12{width:3rem;}
+.w-18{width:4.5rem;}
 .w-26{width:6.5rem;}
 .w-4{width:1rem;}
 .w-6{width:1.5rem;}
