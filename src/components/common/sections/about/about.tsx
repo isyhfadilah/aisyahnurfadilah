@@ -21,8 +21,8 @@ export const AboutDesk = () => {
             <span className="text-dark">Sumedang, Indonesia</span>
           </div>
           <p className="text-justify text-dark-gray">
-            As a Fresh Graduate in Software Engineering major, I would like to build a long-term career in Web Development or
-            Website User Interface Design to develop new skills while strengthening the skills I already have. I have gained
+            As a Fresh Graduate in Software Engineering major, I would like to build a long-term career in Web Development
+            and User Interface Design to develop new skills while strengthening the skills I already have. I have gained
             various experiences in this field since 2022, as outlined in my project portfolio.
           </p>
         </div>
