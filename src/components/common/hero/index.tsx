@@ -27,21 +27,18 @@ export const Hero = () => {
       <div className="bg-red/15 md:w-sm md:h-sm rounded-full absolute z-1 bottom-0 right-0 blur-3xl"></div>
 
       <Container>
-        <section className="flex justify-center items-center h-screen">
-          <div className="flex flex-col justify-center items-center w-md lg:w-2xl gap-4">
-            {/* buat effect typing */}
-            <div className="flex flex-col space-y-1 text-center">
-              <h1 className="text-xl md:text-2xl bg-gradient-to-r from-red-400 to-orange-500 inline-block text-transparent bg-clip-text">
-                Hello I&apos;m Aisyah Nur Fadilah
-              </h1>
-              <h1 className="text-2xl md:text-3xl bg-gradient-to-r from-red-400 to-orange-500 inline-block text-transparent bg-clip-text">
-                I can work as <b id="typing"></b>
-              </h1>
-            </div>
-            <div className="flex gap-4">
-              <Button text="Contact Me" rounded="full" url="/contact" className="z-1" />
-              <Button text="Hire Me" rounded="full" url="/contact" className="z-1" variant="outline" />
-            </div>
+        <section className="flex flex-col justify-center items-center h-screen space-y-4">
+          <div className="flex flex-col space-y-1 text-center">
+            <h1 className="text-xl md:text-2xl bg-gradient-to-r from-red-400 to-orange-500 inline-block text-transparent bg-clip-text">
+              Hello I&apos;m Aisyah Nur Fadilah
+            </h1>
+            <h1 className="text-2xl md:text-3xl bg-gradient-to-r from-red-400 to-orange-500 inline-block text-transparent bg-clip-text">
+              I can work as <b id="typing"></b>
+            </h1>
+          </div>
+          <div className="flex gap-4">
+            <Button text="Contact Me" rounded="full" url="/contact" className="z-1" />
+            <Button text="Hire Me" rounded="full" url="/contact" className="z-1" variant="outline" />
           </div>
         </section>
       </Container>

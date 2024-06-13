@@ -246,7 +246,6 @@
 .w-4{width:1rem;}
 .w-6{width:1.5rem;}
 .w-full{width:100%;}
-.w-md{width:28rem;}
 .w-sm{width:24rem;}
 .w-xs{width:20rem;}
 .flex{display:flex;}
@@ -476,5 +475,4 @@
 }
 @media (min-width: 1024px){
 .lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
-.lg\:w-2xl{width:42rem;}
 }
