@@ -4,7 +4,7 @@ import { CardService } from '.'
 
 export const HomeService = () => {
   return (
-    <div className="bg-primary/8 px-6 md:px-10 py-8 rounded-lg shadow shadow-sm space-y-6 border-l-2 border-l-secondary border-b-2 border-b-primary">
+    <div className="bg-primary/8 px-6 md:px-10 py-8 rounded-lg shadow shadow-sm space-y-6 border-l-2 border-l-primary border-b-2 border-b-secondary">
       <div className="flex flex-col border-l-2 border-l-secondary pl-6">
         <GradientText text="What Actually I Do" sizes="text-xl" />
         <GradientText text="My Service" sizes="text-2xl" />

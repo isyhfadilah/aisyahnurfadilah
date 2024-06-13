@@ -303,7 +303,6 @@
 .border-red{--un-border-opacity:1;border-color:rgba(248,113,113,var(--un-border-opacity));}
 .border-secondary{--un-border-opacity:1;border-color:rgba(252,165,165,var(--un-border-opacity));}
 .disabled\:border-\#fafafa:disabled{--un-border-opacity:1;border-color:rgba(250,250,250,var(--un-border-opacity));}
-.border-b-primary{--un-border-opacity:1;--un-border-bottom-opacity:var(--un-border-opacity);border-bottom-color:rgba(239,68,68,var(--un-border-bottom-opacity));}
 .border-b-secondary{--un-border-opacity:1;--un-border-bottom-opacity:var(--un-border-opacity);border-bottom-color:rgba(252,165,165,var(--un-border-bottom-opacity));}
 .border-l-primary{--un-border-opacity:1;--un-border-left-opacity:var(--un-border-opacity);border-left-color:rgba(239,68,68,var(--un-border-left-opacity));}
 .border-l-secondary{--un-border-opacity:1;--un-border-left-opacity:var(--un-border-opacity);border-left-color:rgba(252,165,165,var(--un-border-left-opacity));}
