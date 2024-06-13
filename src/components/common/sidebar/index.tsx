@@ -12,22 +12,22 @@ const menuItems = [
   {
     label: 'Home',
     link: '/',
-    icon: <FaHome className="text-red-400 text-2xl md:text-3xl" />
+    icon: <FaHome className="text-primary/90 text-2xl md:text-3xl" />
   },
   {
     label: 'About',
     link: '/about',
-    icon: <FaUser className="text-red-400 text-2xl md:text-3xl" />
+    icon: <FaUser className="text-primary/90 text-2xl md:text-3xl" />
   },
   {
     label: 'resume',
     link: '/resume',
-    icon: <IoMdDocument className="text-red-400 text-2xl md:text-3xl" />
+    icon: <IoMdDocument className="text-primary/90 text-2xl md:text-3xl" />
   },
   {
     label: 'portfolio',
     link: '/portfolio',
-    icon: <FaEnvelope className="text-red-400 text-2xl md:text-3xl" />
+    icon: <FaEnvelope className="text-primary/90 text-2xl md:text-3xl" />
   }
 ]
 
@@ -48,7 +48,7 @@ export const Sidebar = () => {
                 <Link href={item.link} className="rounded-full p-2 shadow-xl hover:bg-white/50">
                   {item.icon}
                 </Link>
-                <span className="text-xs text-red-400 text-center">{item.label}</span>
+                <span className="text-xs text-primary/90 text-center">{item.label}</span>
               </li>
             ))}
           </ul>
@@ -66,7 +66,7 @@ export const Sidebar = () => {
                   className={`transform transition duration-200 ease-in-out ${isClicked === index ? 'rotate-30' : ''}`}>
                   {item.icon}
                 </Link>
-                <span className="text-xs text-red-400 text-center">{item.label}</span>
+                <span className="text-xs text-primary/90 text-center">{item.label}</span>
               </li>
             ))}
           </ul>

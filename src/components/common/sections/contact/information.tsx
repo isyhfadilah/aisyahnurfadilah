@@ -6,7 +6,7 @@ export const ContactInfo = () => {
   return (
     <section className="mb-26">
       <Container>
-        <div className="flex flex-col border-l-2 border-l-orange pl-6">
+        <div className="flex flex-col border-l-2 border-l-secondary pl-6">
           <GradientText text="Contact Information" sizes="text-xl" />
           <GradientText text="Find Me Here" sizes="text-2xl" />
         </div>

@@ -12,7 +12,7 @@ export const GradientText: React.FC<TextProps> = ({ text, sizes, className }) =>
     <h1
       className={cn(
         className,
-        `${sizes} font-bold bg-gradient-to-r from-red-400 to-orange-500 inline-block text-transparent bg-clip-text`
+        `${sizes} font-bold bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text`
       )}>
       {text}
     </h1>

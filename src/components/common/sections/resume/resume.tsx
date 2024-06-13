@@ -12,7 +12,7 @@ export const ResumeTimeline = () => {
 
       <Container className="space-y-6 mt-6">
         <div className="md:flex space-y-6 md:space-y-0 justify-between items-center">
-          <div className="flex flex-col border-l-2 border-l-orange pl-6">
+          <div className="flex flex-col border-l-2 border-l-secondary pl-6">
             <GradientText text="Explore" sizes="text-xl" />
             <GradientText text="My Experiences" sizes="text-2xl" />
           </div>

@@ -23,21 +23,21 @@ export const HomePortfolio = () => {
           text="all"
           variant="outline"
           size="xs"
-          className={`${selectType == 'all' ? 'bg-red text-white' : ''}`}
+          className={`${selectType == 'all' ? 'bg-primary text-white' : ''}`}
         />
         <Button
           onClick={() => handleTypeChange('website')}
           text="website"
           variant="outline"
           size="xs"
-          className={`${selectType == 'website' ? 'bg-red text-white' : ''}`}
+          className={`${selectType == 'website' ? 'bg-primary text-white' : ''}`}
         />
         <Button
           onClick={() => handleTypeChange('design')}
           text="design"
           variant="outline"
           size="xs"
-          className={`${selectType == 'design' ? 'bg-red text-white' : ''}`}
+          className={`${selectType == 'design' ? 'bg-primary text-white' : ''}`}
         />
       </div>
 
