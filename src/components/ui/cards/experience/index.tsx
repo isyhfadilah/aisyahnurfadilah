@@ -34,9 +34,9 @@ export const CardExperience = ({ title, skills }: SkillProps) => {
             <li key={index}>
               <div className="flex items-center gap-1">
                 <BsFillPatchCheckFill className="text-primary" />
-                <p>{item.skill}</p>
+                <p className="text-dark">{item.skill}</p>
               </div>
-              <p className="text-sm text-black/50">{item.level}</p>
+              <p className="text-sm text-dark-gray">{item.level}</p>
             </li>
           ))}
         </ul>

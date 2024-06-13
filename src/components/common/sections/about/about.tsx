@@ -15,12 +15,12 @@ export const AboutDesk = () => {
 
       <Container className="flex flex-col-reverse md:flex-row justify-between items-center gap-6">
         <div>
-          <h1 className="text-xl font-semibold">Aisyah Nur Fadilah</h1>
+          <h1 className="text-xl font-semibold text-dark">Aisyah Nur Fadilah</h1>
           <div className="flex text-sm mb-4">
-            <FaMapPin />
-            <span>Sumedang, Indonesia</span>
+            <FaMapPin className="text-dark" />
+            <span className="text-dark">Sumedang, Indonesia</span>
           </div>
-          <p className="text-justify">
+          <p className="text-justify text-dark-gray">
             As a Fresh Graduate in Software Engineering major, I would like to build a long-term career in Web Development or
             Website User Interface Design to develop new skills while strengthening the skills I already have. I have gained
             various experiences in this field since 2022, as outlined in my project portfolio.

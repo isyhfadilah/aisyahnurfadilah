@@ -20,9 +20,9 @@ export default defineConfig({
     colors: {
       primary: '#ef4444',
       secondary: '#fca5a5',
-      dark: '#181818',
-      'dark-gray': '#202123',
-      stoke: '#3A3A3A'
+      dark: '#111827',
+      'dark-gray': '#6b7280',
+      stoke: '#9ca3af'
     }
   },
   transformers: [
