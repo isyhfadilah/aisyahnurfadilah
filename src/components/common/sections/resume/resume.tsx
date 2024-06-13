@@ -23,6 +23,7 @@ export const ResumeTimeline = () => {
             rounded="full"
             size="sm"
             variant="outline"
+            className="hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white"
           />
         </div>
 
