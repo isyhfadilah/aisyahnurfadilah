@@ -17,7 +17,13 @@ export const ResumeTimeline = () => {
             <GradientText text="My Experiences" sizes="text-2xl" />
           </div>
 
-          <Button url="" text="Download Resume" rounded="full" size="sm" variant="outline" />
+          <Button
+            url="https://drive.google.com/file/d/1KoceWGLBzsgTORU9z9y17hKMknvJ0kOc/view"
+            text="Download Resume"
+            rounded="full"
+            size="sm"
+            variant="outline"
+          />
         </div>
 
         <Timeline />
