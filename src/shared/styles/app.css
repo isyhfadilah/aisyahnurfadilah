@@ -301,12 +301,12 @@
 .border-primary,
 .border-red-500{--un-border-opacity:1;border-color:rgba(239,68,68,var(--un-border-opacity));}
 .border-red{--un-border-opacity:1;border-color:rgba(248,113,113,var(--un-border-opacity));}
-.border-secondary{--un-border-opacity:1;border-color:rgba(254,202,202,var(--un-border-opacity));}
+.border-secondary{--un-border-opacity:1;border-color:rgba(252,165,165,var(--un-border-opacity));}
 .disabled\:border-\#fafafa:disabled{--un-border-opacity:1;border-color:rgba(250,250,250,var(--un-border-opacity));}
 .border-b-primary{--un-border-opacity:1;--un-border-bottom-opacity:var(--un-border-opacity);border-bottom-color:rgba(239,68,68,var(--un-border-bottom-opacity));}
-.border-b-secondary{--un-border-opacity:1;--un-border-bottom-opacity:var(--un-border-opacity);border-bottom-color:rgba(254,202,202,var(--un-border-bottom-opacity));}
+.border-b-secondary{--un-border-opacity:1;--un-border-bottom-opacity:var(--un-border-opacity);border-bottom-color:rgba(252,165,165,var(--un-border-bottom-opacity));}
 .border-l-primary{--un-border-opacity:1;--un-border-left-opacity:var(--un-border-opacity);border-left-color:rgba(239,68,68,var(--un-border-left-opacity));}
-.border-l-secondary{--un-border-opacity:1;--un-border-left-opacity:var(--un-border-opacity);border-left-color:rgba(254,202,202,var(--un-border-left-opacity));}
+.border-l-secondary{--un-border-opacity:1;--un-border-left-opacity:var(--un-border-opacity);border-left-color:rgba(252,165,165,var(--un-border-left-opacity));}
 .\!disabled\:border-opacity-10:disabled{--un-border-opacity:0.1 !important;}
 .disabled\:border-opacity-10:disabled{--un-border-opacity:0.1;}
 .\!rounded-xl{border-radius:0.75rem !important;}
@@ -335,17 +335,17 @@
 .bg-primary\/5{background-color:rgba(239,68,68,0.05);}
 .bg-primary\/8{background-color:rgba(239,68,68,0.08);}
 .bg-red-400{--un-bg-opacity:1;background-color:rgba(248,113,113,var(--un-bg-opacity));}
-.bg-secondary{--un-bg-opacity:1;background-color:rgba(254,202,202,var(--un-bg-opacity));}
+.bg-secondary{--un-bg-opacity:1;background-color:rgba(252,165,165,var(--un-bg-opacity));}
 .bg-transparent{background-color:transparent;}
 .bg-white{--un-bg-opacity:1;background-color:rgba(255,255,255,var(--un-bg-opacity));}
 .hover\:bg-white\/50:hover{background-color:rgba(255,255,255,0.5);}
 .\!bg-opacity-50{--un-bg-opacity:0.5 !important;}
 .disabled\:bg-opacity-50:disabled{--un-bg-opacity:0.5;}
 .from-primary{--un-gradient-from-position:0%;--un-gradient-from:rgba(239,68,68,var(--un-from-opacity, 1)) var(--un-gradient-from-position);--un-gradient-to-position:100%;--un-gradient-to:rgba(239,68,68,0) var(--un-gradient-to-position);--un-gradient-stops:var(--un-gradient-from), var(--un-gradient-to);}
-.from-secondary{--un-gradient-from-position:0%;--un-gradient-from:rgba(254,202,202,var(--un-from-opacity, 1)) var(--un-gradient-from-position);--un-gradient-to-position:100%;--un-gradient-to:rgba(254,202,202,0) var(--un-gradient-to-position);--un-gradient-stops:var(--un-gradient-from), var(--un-gradient-to);}
+.from-secondary{--un-gradient-from-position:0%;--un-gradient-from:rgba(252,165,165,var(--un-from-opacity, 1)) var(--un-gradient-from-position);--un-gradient-to-position:100%;--un-gradient-to:rgba(252,165,165,0) var(--un-gradient-to-position);--un-gradient-stops:var(--un-gradient-from), var(--un-gradient-to);}
 .from-transparent{--un-gradient-from-position:0%;--un-gradient-from:transparent var(--un-gradient-from-position);--un-gradient-to-position:100%;--un-gradient-to:rgba(255,255,255,0) var(--un-gradient-to-position);--un-gradient-stops:var(--un-gradient-from), var(--un-gradient-to);}
 .to-primary{--un-gradient-to-position:100%;--un-gradient-to:rgba(239,68,68,var(--un-to-opacity, 1)) var(--un-gradient-to-position);}
-.to-secondary{--un-gradient-to-position:100%;--un-gradient-to:rgba(254,202,202,var(--un-to-opacity, 1)) var(--un-gradient-to-position);}
+.to-secondary{--un-gradient-to-position:100%;--un-gradient-to:rgba(252,165,165,var(--un-to-opacity, 1)) var(--un-gradient-to-position);}
 .bg-gradient-to-b{--un-gradient-shape:to bottom;--un-gradient:var(--un-gradient-shape), var(--un-gradient-stops);background-image:linear-gradient(var(--un-gradient));}
 .bg-gradient-to-r{--un-gradient-shape:to right;--un-gradient:var(--un-gradient-shape), var(--un-gradient-stops);background-image:linear-gradient(var(--un-gradient));}
 .bg-cover{background-size:cover;}
