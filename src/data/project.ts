@@ -10,7 +10,7 @@ export const projects = [
   {
     title: 'E-Voting Osis',
     link: 'https://voting-osis.vercel.app/',
-    image: '/images/projects/voting.png',
+    image: '/images/projects/voting-osis.png',
     type: 'website',
     detail: ''
   },
