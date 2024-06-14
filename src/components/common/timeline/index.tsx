@@ -13,7 +13,7 @@ export const Timeline = () => {
             <div className="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
           </div>
           <div className="mt-3">
-            <time className="block text-xs font-normal leading-none text-stoke">{item.time}</time>
+            <time className="block mb-2 text-xs font-normal leading-none text-stoke">{item.time}</time>
             <h3 className="text-lg font-semibold text-dark">{item.position}</h3>
             <p className="block mb-3 text-sm font-normal leading-none text-dark-gray">{item.organizer}</p>
             <p className="text-base font-normal text-dark-gray text-justify md:mr-6">{item.detail}</p>
