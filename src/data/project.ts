@@ -51,7 +51,7 @@ export const projects = [
   },
   {
     title: 'MEVERS',
-    link: 'https://difest23-mevers.netlify.app/',
+    link: 'https://mevers2023.netlify.app/',
     image: '/images/projects/mevers.png',
     type: 'website',
     detail: ''
