@@ -1,6 +1,13 @@
 // kualitas image masih buruk
 export const projects = [
   {
+    tittle: 'Smart Waste',
+    link: 'https://www.figma.com/proto/chOcG5bmYyrHTwCjS9VHjt/Smart-Waste?node-id=147-1130&p=f&t=AxhP0PaVbpwNV3ao-1&scaling=scale-down&content-scaling=fixed&page-id=139%3A2&starting-point-node-id=167%3A145',
+    image: '/images/projects/smartwaste.png',
+    type: 'design',
+    detail: ''
+  },
+  {
     title: 'Official Website SMKN 2 Sumedang',
     link: 'https://smkn2sumedang.vercel.app/',
     image: '/images/projects/smkn2.png',
