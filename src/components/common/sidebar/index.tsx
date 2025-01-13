@@ -10,12 +10,12 @@ import { IoMdDocument } from 'react-icons/io'
 // nanti switch ke new file khusus
 const menuItems = [
   {
-    label: 'Home',
+    label: 'home',
     link: '/',
     icon: <FaHome className="text-primary/90 text-2xl md:text-3xl" />
   },
   {
-    label: 'About',
+    label: 'about',
     link: '/about',
     icon: <FaUser className="text-primary/90 text-2xl md:text-3xl" />
   },
@@ -48,7 +48,7 @@ export const Sidebar = () => {
                 <Link href={item.link} className="rounded-full p-2 shadow-xl hover:bg-white/50">
                   {item.icon}
                 </Link>
-                <span className="text-xs text-primary/90 text-center">{item.label}</span>
+                <span className="text-xs text-primary/90 text-center capitalize">{item.label}</span>
               </li>
             ))}
           </ul>
