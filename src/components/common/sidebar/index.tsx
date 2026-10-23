@@ -9,7 +9,7 @@ const menuItems = [
   { label: 'About', link: '/#about' },
   {
     label: 'Resume',
-    link: 'https://drive.google.com/file/d/13mBLNId3XDFgChvwQzpe2ucCyanq6TLj/view',
+    link: 'https://drive.google.com/file/d/11O7SmX7SMtqv0WIeXzSVpXkARVvqJwWi/view?usp=sharing',
     external: true
   },
   { label: 'Contact', link: '/#contact' }
