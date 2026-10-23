@@ -14,6 +14,18 @@ interface AvatarProps {
   background?: string
   provider?: 'dicebear' | 'ui-avatar'
 }
+
+const roundedClasses = {
+  none: 'rounded-none',
+  sm: 'rounded-sm',
+  md: 'rounded-md',
+  lg: 'rounded-lg',
+  xl: 'rounded-xl',
+  '2xl': 'rounded-2xl',
+  '3xl': 'rounded-3xl',
+  full: 'rounded-full'
+}
+
 export const Avatar: React.FC<AvatarProps> = ({
   src,
   name,
@@ -59,13 +71,13 @@ export const Avatar: React.FC<AvatarProps> = ({
     }
   }, [size])
   return (
-    <div className={cn('flex items-center space-x-3 w-full', `rounded-${rounded}`, className)}>
+    <div className={cn('flex items-center space-x-3 w-full', roundedClasses[rounded], className)}>
       <Image
         src={url}
         alt={name || ''}
         width={avatarSize}
         height={avatarSize}
-        className={cn(`rounded-${rounded}`)}
+        className={cn(roundedClasses[rounded])}
         style={{
           background: background || '#CD9D43'
         }}

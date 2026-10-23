@@ -1,11 +1,29 @@
 import Link from 'next/link'
-import { HTMLProps } from 'react'
+import type { HTMLProps, JSX } from 'react'
 
 import { cn } from '@/lib/utils'
 
 export type Variants = 'primary' | 'secondary' | 'dark' | 'outline' | 'none' | 'success' | 'danger' | 'dark-gray'
 export type Sizes = 'xs' | 'sm' | 'md' | 'lg'
 export type ExtraSizes = 'xl' | '2xl' | '3xl' | 'full'
+
+const roundedClasses: Record<Sizes | ExtraSizes, string> = {
+  xs: 'rounded-xs',
+  sm: 'rounded-sm',
+  md: 'rounded-md',
+  lg: 'rounded-lg',
+  xl: 'rounded-xl',
+  '2xl': 'rounded-2xl',
+  '3xl': 'rounded-3xl',
+  full: 'rounded-full'
+}
+
+const shadowClasses: Record<Sizes, string> = {
+  xs: 'shadow-xs',
+  sm: 'shadow-sm',
+  md: 'shadow-md',
+  lg: 'shadow-lg'
+}
 
 interface ButtonProps extends Omit<HTMLProps<HTMLButtonElement & HTMLAnchorElement>, 'size'> {
   text?: string | JSX.Element
@@ -76,24 +94,24 @@ export const Button: React.FC<ButtonProps> = ({
 
   switch (size) {
     case 'xs':
-      classNames.push('px-3 text-sm py-2px')
+      classNames.push('px-3 text-sm py-[2px]')
       break
     case 'sm':
       classNames.push('px-4 py-2 text-sm')
       break
     case 'md':
-      classNames.push('px-5 py-0.6rem')
+      classNames.push('px-5 py-[0.6rem]')
       break
     case 'lg':
       classNames.push('py-3 px-9')
       break
     default:
-      classNames.push('px-5 py-0.6rem')
+      classNames.push('px-5 py-[0.6rem]')
       break
   }
 
   if (shadow) {
-    classNames.push(`shadow-${shadow}`)
+    classNames.push(shadowClasses[shadow])
   }
 
   // if button had a link
@@ -105,8 +123,8 @@ export const Button: React.FC<ButtonProps> = ({
         className={cn(
           ...classNames,
           className,
-          'text-center disabled:border-#fafafa disabled:bg-opacity-50 disabled:text-hint flex items-center justify-center',
-          `rounded-${rounded}`
+          'text-center disabled:border-[#fafafa] disabled:opacity-50 disabled:text-gray-400 flex items-center justify-center',
+          roundedClasses[rounded]
         )}
         {...(rest as any)}>
         {loading ? <Loading /> : text || children}
@@ -120,8 +138,8 @@ export const Button: React.FC<ButtonProps> = ({
       className={cn(
         ...classNames,
         className,
-        'disabled:border-#fafafa disabled:bg-opacity-50 disabled:text-hint flex items-center justify-center',
-        `rounded-${rounded}`
+        'disabled:border-[#fafafa] disabled:opacity-50 disabled:text-gray-400 flex items-center justify-center',
+        roundedClasses[rounded]
       )}
       {...rest}>
       {loading ? <Loading /> : text || children}

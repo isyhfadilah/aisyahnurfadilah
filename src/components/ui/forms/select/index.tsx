@@ -61,24 +61,24 @@ export const Select: React.FC<SelectProps> = ({
         isMulti={isMulti}
         name="colors"
         options={items}
-        className={cn('', `placeholder:${theme.hintColor} placeholder:text-opacity-80`, theme.borderColor, className)}
+        className={cn('', theme.placeholderColor, theme.borderColor, className)}
         classNamePrefix="select"
         placeholder={placeholder}
         classNames={{
           container: () => cn('p-0'),
           control: () =>
             cn(
-              '!rounded-xl !bg-dark !focus:outline-none !border !w-full !disabled:border-opacity-10 !disabled:text-opacity-10',
+              '!rounded-xl !bg-dark !focus:outline-none !border !w-full disabled:!border-current/10 disabled:!opacity-10',
               theme.borderColor,
               className,
               sizes
             ),
           dropdownIndicator: () => cn('!text-white'),
           clearIndicator: () => cn('!text-white'),
-          placeholder: () => cn(`!text-white !text-opacity-50`),
+          placeholder: () => cn('!text-white/50'),
           menu: () => cn('!bg-dark !rounded-xl'),
-          option: () => cn('!bg-dark hover:!bg-dark-gray !rounded-xl !bg-opacity-50'),
-          multiValue: () => cn('!bg-dark-gray !rounded-xl !bg-opacity-50'),
+          option: () => cn('!bg-dark/50 hover:!bg-dark-gray !rounded-xl'),
+          multiValue: () => cn('!bg-dark-gray/50 !rounded-xl'),
           multiValueLabel: () => cn('!text-white border-l border-b border-t border-gray-500 !rounded-r-none'),
           singleValue: () => cn('!text-white'),
           multiValueRemove: () =>

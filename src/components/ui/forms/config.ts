@@ -4,13 +4,15 @@ export const theme = (variant: Variant = 'default') => {
   let className = {
     labelColor: 'text-white',
     hintColor: 'text-gray-400',
-    borderColor: 'border-dark border-opacity-0'
+    placeholderColor: 'placeholder:text-gray-400/80',
+    borderColor: 'border-dark/0'
   }
   switch (variant) {
     case 'error':
       className = {
         labelColor: 'text-danger',
         hintColor: 'text-danger',
+        placeholderColor: 'placeholder:text-danger/80',
         borderColor: 'border-danger'
       }
       break
@@ -18,6 +20,7 @@ export const theme = (variant: Variant = 'default') => {
       className = {
         labelColor: 'text-success',
         hintColor: 'text-success',
+        placeholderColor: 'placeholder:text-success/80',
         borderColor: 'border-success'
       }
       break
@@ -25,6 +28,7 @@ export const theme = (variant: Variant = 'default') => {
       className = {
         labelColor: 'text-white',
         hintColor: 'text-gray-400',
+        placeholderColor: 'placeholder:text-gray-400/80',
         borderColor: 'border-secondary'
       }
       break

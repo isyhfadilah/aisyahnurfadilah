@@ -63,7 +63,7 @@ export const Sidebar = () => {
                 <Link
                   href={item.link}
                   onClick={() => handleClicked(index)}
-                  className={`transform transition duration-200 ease-in-out ${isClicked === index ? 'rotate-30' : ''}`}>
+                  className={`transform transition duration-200 ease-in-out ${isClicked === index ? 'rotate-[30deg]' : ''}`}>
                   {item.icon}
                 </Link>
                 <span className="text-xs text-primary/90 text-center">{item.label}</span>

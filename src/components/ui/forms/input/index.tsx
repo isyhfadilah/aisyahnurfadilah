@@ -53,8 +53,8 @@ export const Input: React.FC<InputProps> = ({
         <input
           type={type}
           className={cn(
-            'rounded-xl bg-white focus:outline-none border border-red w-full disabled:border-opacity-10 disabled:text-opacity-10',
-            `placeholder:${theme.hintColor} placeholder:text-opacity-80`,
+            'rounded-xl bg-white focus:outline-none border border-red-500 w-full disabled:border-current/10 disabled:opacity-10',
+            theme.placeholderColor,
             theme.borderColor,
             sizes,
             className
@@ -65,7 +65,7 @@ export const Input: React.FC<InputProps> = ({
         {inputType === 'password' && (
           <button
             type="button"
-            className="absolute text-[#8C8CA1] transform -translate-y-1/2 top-1/2 right-5 text-base disabled:border-opacity-10 disabled:text-opacity-10"
+            className="absolute text-[#8C8CA1] transform -translate-y-1/2 top-1/2 right-5 text-base disabled:border-current/10 disabled:opacity-10"
             onClick={() => (type === 'password' ? setType('text') : setType('password'))}>
             {type === 'password' ? <MdVisibility className="text-lg" /> : <MdVisibilityOff className="text-lg" />}
           </button>

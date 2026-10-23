@@ -6,7 +6,7 @@ import Image from 'next/image'
 export const AboutDesk = () => {
   return (
     <section className="py-16" id="about">
-      <div className="bg-primary/15 md:w-sm md:h-sm rounded-full absolute z-1 top-0 right-0 blur-3xl"></div>
+      <div className="bg-primary/15 md:w-96 md:h-[24rem] rounded-full absolute z-1 top-0 right-0 blur-3xl"></div>
 
       {/* make a tittle */}
       <div className="flex justify-center mb-2">

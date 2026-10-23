@@ -23,8 +23,8 @@ export const Hero = () => {
 
   return (
     <section className="bg-white">
-      <div className="bg-primary/15 w-sm h-sm md:w-xl md:h-md rounded-full absolute z-1 -top-10 -left-30 blur-3xl"></div>
-      <div className="bg-primary/15 md:w-sm md:h-sm rounded-full absolute z-1 bottom-0 right-0 blur-3xl"></div>
+      <div className="bg-primary/15 w-96 h-96 md:w-[36rem] md:h-[28rem] rounded-full absolute z-[1] -top-10 -left-30 blur-3xl"></div>
+      <div className="bg-primary/15 md:w-96 md:h-96 rounded-full absolute z-[1] bottom-0 right-0 blur-3xl"></div>
 
       <Container>
         <section className="flex flex-col justify-center items-center h-screen space-y-6">

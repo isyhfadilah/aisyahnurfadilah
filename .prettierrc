@@ -1,5 +1,6 @@
 {
   "semi": false,
+  "endOfLine": "auto",
   "[typescript]": {
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false

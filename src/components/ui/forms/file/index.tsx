@@ -25,13 +25,15 @@ export const InputFile: React.FC<InputFileProps> = ({
     let className = {
       labelColor: 'text-white',
       hintColor: 'text-gray-400',
-      borderColor: 'border-#3A3A3A'
+      placeholderColor: 'placeholder:text-gray-400/80',
+      borderColor: 'border-[#3A3A3A]'
     }
     switch (variant) {
       case 'error':
         className = {
           labelColor: 'text-danger',
           hintColor: 'text-danger',
+          placeholderColor: 'placeholder:text-danger/80',
           borderColor: 'border-danger'
         }
         break
@@ -39,6 +41,7 @@ export const InputFile: React.FC<InputFileProps> = ({
         className = {
           labelColor: 'text-success',
           hintColor: 'text-success',
+          placeholderColor: 'placeholder:text-success/80',
           borderColor: 'border-success'
         }
         break
@@ -46,6 +49,7 @@ export const InputFile: React.FC<InputFileProps> = ({
         className = {
           labelColor: 'text-white',
           hintColor: 'text-gray-400',
+          placeholderColor: 'placeholder:text-gray-400/80',
           borderColor: 'border-secondary'
         }
         break
@@ -66,8 +70,8 @@ export const InputFile: React.FC<InputFileProps> = ({
         <input
           type="file"
           className={clsx(
-            'px-4 py-3 rounded-xl bg-transparent focus:outline-none border w-full font-light text-sm disabled:border-opacity-10 disabled:text-opacity-10',
-            `placeholder:${theme.hintColor} placeholder:text-opacity-80`,
+            'px-4 py-3 rounded-xl bg-transparent focus:outline-none border w-full font-light text-sm disabled:border-current/10 disabled:opacity-10',
+            theme.placeholderColor,
             theme.borderColor,
             className
           )}

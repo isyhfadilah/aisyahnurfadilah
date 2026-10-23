@@ -1,4 +1,3 @@
-import '@unocss/reset/tailwind.css'
 import '@/shared/styles/app.css'
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
