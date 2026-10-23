@@ -48,6 +48,8 @@ export const HomePortfolio = () => {
             title={item.title}
             detail={item.detail}
             link={item.link}
+            type={item.type}
+            year={item.year}
             priority={index === 0}
           />
         ))}

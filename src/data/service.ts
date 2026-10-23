@@ -1,13 +1,14 @@
 export const services = [
   {
     image: '/icons/web.jpg',
-    title: 'Front-End Web Development',
+    title: 'UI/UX & Digital Product Design',
     detail:
-      'Build an interactive and responsive website for various device sizes using various frameworks such as Next.js, React.js, Tailwind CSS, Uno CSS, or natively without using frameworks.'
+      'Shape user needs into clear flows, thoughtful interfaces, and testable prototypes for mobile and web experiences.'
   },
   {
     image: '/icons/envio.jpg',
-    title: 'UI Web Designer',
-    detail: 'Build a website design with a good layout for various device sizes using the Figma tool.'
+    title: 'Front-End Development',
+    detail:
+      'Bring interface designs to life with responsive, accessible components—grounded in hands-on experience with React and modern web tools.'
   }
 ]

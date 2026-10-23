@@ -7,7 +7,7 @@ import Typed from 'typed.js'
 export const Hero = () => {
   useEffect(() => {
     const typed = new Typed('#typing', {
-      strings: ['Front-End Web Developer', 'UI Web Designer'],
+      strings: ['UI/UX Designer', 'Front-End Developer'],
       typeSpeed: 60,
       backSpeed: 60,
       loop: true
@@ -36,7 +36,7 @@ export const Hero = () => {
           <div className="relative z-10 mx-auto max-w-6xl">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/70 px-5 py-2 text-xs font-bold tracking-wide sm:text-sm">
               <span className="size-2 rounded-full bg-secondary" />
-              Find Me <span className="text-dark/40">/</span> Aisyah Nur Fadilah
+              Informatics Student <span className="text-dark/40">/</span> SATU University
             </p>
             <h1 className="display-type text-[clamp(3.25rem,10.7vw,10rem)] leading-[0.84] text-white [text-shadow:0_4px_0_rgb(23_24_21_/_5%)]">
               Hello I&apos;m
@@ -71,7 +71,7 @@ export const Hero = () => {
         <div className="ticker-track flex w-max gap-8 whitespace-nowrap text-xl font-bold tracking-tight sm:text-2xl">
           {[0, 1, 2, 3].map((item) => (
             <span key={item} className="flex items-center gap-8">
-              Front-End Web Developer <span className="text-primary">✳</span> UI Web Designer{' '}
+              UI/UX Designer <span className="text-primary">✳</span> Front-End Developer{' '}
               <span className="text-secondary">✳</span>
             </span>
           ))}

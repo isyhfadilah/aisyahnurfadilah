@@ -16,8 +16,8 @@ export const ContactForm = () => {
               <GradientText text="CONTACT" sizes="text-4xl sm:text-6xl" />
             </div>
             <div className="mt-8 space-y-3 text-lg font-bold sm:text-xl">
-              <p>Front-End Web Developer</p>
-              <p className="text-white">UI Web Designer</p>
+              <p>UI/UX Designer</p>
+              <p className="text-dark-gray">Front-End Developer</p>
             </div>
             <div
               aria-hidden="true"

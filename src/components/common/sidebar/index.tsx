@@ -14,6 +14,7 @@ const menuItems = [
 export const Sidebar = () => {
   const pathname = usePathname()
   const [activeLink, setActiveLink] = useState('/')
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const updateActiveLink = () => setActiveLink(window.location.hash ? `/${window.location.hash}` : '/')
@@ -22,8 +23,21 @@ export const Sidebar = () => {
     return () => window.removeEventListener('hashchange', updateActiveLink)
   }, [pathname])
 
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 80)
+    updateScrollState()
+    window.addEventListener('scroll', updateScrollState, { passive: true })
+    return () => window.removeEventListener('scroll', updateScrollState)
+  }, [])
+
+  const isOnHomeHero = pathname === '/' && !isScrolled
+
   return (
-    <header id="top" className="sticky top-0 z-30 bg-[#2189cf]/95 text-dark backdrop-blur-md">
+    <header
+      id="top"
+      className={`sticky top-0 z-30 text-dark backdrop-blur-md transition-colors duration-300 ${
+        isOnHomeHero ? 'bg-[#2189cf]/95' : 'bg-paper/95 shadow-sm'
+      }`}>
       <div className="mx-auto flex max-w-[1500px] flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
         <Link href="/" className="flex w-fit items-center gap-3" aria-label="Aisyah Nur Fadilah — home">
           <span className="grid size-11 place-items-center rounded-full border-2 border-dark text-sm font-black tracking-[-0.08em]">

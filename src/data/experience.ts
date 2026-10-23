@@ -1,26 +1,61 @@
 export const experiences = [
   {
-    position: 'Front-End Web Developer',
-    organizer: 'Internship PT. Sawala Inovasi Indonesia',
+    position: 'Teaching Assistant, Algorithm & Programming Lab',
+    organizer: 'SATU University',
+    time: 'Sep 2026 - Present',
+    detail:
+      'Support students in programming fundamentals, algorithms, and problem-solving. Develop practical case studies and exercises, and guide students through lab sessions and coding challenges.',
+    image: undefined
+  },
+  {
+    position: 'Event Committee & Master of Ceremonies',
+    organizer: 'Satu Creanova 2026',
+    time: 'Oct 2026',
+    detail:
+      'Helped deliver the final rounds of the UI/UX Design and Web Programming competitions. Co-hosted the event, guided transitions, and kept the program moving for participants, judges, and the audience.',
+    image: undefined
+  },
+  {
+    position: 'Treasurer',
+    organizer: 'OneTalk Public Speaking Club',
+    time: 'Nov 2024 - Present',
+    detail:
+      'Serve as Treasurer for the university public-speaking club, supporting its financial administration and day-to-day operations.',
+    image: undefined
+  },
+  {
+    position: 'Front-End Web Developer Intern',
+    organizer: 'Sawala Technology',
     time: 'Jun 2023 - Oct 2023',
     detail:
-      'Develop UI/UX design into a real and interactive website using TypeScript programming language and several frameworks and libraries such as Next.js, React.js, Tailwind CSS, and Uno CSS. Performed testing to ensure all features were working properly. Manage code using Git and GitHub to monitor code changes and collaborate with the team.',
+      'Built front-end fundamentals through guided training and practical exercises, then applied them while contributing to real projects. The experience shaped a practical understanding of interface implementation and developer-designer collaboration.',
     image: '/images/sawala.jpeg'
+  }
+]
+
+export const awards = [
+  {
+    title: '3rd Place, Web Design Competition',
+    organization: 'Technoversary 2025 · Universitas Kuningan',
+    time: 'Dec 2025',
+    detail: 'Earned third place with a team project responding to the “EcoDigital for Environment” theme.'
   },
   {
-    position: '1st place in Website Design',
-    organizer: 'Digital Festival (DIFEST) Nasional 2023',
-    time: 'Mar 2023 - Mar 2023',
-    detail:
-      'Participated and won 1st place in the national website design competition at the National Digital Festival 2023, organized by the Informatics Management Student Association of Subang State Polytechnic, with the theme "Increase Your Creativity and Create a Brilliant Generation with Technology."',
-    image: '/images/polsub.png'
+    title: '3rd Place, UI/UX Design',
+    organization: 'National Informatics Competition · Universitas Nusa Cendana',
+    time: 'Oct 2024',
+    detail: 'Earned third place in the UI/UX Design category as part of Team Cyber_Warriors_SU.'
   },
   {
-    position: '2nd place in Website Design',
-    organizer: 'ITDRI Conference & Festival 2022',
-    time: 'Nov 2022 - Dec 2022',
-    detail:
-      'Participated and won 2nd in the national competition between SMK Telkom Center of Excellence, organized by Telkom-ITDRI (Indonesia Telecommunication & Digital Research Institute) with the theme "Innovation for Indonesia" in the website design sub-competition.',
-    image: '/images/itdri.png'
+    title: '1st Place, Website Design',
+    organization: 'Digital Festival (DIFEST) Nasional 2023 · Politeknik Negeri Subang',
+    time: 'Mar 2023',
+    detail: 'Won first place with an interactive education website concept inspired by the metaverse.'
+  },
+  {
+    title: '2nd Place, Website Design',
+    organization: 'ITDRI Conference & Festival 2022 · Telkom-ITDRI',
+    time: 'Nov–Dec 2022',
+    detail: 'Placed second in a national vocational-school competition themed “Innovation for Indonesia.”'
   }
 ]

@@ -25,12 +25,17 @@ export const AboutDesk = () => {
             <h2 className="display-type text-4xl leading-[0.95] text-dark sm:text-6xl">Aisyah Nur Fadilah</h2>
             <div className="mt-5 flex items-center gap-2 text-sm font-bold text-dark-gray">
               <FaMapPin className="text-primary" />
-              <span>Sumedang, Indonesia</span>
+              <span>West Java, Indonesia</span>
             </div>
             <p className="mt-7 max-w-2xl text-base leading-8 text-dark-gray sm:text-lg">
-              As a Fresh Graduate in Software Engineering major, I would like to build a long-term career in Web Development
-              and User Interface Design to develop new skills while strengthening the skills I already have. I have gained
-              various experiences in this field since 2022, as outlined in my project portfolio.
+              I&apos;m an Informatics student at SATU University, exploring how thoughtful UI/UX can make digital products
+              clearer, simpler, and more meaningful. My design work spans mobile app concepts, landing-page redesigns, and
+              usability-focused case studies—turning user needs into purposeful flows and interfaces.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-dark-gray sm:text-lg">
+              My front-end background, including an internship at Sawala Technology, helps me design with implementation in
+              mind. I&apos;m strengthening my process from user context and wireframes through prototyping, while exploring
+              accessibility, AI, and digital product design.
             </p>
             <Link
               href="/#experience"

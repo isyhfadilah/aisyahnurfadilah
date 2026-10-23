@@ -1,11 +1,39 @@
-// kualitas image masih buruk
 export const projects = [
+  {
+    title: 'Meal Up',
+    link: undefined,
+    image: undefined,
+    type: 'design',
+    year: '2025',
+    detail:
+      'A food-waste reduction platform concept connecting culinary businesses with surplus food and communities in need.'
+  },
+  {
+    title: 'Plantify',
+    link: undefined,
+    image: undefined,
+    type: 'design',
+    year: '2025',
+    detail:
+      'A gamified plant-care app concept with daily challenges, community features, rewards, and an AI-powered plant scanner.'
+  },
+  {
+    title: 'Literacy Modern',
+    link: undefined,
+    image: undefined,
+    type: 'design',
+    year: '2025',
+    detail:
+      'A digital library app concept designed to help students build reading habits with curated books and progress goals.'
+  },
   {
     title: 'Smart Waste',
     link: 'https://www.figma.com/proto/chOcG5bmYyrHTwCjS9VHjt/Smart-Waste?node-id=147-1130&p=f&t=AxhP0PaVbpwNV3ao-1&scaling=scale-down&content-scaling=fixed&page-id=139%3A2&starting-point-node-id=167%3A145',
     image: '/images/projects/smartwaste.png',
     type: 'design',
-    detail: ''
+    year: '2024',
+    detail:
+      'A household waste-management app shaped by user research with 13 Bandung respondents, from user flows and wireframes to a high-fidelity prototype.'
   },
   {
     title: 'Official Website SMKN 2 Sumedang',
@@ -64,7 +92,7 @@ export const projects = [
     detail: ''
   },
   {
-    title: 'GroJunio',
+    title: 'Grow Junior (GROJUNIO)',
     link: 'https://www.figma.com/design/H1PAY2zMseOFKEfkf59uEb/ITDRI?node-id=0-1&t=l20ao9mXUgadSWaP-0',
     image: '/images/projects/grojunio.png',
     type: 'design',

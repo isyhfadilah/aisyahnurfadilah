@@ -10,13 +10,17 @@ export const Timeline = () => {
           className="group rounded-[1.5rem] border border-white/15 bg-white/[0.06] p-5 transition-transform hover:-translate-y-1 sm:p-6">
           <div className="flex items-center gap-4">
             <div className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-secondary p-2">
-              <Image
-                src={item.image}
-                alt={item.organizer}
-                height={50}
-                width={50}
-                className="h-auto max-h-full w-auto object-contain"
-              />
+              {item.image ? (
+                <Image
+                  src={item.image}
+                  alt={item.organizer}
+                  height={50}
+                  width={50}
+                  className="h-auto max-h-full w-auto object-contain"
+                />
+              ) : (
+                <span className="font-display text-sm font-bold text-dark">{item.organizer.slice(0, 2).toUpperCase()}</span>
+              )}
             </div>
             <span className="h-px flex-1 bg-white/15" />
             <span className="text-sm font-bold text-secondary">0{index + 1}</span>

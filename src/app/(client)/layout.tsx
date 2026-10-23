@@ -10,8 +10,9 @@ import { ScrollEffects } from '@/components/common/scroll-effects'
 import '@/shared/styles/css/scrollbar.css'
 
 export const metadata: Metadata = {
-  title: 'Aisyah Nur Fadilah | Front-End Web Developer | UI Web Designer',
-  description: 'Aisyah Nur Fadilah is a front-end developer and UI designer creating thoughtful digital experiences.'
+  title: 'Aisyah Nur Fadilah | UI/UX Designer & Front-End Developer',
+  description:
+    'Aisyah Nur Fadilah is an Informatics student at SATU University exploring UI/UX design, front-end development, and thoughtful digital products.'
 }
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {

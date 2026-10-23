@@ -1,22 +1,26 @@
 export const skills = {
-  title: 'programming language skills',
+  title: 'UI/UX Design',
   skills: [
-    { skill: 'HTML 5', level: 'experienced' },
-    { skill: 'CSS', level: 'experienced' },
-    { skill: 'TypeScript', level: 'experienced' },
-    { skill: 'PHP', level: 'experienced' },
-    { skill: 'JavaScript', level: 'basic' }
+    { skill: 'User Interface Design' },
+    { skill: 'User Experience (UX)' },
+    { skill: 'User Flows' },
+    { skill: 'Wireframing' },
+    { skill: 'Prototyping' },
+    { skill: 'Usability-Focused Design' },
+    { skill: 'Figma' }
   ]
 }
 
 export const language = {
-  title: 'frameworks and libraries skills',
+  title: 'Front-End Development',
   skills: [
-    { skill: 'Next.js 13', level: 'experienced' },
-    { skill: 'React', level: 'experienced' },
-    { skill: 'Laravel 10', level: 'experienced' },
-    { skill: 'Code Igniter', level: 'basic' },
-    { skill: 'Tailwind CSS', level: 'experiences' },
-    { skill: 'Uno CSS', level: 'experiences' }
+    { skill: 'HTML5' },
+    { skill: 'CSS' },
+    { skill: 'JavaScript' },
+    { skill: 'TypeScript' },
+    { skill: 'React.js' },
+    { skill: 'Node.js' },
+    { skill: 'Next.js' },
+    { skill: 'Tailwind CSS' }
   ]
 }
