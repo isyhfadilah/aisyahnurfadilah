@@ -1,4 +1,5 @@
 import '@/shared/styles/app.css'
+import '@/shared/styles/visual-refresh.css'
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,0 +1,101 @@
+.neo-button {
+  box-shadow: 3px 3px 0 var(--color-dark);
+}
+
+.neo-button:hover {
+  transform: translate(1px, 1px);
+}
+
+.neo-panel,
+.neo-card {
+  box-shadow: 4px 4px 0 var(--color-dark);
+}
+
+.portfolio-hero {
+  background: var(--color-paper);
+}
+
+.hero-mark {
+  position: absolute;
+  top: 50%;
+  right: clamp(2rem, 10vw, 10rem);
+  display: flex;
+  width: clamp(12rem, 27vw, 25rem);
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-dark);
+  background: var(--color-secondary);
+  box-shadow: 8px 8px 0 var(--color-dark);
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 18rem);
+  font-weight: 700;
+  letter-spacing: -0.12em;
+  line-height: 1;
+  transform: translateY(-50%) rotate(4deg);
+}
+
+.hero-mark span {
+  color: var(--color-primary);
+}
+
+.ticker-track {
+  animation-duration: 34s;
+}
+
+.section-surface {
+  background-image: none;
+}
+
+#contact form {
+  border: 2px solid var(--color-dark);
+  border-radius: 0.75rem;
+  box-shadow: 4px 4px 0 var(--color-dark);
+}
+
+.neo-card {
+  padding: 0;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.neo-card > img {
+  border: 0;
+  border-bottom: 1px solid rgb(38 35 33 / 15%);
+  padding: 0;
+}
+
+.neo-card > div:last-child {
+  border: 0;
+  background: white;
+  padding: 1rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .neo-card:hover,
+  .neo-card:focus-visible {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-dark);
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-mark {
+    right: 2rem;
+    opacity: 0.12;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero-mark {
+    top: auto;
+    right: -3rem;
+    bottom: 2rem;
+    width: 12rem;
+    font-size: 8rem;
+    opacity: 0.12;
+    transform: rotate(4deg);
+  }
+}

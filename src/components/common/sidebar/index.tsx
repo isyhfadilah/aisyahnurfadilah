@@ -18,7 +18,6 @@ const menuItems = [
 export const Sidebar = () => {
   const pathname = usePathname()
   const [activeLink, setActiveLink] = useState('/')
-  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const updateActiveLink = () => setActiveLink(window.location.hash ? `/${window.location.hash}` : '/')
@@ -27,56 +26,41 @@ export const Sidebar = () => {
     return () => window.removeEventListener('hashchange', updateActiveLink)
   }, [pathname])
 
-  useEffect(() => {
-    const updateScrollState = () => setIsScrolled(window.scrollY > 80)
-    updateScrollState()
-    window.addEventListener('scroll', updateScrollState, { passive: true })
-    return () => window.removeEventListener('scroll', updateScrollState)
-  }, [])
-
-  const isOnHomeHero = pathname === '/' && !isScrolled
-
   return (
-    <header
-      className={`sticky top-0 z-30 text-dark backdrop-blur-md transition-colors duration-300 ${
-        isOnHomeHero ? 'bg-sky/95' : 'bg-paper/95'
-      }`}>
-      <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-3 border-b-2 border-dark px-4 py-3 sm:px-8 sm:py-4 lg:px-12">
+    <header className="sticky top-0 z-30 border-b border-dark/15 bg-paper/95 text-dark backdrop-blur-md">
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-3 px-5 py-4 sm:px-8 lg:px-16">
         <Link href="/" className="flex w-fit shrink-0 items-center gap-3" aria-label="Aisyah Nur Fadilah — home">
-          <span className="grid size-9 place-items-center border-2 border-dark bg-secondary text-xs font-black tracking-[-0.08em] shadow-[3px_3px_0_#262321] sm:size-11 sm:text-sm">
-            ANF
+          <span className="font-display text-2xl font-black tracking-[-0.1em] text-dark sm:text-3xl">
+            a<span className="text-primary">.</span>
           </span>
-          <span className="hidden font-display text-sm font-bold leading-none tracking-[-0.04em] sm:block sm:text-base">
-            AISYAH NUR
+          <span className="hidden text-xs font-semibold leading-tight text-dark-gray sm:block">
+            Aisyah Nur Fadilah
             <br />
-            FADILAH<span className="text-secondary">.</span>
+            Designer &amp; Developer
           </span>
         </Link>
 
         <nav aria-label="Main navigation" className="flex min-w-0 items-center justify-end">
-          <ul className="flex flex-nowrap items-center gap-0.5 border-2 border-dark bg-paper p-1 shadow-[3px_3px_0_#262321] sm:gap-1.5">
+          <ul className="flex flex-nowrap items-center gap-1 sm:gap-4">
             {menuItems.map((item) => {
               const isActive = !item.external && pathname === '/' && activeLink === item.link
+              const linkClassName = `inline-flex whitespace-nowrap px-2 py-2 text-[11px] font-semibold transition-colors sm:px-3 sm:text-sm ${
+                isActive ? 'text-primary' : 'text-dark-gray hover:text-dark'
+              }`
 
               return (
                 <li key={item.link}>
                   {item.external ? (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex border-2 border-transparent px-2 py-1.5 text-[11px] font-bold text-dark/80 transition-colors hover:border-dark hover:bg-primary hover:text-dark sm:px-4 sm:py-2 sm:text-sm">
+                    <a href={item.link} target="_blank" rel="noreferrer" className={linkClassName}>
                       {item.label}
                     </a>
                   ) : (
                     <Link
                       href={item.link}
                       aria-current={isActive ? 'page' : undefined}
-                      className={`inline-flex border-2 px-2 py-1.5 text-[11px] font-bold transition-colors sm:px-4 sm:py-2 sm:text-sm ${
-                        isActive
-                          ? 'border-dark bg-secondary text-dark'
-                          : 'border-transparent text-dark/80 hover:border-dark hover:bg-primary hover:text-dark'
-                      }`}>
+                      className={
+                        item.label === 'Contact' ? 'neo-button px-3 py-2 text-[11px] sm:px-4 sm:text-sm' : linkClassName
+                      }>
                       {item.label}
                     </Link>
                   )}
