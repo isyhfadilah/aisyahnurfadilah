@@ -1,9 +1,24 @@
+'use client'
+
 import Container from '../../layouts/Container'
 import { GradientText } from '@/components/ui/title/gradient'
 import { Input, TextArea } from '@/components/ui/forms'
 import Button from '@/components/ui/button'
 
 export const ContactForm = () => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const name = String(formData.get('name') ?? '').trim()
+    const email = String(formData.get('email') ?? '').trim()
+    const message = String(formData.get('message') ?? '').trim()
+    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`)
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
+
+    window.location.href = `mailto:aisyahnfadilah73@gmail.com?subject=${subject}&body=${body}`
+  }
+
   return (
     <section
       className="motion-rise relative isolate overflow-hidden bg-sage py-16 text-dark sm:py-24"
@@ -27,29 +42,46 @@ export const ContactForm = () => {
             </div>
           </div>
           <form
-            action=""
+            onSubmit={handleSubmit}
             className="space-y-5 rounded-[1.5rem] border border-dark/10 bg-paper p-5 shadow-xl shadow-dark/10 sm:p-8">
             <Input
+              id="contact-name"
+              name="name"
               label="Name"
               type="text"
+              autoComplete="name"
+              required
               variant="dark"
               className="border-dark/20 bg-white text-dark focus:border-primary focus:ring-2 focus:ring-primary/20"
               containerClass="text-dark"
             />
             <Input
+              id="contact-email"
+              name="email"
               label="Email"
               type="email"
+              autoComplete="email"
+              required
               variant="dark"
               className="border-dark/20 bg-white text-dark focus:border-primary focus:ring-2 focus:ring-primary/20"
               containerClass="text-dark"
             />
             <TextArea
+              id="contact-message"
+              name="message"
               label="Message"
+              required
               variant="dark"
               className="min-h-36 border-dark/20 bg-white text-dark focus:border-primary focus:ring-2 focus:ring-primary/20"
               containerClass="text-dark"
             />
-            <Button text="Submit" className="w-full transition-transform hover:-translate-y-0.5" rounded="full" />
+            <Button
+              text="Open email app"
+              type="submit"
+              className="w-full transition-transform hover:-translate-y-0.5"
+              rounded="full"
+            />
+            <p className="text-center text-xs text-dark-gray">Your email app will open with the message ready to send.</p>
           </form>
         </div>
       </Container>

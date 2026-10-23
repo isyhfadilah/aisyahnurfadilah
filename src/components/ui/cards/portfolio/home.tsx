@@ -28,23 +28,26 @@ export const HomePortfolio = ({ featuredOnly = false }: HomePortfolioProps) => {
         <div className="mb-8 flex flex-wrap gap-2">
           <Button
             onClick={() => handleTypeChange('all')}
-            text="all"
+            text="All projects"
             variant="outline"
             size="sm"
+            aria-pressed={selectType === 'all'}
             className={`${selectType == 'all' ? 'bg-dark text-white' : 'bg-white/70 text-dark'}`}
           />
           <Button
             onClick={() => handleTypeChange('website')}
-            text="website"
+            text="Websites"
             variant="outline"
             size="sm"
+            aria-pressed={selectType === 'website'}
             className={`${selectType == 'website' ? 'bg-dark text-white' : 'bg-white/70 text-dark'}`}
           />
           <Button
             onClick={() => handleTypeChange('design')}
-            text="design"
+            text="Design"
             variant="outline"
             size="sm"
+            aria-pressed={selectType === 'design'}
             className={`${selectType == 'design' ? 'bg-dark text-white' : 'bg-white/70 text-dark'}`}
           />
         </div>
