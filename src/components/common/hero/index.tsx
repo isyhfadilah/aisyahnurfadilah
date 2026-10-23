@@ -21,10 +21,6 @@ export const Hero = () => {
         <div aria-hidden="true" className="hero-cloud hero-cloud-right bottom-[17%] -right-24 scale-75 sm:right-[1%]" />
         <div className="relative mx-auto flex min-h-[min(740px,calc(100svh-80px))] max-w-[1500px] flex-col items-center justify-center px-5 pb-20 pt-12 text-center sm:px-8 lg:px-12">
           <div className="relative z-10 mx-auto max-w-6xl">
-            <p className="hero-enter hero-enter-one mb-5 inline-flex items-center gap-2 border-2 border-dark bg-paper px-5 py-2 text-xs font-bold tracking-wide shadow-[4px_4px_0_#262321] sm:text-sm">
-              <span className="size-2 rounded-full border border-dark bg-primary" />
-              Informatics Student <span className="text-dark/40">/</span> SATU University
-            </p>
             <h1 className="display-type hero-enter hero-enter-two text-[clamp(3.25rem,10.7vw,10rem)] leading-[0.84] text-dark [text-shadow:3px_3px_0_#fffaf2]">
               <span className="hero-title-line">Hello I&apos;m</span>
               <span className="hero-title-line">Aisyah Nur</span>
