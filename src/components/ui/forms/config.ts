@@ -2,7 +2,7 @@ export type Variant = 'default' | 'error' | 'success' | 'dark'
 export type Size = 'sm' | 'md' | 'lg'
 export const theme = (variant: Variant = 'default') => {
   let className = {
-    labelColor: 'text-white',
+    labelColor: 'text-dark',
     hintColor: 'text-gray-400',
     placeholderColor: 'placeholder:text-gray-400/80',
     borderColor: 'border-dark/0'

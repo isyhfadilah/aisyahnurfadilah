@@ -8,13 +8,5 @@ interface TextProps {
 }
 
 export const GradientText: React.FC<TextProps> = ({ text, sizes, className }) => {
-  return (
-    <h1
-      className={cn(
-        className,
-        `${sizes} font-bold bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text`
-      )}>
-      {text}
-    </h1>
-  )
+  return <h2 className={cn(`${sizes} display-type inline-block text-dark`, className)}>{text}</h2>
 }

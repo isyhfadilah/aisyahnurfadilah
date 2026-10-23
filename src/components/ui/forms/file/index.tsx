@@ -23,7 +23,7 @@ export const InputFile: React.FC<InputFileProps> = ({
 }) => {
   const theme = useMemo(() => {
     let className = {
-      labelColor: 'text-white',
+      labelColor: 'text-dark',
       hintColor: 'text-gray-400',
       placeholderColor: 'placeholder:text-gray-400/80',
       borderColor: 'border-[#3A3A3A]'

@@ -32,7 +32,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
   return (
     <div className={cn('flex flex-col space-y-2', containerClass)}>
       {label && (
-        <label className={cn('text-sm text-left', theme.hintColor)}>
+        <label className={cn('text-sm font-semibold text-left', theme.labelColor)}>
           {label} {required && <span className="text-danger">*</span>}
         </label>
       )}

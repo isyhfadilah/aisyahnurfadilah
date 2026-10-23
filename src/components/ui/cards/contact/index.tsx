@@ -8,11 +8,11 @@ export interface ContactProps {
 
 export const CardContact = ({ title, detail, icon }: ContactProps) => {
   return (
-    <div className="flex items-center gap-3 md:gap-6 py-2 md:px-4">
-      <div className="rounded-full p-2 bg-gradient-to-b from-secondary to-primary">{icon}</div>
+    <div className="flex items-center gap-4 rounded-2xl border border-dark/10 bg-white p-4 transition-transform hover:-translate-y-1 md:p-5">
+      <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-secondary [&>svg]:!text-dark">{icon}</div>
       <div className="space-y-1">
-        <h1 className="text-lg md:text-xl font-semibold capitalize text-dark">{title}</h1>
-        <p className="text-sm md:text-base text-dark-gray">{detail}</p>
+        <h2 className="font-display text-base font-bold capitalize text-dark md:text-lg">{title}</h2>
+        <p className="break-words text-sm text-dark-gray md:text-base">{detail}</p>
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import { HomeExperience } from '@/components/ui/cards/experience/home'
 
 export const ResumeSkills = () => {
   return (
-    <section className="mb-16">
+    <section className="bg-sage py-14 sm:py-20" data-scroll-reveal id="skills">
       <Container>
         <HomeExperience />
       </Container>

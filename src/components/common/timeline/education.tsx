@@ -2,16 +2,20 @@ import Image from 'next/image'
 
 export const TimeEducation = () => {
   return (
-    // masih mepet di mobile
-    <ol className="relative border-s border-gray-200">
-      <li className="mb-10 ms-6">
-        <span className="absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -start-3 ring-8 ring-white">
-          <Image src="/images/smea.png" alt="smkn 2 sumedang" height={80} width={80} />
+    <ol className="relative max-w-3xl border-s border-dark/20">
+      <li className="relative mb-10 ms-8 rounded-2xl border border-dark/10 bg-white p-5 sm:p-7">
+        <span className="absolute -start-[3.05rem] top-5 grid size-10 place-items-center rounded-full border-4 border-paper bg-secondary">
+          <Image
+            src="/images/smea.png"
+            alt="SMKN 2 Sumedang"
+            height={28}
+            width={28}
+            className="h-7 w-7 rounded-full object-cover"
+          />
         </span>
-
-        <time className="block mb-2 text-sm font-normal leading-none text-stoke">Juli 2021 - May 2024</time>
-        <h3 className="flex items-center mb-1 text-lg font-semibold text-dark">SMKN 2 Sumedang</h3>
-        <p className="mb-4 text-base font-normal text-dark-gray">Software Engineering Major</p>
+        <time className="mb-2 block text-xs font-bold uppercase tracking-wide text-dark-gray">Juli 2021 - May 2024</time>
+        <h3 className="mb-1 font-display text-lg font-bold text-dark">SMKN 2 Sumedang</h3>
+        <p className="text-sm font-medium text-dark-gray">Software Engineering Major</p>
       </li>
     </ol>
   )

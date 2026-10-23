@@ -24,7 +24,7 @@ const contact = [
 
 export const HomeContact = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x md:divide-black/50 mt-6 space-y-4 md:space-y-0">
+    <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
       {contact.map((item, index) => (
         <CardContact key={index} title={item.title} detail={item.detail} icon={item.icon} />
       ))}

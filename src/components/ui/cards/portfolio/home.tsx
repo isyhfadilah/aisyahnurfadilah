@@ -15,35 +15,41 @@ export const HomePortfolio = () => {
   const filterProjects = selectType === 'all' ? projects : projects.filter((project) => project.type === selectType)
 
   return (
-    <section className="my-10">
-      <div className="flex gap-2 mb-10">
-        {/* perbaiki strukturnya */}
+    <section className="my-8">
+      <div className="mb-8 flex flex-wrap gap-2">
         <Button
           onClick={() => handleTypeChange('all')}
           text="all"
           variant="outline"
-          size="xs"
-          className={`${selectType == 'all' ? 'bg-primary text-white' : ''}`}
+          size="sm"
+          className={`${selectType == 'all' ? 'bg-dark text-white' : 'bg-white/70 text-dark'}`}
         />
         <Button
           onClick={() => handleTypeChange('website')}
           text="website"
           variant="outline"
-          size="xs"
-          className={`${selectType == 'website' ? 'bg-primary text-white' : ''}`}
+          size="sm"
+          className={`${selectType == 'website' ? 'bg-dark text-white' : 'bg-white/70 text-dark'}`}
         />
         <Button
           onClick={() => handleTypeChange('design')}
           text="design"
           variant="outline"
-          size="xs"
-          className={`${selectType == 'design' ? 'bg-primary text-white' : ''}`}
+          size="sm"
+          className={`${selectType == 'design' ? 'bg-dark text-white' : 'bg-white/70 text-dark'}`}
         />
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center place-content-center gap-6">
+      <div className="motion-stagger grid grid-cols-1 place-items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {filterProjects.map((item, index) => (
-          <CardPortfolio key={index} image={item.image} title={item.title} detail={item.detail} link={item.link} />
+          <CardPortfolio
+            key={index}
+            image={item.image}
+            title={item.title}
+            detail={item.detail}
+            link={item.link}
+            priority={index === 0}
+          />
         ))}
       </div>
     </section>

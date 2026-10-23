@@ -42,7 +42,7 @@ export const Input: React.FC<InputProps> = ({
   return (
     <div className={cn('flex flex-col space-y-2', containerClass, type === 'hidden' && 'hidden')}>
       {label && (
-        <label className={cn('text-sm text-left', theme.hintColor, labelClassname)}>
+        <label className={cn('text-sm font-semibold text-left', theme.labelColor, labelClassname)}>
           {label} {required && <span className="text-danger">*</span>}
         </label>
       )}

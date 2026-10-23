@@ -1,13 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Poppins', sans-serif;
-  --color-primary: #ef4444;
-  --color-secondary: #fca5a5;
-  --color-dark: #111827;
-  --color-dark-gray: #6b7280;
-  --color-stoke: #9ca3af;
-  --color-danger: #ef4444;
-  --color-success: #22c55e;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-display: 'Space Grotesk', 'DM Sans', sans-serif;
+  --color-primary: #f36f3d;
+  --color-secondary: #ccef43;
+  --color-dark: #171815;
+  --color-dark-gray: #5d6058;
+  --color-sage: #999d8b;
+  --color-sky: #68b7e8;
+  --color-paper: #f7f7f2;
+  --color-stoke: #d5d7cc;
+  --color-danger: #dc3d39;
+  --color-success: #40885d;
+}
+
+@layer base {
+  body {
+    background: var(--color-paper);
+    color: var(--color-dark);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: var(--color-secondary);
+    color: var(--color-dark);
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.motion-rise {
+  animation: rise-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.motion-rise-delay-1 {
+  animation: rise-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 100ms;
+}
+
+.motion-rise-delay-2 {
+  animation: rise-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 200ms;
+}
+
+.motion-stagger > * {
+  animation: rise-in 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.motion-stagger > :nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.motion-stagger > :nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.motion-stagger > :nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.motion-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.editorial-dots {
+  background-image: radial-gradient(rgb(149 179 74 / 24%) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+.display-type {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.075em;
+}
+
+.portfolio-hero {
+  background:
+    radial-gradient(ellipse at 50% 110%, rgb(220 244 255 / 90%) 0, transparent 42%),
+    linear-gradient(180deg, #2189cf 0%, #62b2e7 53%, #c4e8fa 100%);
+}
+
+.hero-cloud {
+  position: absolute;
+  width: 15rem;
+  height: 4.5rem;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 72%);
+  filter: blur(1px);
+}
+
+.hero-cloud::before,
+.hero-cloud::after {
+  position: absolute;
+  bottom: 1rem;
+  border-radius: 50%;
+  background: inherit;
+  content: '';
+}
+
+.hero-cloud::before {
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.hero-cloud::after {
+  right: 2rem;
+  width: 6rem;
+  height: 6rem;
+}
+
+.ticker-track {
+  animation: ticker-scroll 28s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.section-surface {
+  background-color: var(--color-paper);
+  background-image: radial-gradient(rgb(149 179 74 / 24%) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+html.has-scroll-reveal [data-scroll-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.has-scroll-reveal [data-scroll-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (max-width: 639px) {
+  html {
+    scroll-padding-top: 11rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html.has-scroll-reveal [data-scroll-reveal] {
+    opacity: 1;
+    transform: none;
+  }
 }

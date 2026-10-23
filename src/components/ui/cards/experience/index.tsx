@@ -15,9 +15,9 @@ export const CardExperience = ({ title, skills }: SkillProps) => {
   const column2 = skills.slice(3)
 
   return (
-    <div className="border-l-2 border-l-primary border-b-2 border-b-secondary rounded-lg space-y-4 py-6 px-5 md:px-10 bg-primary/5">
-      <h1 className="font-semibold capitalize text-lg text-primary">{title}</h1>
-      <div className="flex space-x-5 md:space-x-10">
+    <div className="rounded-[1.5rem] border border-dark/10 bg-paper p-5 transition-transform hover:-translate-y-1 sm:p-7">
+      <h2 className="mb-4 font-display text-xl font-bold capitalize text-dark">{title}</h2>
+      <div className="grid grid-cols-2 gap-4">
         <ul className="space-y-2">
           {column1.map((item, index) => (
             <li key={index}>
@@ -25,7 +25,7 @@ export const CardExperience = ({ title, skills }: SkillProps) => {
                 <BsFillPatchCheckFill className="text-primary" />
                 <p>{item.skill}</p>
               </div>
-              <p className="text-sm text-black/50">{item.level}</p>
+              <p className="text-sm text-dark-gray">{item.level}</p>
             </li>
           ))}
         </ul>
