@@ -53,10 +53,15 @@ export const Hero = () => {
         </div>
       </section>
       <div aria-hidden="true" className="overflow-hidden border-y-2 border-dark bg-secondary py-3 text-dark">
-        <div className="ticker-track flex w-max gap-8 whitespace-nowrap text-xl font-bold tracking-tight sm:text-2xl">
-          {[0, 1, 2, 3].map((item) => (
-            <span key={item} className="flex items-center gap-8">
-              UI/UX Designer <span className="text-primary">✳</span> Front-End Developer <span className="text-dark">✳</span>
+        <div className="ticker-track flex w-max whitespace-nowrap text-xl font-bold tracking-tight sm:text-2xl">
+          {[0, 1].map((group) => (
+            <span key={group} className="flex min-w-[100vw] shrink-0 items-center justify-around gap-8">
+              {[0, 1].map((item) => (
+                <span key={item} className="flex items-center gap-8">
+                  UI/UX Designer <span className="text-primary">✳</span> Front-End Developer{' '}
+                  <span className="text-dark">✳</span>
+                </span>
+              ))}
             </span>
           ))}
         </div>
