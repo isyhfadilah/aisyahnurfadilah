@@ -17,6 +17,11 @@
 }
 
 @layer base {
+  html,
+  body {
+    cursor: url('/images/neo-cursor.svg') 3 3, auto;
+  }
+
   body {
     background: var(--color-paper);
     color: var(--color-dark);
@@ -30,9 +35,19 @@
 
   a,
   button,
+  [role='button'] {
+    cursor: url('/images/neo-cursor.svg') 3 3, pointer;
+  }
+
   input,
   textarea {
     -webkit-tap-highlight-color: transparent;
+  }
+
+  input,
+  textarea,
+  [contenteditable='true'] {
+    cursor: text !important;
   }
 }
 
@@ -78,15 +93,8 @@
     border: 2px solid var(--color-dark);
     background: var(--color-paper);
     box-shadow: 6px 6px 0 var(--color-dark);
-    transition:
-      transform 180ms ease,
-      box-shadow 180ms ease;
   }
 
-  .neo-card:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 4px 4px 0 var(--color-dark);
-  }
 }
 
 @keyframes rise-in {
@@ -97,6 +105,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -264,6 +281,10 @@
   animation-delay: 300ms;
 }
 
+.motion-stagger > .neo-card {
+  animation-name: fade-in;
+}
+
 .motion-float {
   animation: float-slow 6s ease-in-out infinite;
 }
@@ -330,6 +351,18 @@
   background-color: var(--color-paper);
   background-image: radial-gradient(rgb(38 35 33 / 13%) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-preview {
+    filter: grayscale(1);
+    transition: filter 500ms ease;
+  }
+
+  .neo-card:hover .project-preview,
+  .neo-card:focus-visible .project-preview {
+    filter: grayscale(0);
+  }
 }
 
 html.has-scroll-reveal [data-scroll-reveal] {

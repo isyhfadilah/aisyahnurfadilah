@@ -1,5 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion, useReducedMotion } from 'framer-motion'
+
+const MotionLink = motion.create(Link)
+
+const cardHover = {
+  x: -8,
+  y: -8,
+  boxShadow: '14px 14px 0 var(--color-dark)',
+  transition: { type: 'spring' as const, stiffness: 500, damping: 18 }
+}
 
 export interface CardProps {
   image?: string
@@ -13,6 +23,8 @@ export interface CardProps {
 }
 
 export const CardPortfolio = ({ image, title, detail, link, priority = false, type, year, action }: CardProps) => {
+  const prefersReducedMotion = useReducedMotion()
+
   const content = (
     <>
       {image ? (
@@ -22,7 +34,7 @@ export const CardPortfolio = ({ image, title, detail, link, priority = false, ty
           height={1000}
           width={1000}
           loading={priority ? 'eager' : 'lazy'}
-          className="relative h-52 w-full border-2 border-dark bg-paper object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02] md:h-72"
+          className="project-preview relative h-52 w-full border-2 border-dark bg-paper object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02] md:h-72"
         />
       ) : (
         <div className="relative flex h-52 flex-col justify-between overflow-hidden border-2 border-dark bg-sky p-5 md:h-72 md:p-7">
@@ -56,10 +68,18 @@ export const CardPortfolio = ({ image, title, detail, link, priority = false, ty
   const className = 'neo-card group relative flex h-full flex-col overflow-hidden p-2'
 
   return link ? (
-    <Link href={link} target="_blank" rel="noreferrer" className={className}>
+    <MotionLink
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className={className}
+      whileHover={prefersReducedMotion ? undefined : cardHover}
+      whileFocus={prefersReducedMotion ? undefined : cardHover}>
       {content}
-    </Link>
+    </MotionLink>
   ) : (
-    <article className={className}>{content}</article>
+    <motion.article className={className} whileHover={prefersReducedMotion ? undefined : cardHover}>
+      {content}
+    </motion.article>
   )
 }
