@@ -15,13 +15,19 @@
   background: var(--color-paper);
 }
 
-.hero-mark {
+.hero-art-position {
   position: absolute;
   top: 50%;
   right: clamp(2rem, 10vw, 10rem);
-  display: flex;
   width: clamp(12rem, 27vw, 25rem);
   aspect-ratio: 1;
+  transform: translateY(-50%);
+}
+
+.hero-mark {
+  position: absolute;
+  inset: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--color-dark);
@@ -33,7 +39,25 @@
   font-weight: 700;
   letter-spacing: -0.12em;
   line-height: 1;
-  transform: translateY(-50%) rotate(4deg);
+}
+
+.hero-coin {
+  position: absolute;
+  top: 4%;
+  right: -12%;
+  display: grid;
+  width: clamp(3.5rem, 7vw, 6rem);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 2px solid var(--color-dark);
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow:
+    inset 0 0 0 4px var(--color-primary),
+    inset 0 0 0 6px var(--color-dark),
+    4px 4px 0 var(--color-dark);
+  color: var(--color-dark);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .hero-mark span {
@@ -82,20 +106,27 @@
 }
 
 @media (max-width: 1023px) {
-  .hero-mark {
+  .hero-art-position {
     right: 2rem;
     opacity: 0.12;
   }
 }
 
 @media (max-width: 639px) {
-  .hero-mark {
+  .hero-art-position {
     top: auto;
     right: -3rem;
     bottom: 2rem;
     width: 12rem;
-    font-size: 8rem;
     opacity: 0.12;
-    transform: rotate(4deg);
+    transform: none;
+  }
+
+  .hero-mark {
+    font-size: 8rem;
+  }
+
+  .hero-coin {
+    width: 3.5rem;
   }
 }

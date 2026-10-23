@@ -1,14 +1,54 @@
 'use client'
 
 import Link from 'next/link'
+import { motion, useMotionValue, useReducedMotion, useSpring } from 'framer-motion'
 
 export const Hero = () => {
+  const prefersReducedMotion = useReducedMotion()
+  const cardTargetX = useMotionValue(0)
+  const cardTargetY = useMotionValue(0)
+  const coinTargetX = useMotionValue(0)
+  const coinTargetY = useMotionValue(0)
+  const cardX = useSpring(cardTargetX, { stiffness: 110, damping: 20, mass: 0.6 })
+  const cardY = useSpring(cardTargetY, { stiffness: 110, damping: 20, mass: 0.6 })
+  const coinX = useSpring(coinTargetX, { stiffness: 150, damping: 18, mass: 0.4 })
+  const coinY = useSpring(coinTargetY, { stiffness: 150, damping: 18, mass: 0.4 })
+
+  const handlePointerMove = (event: React.PointerEvent<HTMLElement>) => {
+    if (event.pointerType === 'touch') return
+
+    const bounds = event.currentTarget.getBoundingClientRect()
+    const pointerX = (event.clientX - bounds.left) / bounds.width - 0.5
+    const pointerY = (event.clientY - bounds.top) / bounds.height - 0.5
+
+    cardTargetX.set(pointerX * 18)
+    cardTargetY.set(pointerY * 14)
+    coinTargetX.set(pointerX * 34)
+    coinTargetY.set(pointerY * 28)
+  }
+
+  const handlePointerLeave = () => {
+    cardTargetX.set(0)
+    cardTargetY.set(0)
+    coinTargetX.set(0)
+    coinTargetY.set(0)
+  }
+
   return (
     <>
-      <section id="home" className="portfolio-hero relative isolate overflow-hidden text-dark">
+      <section
+        id="home"
+        className="portfolio-hero relative isolate overflow-hidden text-dark"
+        onPointerMove={prefersReducedMotion ? undefined : handlePointerMove}
+        onPointerLeave={handlePointerLeave}>
         <div className="relative mx-auto flex min-h-[min(700px,calc(100svh-80px))] max-w-[1500px] items-center px-5 py-20 sm:px-8 lg:px-16">
-          <div aria-hidden="true" className="hero-mark">
-            A<span>.</span>
+          <div aria-hidden="true" className="hero-art-position">
+            <motion.div className="hero-mark" style={{ x: cardX, y: cardY, rotate: 4 }}>
+              A<span>.</span>
+            </motion.div>
+            <motion.div className="hero-coin" style={{ x: coinX, y: coinY, rotate: -12 }}>
+              ✳
+            </motion.div>
           </div>
           <div className="relative z-10 max-w-4xl">
             <p className="hero-enter hero-enter-one mb-5 text-xs font-bold uppercase tracking-[0.2em] text-dark-gray sm:text-sm">
