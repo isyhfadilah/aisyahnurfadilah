@@ -43,7 +43,10 @@ export const Hero = () => {
         onPointerLeave={handlePointerLeave}>
         <div className="relative mx-auto flex min-h-[min(700px,calc(100svh-80px))] max-w-[1500px] items-center px-5 py-20 sm:px-8 lg:px-16">
           <div aria-hidden="true" className="hero-art-position">
-            <motion.div className="hero-mark" style={{ x: cardX, y: cardY, rotate: 4 }}>
+            <motion.div
+              className="hero-mark"
+              layoutId={prefersReducedMotion ? undefined : 'portfolio-intro-mark'}
+              style={{ x: cardX, y: cardY, rotate: 4 }}>
               A<span>.</span>
             </motion.div>
             <motion.div className="hero-coin" style={{ x: coinX, y: coinY, rotate: -12 }}>

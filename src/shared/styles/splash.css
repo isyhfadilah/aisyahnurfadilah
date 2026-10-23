@@ -1,0 +1,80 @@
+.portfolio-intro {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  background: var(--color-paper);
+  color: var(--color-dark);
+}
+
+.portfolio-intro-inner {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+  justify-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  perspective: 900px;
+}
+
+.portfolio-intro-mark {
+  display: flex;
+  width: clamp(8rem, 23vw, 11rem);
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-dark);
+  background: var(--color-secondary);
+  box-shadow: 8px 8px 0 var(--color-dark);
+  color: var(--color-dark);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 15vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.12em;
+  line-height: 1;
+  transform-style: preserve-3d;
+  transition: box-shadow 180ms ease;
+}
+
+.portfolio-intro-mark span {
+  color: var(--color-primary);
+}
+
+.portfolio-intro-mark:hover,
+.portfolio-intro-mark:focus-visible {
+  box-shadow: 5px 5px 0 var(--color-dark);
+}
+
+.portfolio-intro-mark:focus-visible {
+  outline: 2px solid var(--color-dark);
+  outline-offset: 6px;
+}
+
+.portfolio-intro-hint {
+  color: var(--color-dark-gray);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 639px) {
+  .portfolio-intro-mark {
+    width: 8rem;
+    font-size: 5.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-intro-mark {
+    transition: none;
+  }
+}
