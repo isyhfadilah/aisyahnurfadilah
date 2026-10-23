@@ -28,6 +28,7 @@ export const projects = [
   },
   {
     title: 'Smart Waste',
+    featured: true,
     link: 'https://www.figma.com/proto/chOcG5bmYyrHTwCjS9VHjt/Smart-Waste?node-id=147-1130&p=f&t=AxhP0PaVbpwNV3ao-1&scaling=scale-down&content-scaling=fixed&page-id=139%3A2&starting-point-node-id=167%3A145',
     image: '/images/projects/smartwaste.png',
     type: 'design',
@@ -93,6 +94,7 @@ export const projects = [
   },
   {
     title: 'Grow Junior (GROJUNIO)',
+    featured: true,
     link: 'https://www.figma.com/design/H1PAY2zMseOFKEfkf59uEb/ITDRI?node-id=0-1&t=l20ao9mXUgadSWaP-0',
     image: '/images/projects/grojunio.png',
     type: 'design',
@@ -100,6 +102,7 @@ export const projects = [
   },
   {
     title: 'JanGi',
+    featured: true,
     link: 'https://www.figma.com/proto/cZ236dzljCpn4JxnMlGj3m/dinamik17?scaling=min-zoom&page-id=0%3A1&node-id=48-10211',
     image: '/images/projects/jangi.png',
     type: 'design',

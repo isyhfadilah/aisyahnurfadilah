@@ -4,14 +4,14 @@
 @theme {
   --font-sans: 'DM Sans', sans-serif;
   --font-display: 'Space Grotesk', 'DM Sans', sans-serif;
-  --color-primary: #f36f3d;
-  --color-secondary: #c9ed43;
-  --color-dark: #171815;
-  --color-dark-gray: #5d6058;
-  --color-sage: #999d8b;
-  --color-sky: #68b7e8;
-  --color-paper: #f7f7f2;
-  --color-stoke: #d5d7cc;
+  --color-primary: #f28b82;
+  --color-secondary: #f5d76e;
+  --color-dark: #262321;
+  --color-dark-gray: #625d59;
+  --color-sage: #c6e7d6;
+  --color-sky: #c9d8f5;
+  --color-paper: #fffaf2;
+  --color-stoke: #262321;
   --color-danger: #dc3d39;
   --color-success: #40885d;
 }
@@ -92,8 +92,8 @@
 }
 
 .editorial-dots {
-  background-image: radial-gradient(rgb(149 179 74 / 24%) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+  background-image: radial-gradient(rgb(38 35 33 / 18%) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
 }
 
 .display-type {
@@ -104,8 +104,8 @@
 
 .portfolio-hero {
   background:
-    radial-gradient(ellipse at 50% 110%, rgb(220 244 255 / 90%) 0, transparent 42%),
-    linear-gradient(180deg, #2189cf 0%, #62b2e7 53%, #c4e8fa 100%);
+    radial-gradient(circle at 12% 18%, rgb(255 250 242 / 68%) 0 3px, transparent 4px),
+    linear-gradient(135deg, #c9d8f5 0%, #e4d9f6 52%, #f7d5cb 100%);
 }
 
 .hero-cloud {
@@ -113,8 +113,9 @@
   width: 15rem;
   height: 4.5rem;
   border-radius: 999px;
-  background: rgb(255 255 255 / 72%);
-  filter: blur(1px);
+  border: 2px solid var(--color-dark);
+  background: var(--color-paper);
+  box-shadow: 5px 5px 0 var(--color-dark);
 }
 
 .hero-cloud::before,
@@ -150,8 +151,8 @@
 
 .section-surface {
   background-color: var(--color-paper);
-  background-image: radial-gradient(rgb(149 179 74 / 24%) 1px, transparent 1px);
-  background-size: 22px 22px;
+  background-image: radial-gradient(rgb(38 35 33 / 13%) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 html.has-scroll-reveal [data-scroll-reveal] {
