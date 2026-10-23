@@ -38,7 +38,6 @@ export const Sidebar = () => {
 
   return (
     <header
-      id="top"
       className={`sticky top-0 z-30 text-dark backdrop-blur-md transition-colors duration-300 ${
         isOnHomeHero ? 'bg-sky/95' : 'bg-paper/95'
       }`}>
