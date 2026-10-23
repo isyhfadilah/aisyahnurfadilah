@@ -5,8 +5,7 @@ export const projects = [
     image: undefined,
     type: 'design',
     year: '2025',
-    detail:
-      'A food-waste reduction platform concept connecting culinary businesses with surplus food and communities in need.'
+    detail: 'A food-waste platform concept linking businesses with surplus food to communities in need.'
   },
   {
     title: 'Plantify',
@@ -14,8 +13,7 @@ export const projects = [
     image: undefined,
     type: 'design',
     year: '2025',
-    detail:
-      'A gamified plant-care app concept with daily challenges, community features, rewards, and an AI-powered plant scanner.'
+    detail: 'A plant-care app concept with daily challenges, community features, rewards, and an AI plant scanner.'
   },
   {
     title: 'Literacy Modern',
@@ -23,8 +21,7 @@ export const projects = [
     image: undefined,
     type: 'design',
     year: '2025',
-    detail:
-      'A digital library app concept designed to help students build reading habits with curated books and progress goals.'
+    detail: 'A digital library concept helping students build reading habits through curated books and progress goals.'
   },
   {
     title: 'Smart Waste',
@@ -34,7 +31,7 @@ export const projects = [
     image: '/images/projects/smartwaste.png',
     type: 'design',
     year: '2024',
-    detail: 'A waste-management app concept shaped by research with 13 Bandung residents.'
+    detail: 'Research with 13 Bandung residents informed this waste-management app concept.'
   },
   {
     title: 'Official Website SMKN 2 Sumedang',
@@ -99,7 +96,7 @@ export const projects = [
     link: 'https://www.figma.com/design/H1PAY2zMseOFKEfkf59uEb/ITDRI?node-id=0-1&t=l20ao9mXUgadSWaP-0',
     image: '/images/projects/grojunio.png',
     type: 'design',
-    detail: 'A technology-skills learning platform concept for students across Indonesia.'
+    detail: 'A learning platform concept introducing technology skills to students across Indonesia.'
   },
   {
     title: 'JanGi',
@@ -108,6 +105,6 @@ export const projects = [
     link: 'https://www.figma.com/proto/cZ236dzljCpn4JxnMlGj3m/dinamik17?scaling=min-zoom&page-id=0%3A1&node-id=48-10211',
     image: '/images/projects/jangi.png',
     type: 'design',
-    detail: 'A school snack discovery experience for finding favorite canteen treats.'
+    detail: 'A school snack discovery concept for exploring canteen favorites.'
   }
 ]

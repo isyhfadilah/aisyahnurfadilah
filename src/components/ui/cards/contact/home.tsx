@@ -6,19 +6,19 @@ import { CardContact } from '.'
 
 const contact = [
   {
-    title: 'phone',
+    title: 'Phone',
     detail: '(+62)82123937972',
     href: 'tel:+6282123937972',
     icon: <FaPhoneAlt className="text-white text-3xl" />
   },
   {
-    title: 'email',
+    title: 'Email',
     detail: 'aisyahnfadilah73@gmail.com',
     href: 'mailto:aisyahnfadilah73@gmail.com',
     icon: <SiGmail className="text-white text-3xl" />
   },
   {
-    title: 'linkedin',
+    title: 'LinkedIn',
     detail: 'Aisyah Nur Fadilah',
     href: 'https://www.linkedin.com/in/fadilahnur/',
     icon: <FaLinkedinIn className="text-white text-3xl" />

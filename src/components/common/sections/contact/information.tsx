@@ -12,8 +12,8 @@ export const ContactInfo = () => {
       id="contact-info">
       <Container>
         <div className="flex flex-col border-l-4 border-primary pl-5">
-          <GradientText text="Contact Information" sizes="text-xl sm:text-2xl" />
-          <GradientText text="Find Me Here" sizes="text-4xl sm:text-6xl" />
+          <GradientText text="Get in touch" sizes="text-xl sm:text-2xl" />
+          <GradientText text="Choose how to reach me" sizes="text-4xl sm:text-6xl" />
         </div>
         <HomeContact />
       </Container>
@@ -31,20 +31,20 @@ export const HomeContactCta = () => {
       <Container className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-dark-gray">
-            Open to conversations and opportunities
+            Have a project or opportunity in mind?
           </p>
-          <h2 className="display-type text-4xl leading-tight sm:text-5xl">Let&apos;s connect.</h2>
+          <h2 className="display-type text-4xl leading-tight sm:text-5xl">Let&apos;s talk about it.</h2>
         </div>
         <div className="flex flex-wrap gap-3">
           <a href="mailto:aisyahnfadilah73@gmail.com" className="neo-button">
-            Say hello <span aria-hidden="true">↗</span>
+            Email me <span aria-hidden="true">↗</span>
           </a>
           <Link
             href="https://www.linkedin.com/in/fadilahnur/"
             target="_blank"
             rel="noreferrer"
             className="neo-button neo-button-secondary">
-            LinkedIn <span aria-hidden="true">↗</span>
+            Connect on LinkedIn <span aria-hidden="true">↗</span>
           </Link>
         </div>
       </Container>

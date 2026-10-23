@@ -12,7 +12,7 @@ export const CardContact = ({ title, detail, icon, href }: ContactProps) => {
     <>
       <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-secondary [&>svg]:!text-dark">{icon}</div>
       <div className="space-y-1">
-        <h2 className="font-display text-base font-bold capitalize text-dark md:text-lg">{title}</h2>
+        <h2 className="font-display text-base font-bold text-dark md:text-lg">{title}</h2>
         <p className="break-words text-sm text-dark-gray md:text-base">{detail}</p>
       </div>
     </>
