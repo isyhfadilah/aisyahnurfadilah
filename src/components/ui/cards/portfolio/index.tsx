@@ -9,9 +9,10 @@ export interface CardProps {
   priority?: boolean
   type?: string
   year?: string
+  action?: string
 }
 
-export const CardPortfolio = ({ image, title, detail, link, priority = false, type, year }: CardProps) => {
+export const CardPortfolio = ({ image, title, detail, link, priority = false, type, year, action }: CardProps) => {
   const content = (
     <>
       {image ? (
@@ -21,7 +22,7 @@ export const CardPortfolio = ({ image, title, detail, link, priority = false, ty
           height={1000}
           width={1000}
           loading={priority ? 'eager' : 'lazy'}
-          className="relative h-52 w-full border-2 border-dark bg-cover bg-center bg-no-repeat object-cover transition-transform duration-500 group-hover:scale-[1.03] md:h-72"
+          className="relative h-52 w-full border-2 border-dark bg-paper object-contain p-2 transition-transform duration-500 group-hover:scale-[1.02] md:h-72"
         />
       ) : (
         <div className="relative flex h-52 flex-col justify-between overflow-hidden border-2 border-dark bg-sky p-5 md:h-72 md:p-7">
@@ -38,24 +39,21 @@ export const CardPortfolio = ({ image, title, detail, link, priority = false, ty
           {year && <span className="relative z-[1] self-end text-xs font-bold text-dark/60">{year}</span>}
         </div>
       )}
-      <div className="flex items-center justify-between gap-3 border-x-2 border-b-2 border-dark bg-paper px-3 py-4 text-dark">
+      <div className="flex min-h-32 flex-col justify-between gap-3 border-x-2 border-b-2 border-dark bg-paper px-3 py-4 text-dark">
         <div>
           <h2 className="font-display font-bold leading-snug md:text-lg">{title}</h2>
-          {detail && <p className="mt-1 line-clamp-3 text-sm leading-6 text-dark-gray">{detail}</p>}
+          {detail && <p className="mt-1 line-clamp-2 text-sm leading-6 text-dark-gray">{detail}</p>}
         </div>
         {link && (
-          <span
-            aria-hidden="true"
-            className="grid size-10 shrink-0 place-items-center border-2 border-dark bg-secondary text-lg text-dark transition-transform group-hover:rotate-45">
-            ↗
+          <span className="inline-flex w-fit items-center gap-2 border-2 border-dark bg-secondary px-3 py-1.5 text-xs font-bold text-dark">
+            {action ?? 'View project'} <span aria-hidden="true">↗</span>
           </span>
         )}
       </div>
     </>
   )
 
-  const className =
-    'group relative block overflow-hidden border-2 border-dark bg-paper p-2 shadow-[6px_6px_0_#262321] transition-transform duration-300 hover:-translate-y-1 hover:translate-x-1 hover:shadow-[3px_3px_0_#262321]'
+  const className = 'neo-card group relative flex h-full flex-col overflow-hidden p-2'
 
   return link ? (
     <Link href={link} target="_blank" rel="noreferrer" className={className}>

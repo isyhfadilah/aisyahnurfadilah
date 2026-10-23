@@ -1,13 +1,16 @@
 import Container from '../../layouts/Container'
 import { GradientText } from '@/components/ui/title/gradient'
 import { FaMapPin } from 'react-icons/fa'
-import Link from 'next/link'
 
 export const AboutDesk = () => {
   return (
-    <section className="section-surface relative isolate overflow-hidden py-16 sm:py-24" data-scroll-reveal id="about">
+    <section
+      className="section-surface relative isolate overflow-hidden py-16 sm:py-24"
+      data-scroll-reveal
+      suppressHydrationWarning
+      id="about">
       <Container className="relative">
-        <div className="motion-rise-delay-1 max-w-3xl">
+        <div className="neo-panel motion-rise-delay-1 max-w-4xl p-6 sm:p-10">
           <div className="mb-5 border-l-4 border-primary pl-5">
             <GradientText text="A LITTLE ABOUT ME" sizes="text-3xl sm:text-4xl" />
           </div>
@@ -17,19 +20,9 @@ export const AboutDesk = () => {
             <span>West Java, Indonesia</span>
           </div>
           <p className="mt-6 max-w-2xl text-base leading-8 text-dark-gray sm:text-lg">
-            I&apos;m Aisyah, an Informatics student exploring UI/UX design and digital products. With a front-end development
-            background, I enjoy shaping useful experiences and thinking through how they come to life.
+            I&apos;m Aisyah, an Informatics student drawn to the point where user needs meet thoughtful interfaces. My
+            front-end background keeps me curious about both how a product feels and how it works.
           </p>
-          <Link
-            href="https://drive.google.com/file/d/13mBLNId3XDFgChvwQzpe2ucCyanq6TLj/view"
-            target="_blank"
-            rel="noreferrer"
-            className="group mt-6 inline-flex items-center gap-3 text-sm font-bold text-dark underline decoration-primary decoration-2 underline-offset-4 transition-colors hover:text-primary">
-            View my CV
-            <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">
-              ↗
-            </span>
-          </Link>
         </div>
       </Container>
     </section>

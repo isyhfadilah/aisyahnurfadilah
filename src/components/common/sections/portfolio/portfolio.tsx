@@ -12,6 +12,7 @@ export const PortfolioProject = ({ featuredOnly = false }: PortfolioProjectProps
     <section
       className="section-surface motion-rise relative isolate overflow-hidden py-16 sm:py-24"
       data-scroll-reveal
+      suppressHydrationWarning
       id="portfolio">
       <Container className="relative mb-10 flex flex-col">
         <div className="mb-5 border-l-4 border-secondary pl-5">
@@ -27,24 +28,14 @@ export const PortfolioProject = ({ featuredOnly = false }: PortfolioProjectProps
         )}
         <HomePortfolio featuredOnly={featuredOnly} />
         {featuredOnly ? (
-          <Link
-            href="/portfolio"
-            className="group mt-5 inline-flex w-fit items-center gap-3 rounded-xl bg-dark px-6 py-3.5 text-sm font-bold text-white transition-transform hover:-translate-y-1">
+          <Link href="/portfolio" className="neo-button mt-5 w-fit">
             View all projects
-            <span className="text-secondary transition-transform group-hover:translate-x-1" aria-hidden="true">
-              ↗
-            </span>
+            <span aria-hidden="true">↗</span>
           </Link>
         ) : (
-          <Link
-            href="https://www.behance.net/aizaa"
-            target="_blank"
-            rel="noreferrer"
-            className="group mt-5 inline-flex w-fit items-center gap-3 rounded-xl bg-dark px-6 py-3.5 text-sm font-bold text-white transition-transform hover:-translate-y-1">
+          <Link href="https://www.behance.net/aizaa" target="_blank" rel="noreferrer" className="neo-button mt-5 w-fit">
             Explore more on Behance
-            <span className="text-secondary transition-transform group-hover:translate-x-1" aria-hidden="true">
-              ↗
-            </span>
+            <span aria-hidden="true">↗</span>
           </Link>
         )}
       </Container>

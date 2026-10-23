@@ -29,12 +29,12 @@ export const projects = [
   {
     title: 'Smart Waste',
     featured: true,
+    action: 'View prototype',
     link: 'https://www.figma.com/proto/chOcG5bmYyrHTwCjS9VHjt/Smart-Waste?node-id=147-1130&p=f&t=AxhP0PaVbpwNV3ao-1&scaling=scale-down&content-scaling=fixed&page-id=139%3A2&starting-point-node-id=167%3A145',
     image: '/images/projects/smartwaste.png',
     type: 'design',
     year: '2024',
-    detail:
-      'A household waste-management app shaped by user research with 13 Bandung respondents, from user flows and wireframes to a high-fidelity prototype.'
+    detail: 'A waste-management app concept shaped by research with 13 Bandung residents.'
   },
   {
     title: 'Official Website SMKN 2 Sumedang',
@@ -95,17 +95,19 @@ export const projects = [
   {
     title: 'Grow Junior (GROJUNIO)',
     featured: true,
+    action: 'View design',
     link: 'https://www.figma.com/design/H1PAY2zMseOFKEfkf59uEb/ITDRI?node-id=0-1&t=l20ao9mXUgadSWaP-0',
     image: '/images/projects/grojunio.png',
     type: 'design',
-    detail: ''
+    detail: 'A technology-skills learning platform concept for students across Indonesia.'
   },
   {
     title: 'JanGi',
     featured: true,
+    action: 'View prototype',
     link: 'https://www.figma.com/proto/cZ236dzljCpn4JxnMlGj3m/dinamik17?scaling=min-zoom&page-id=0%3A1&node-id=48-10211',
     image: '/images/projects/jangi.png',
     type: 'design',
-    detail: ''
+    detail: 'A school snack discovery experience for finding favorite canteen treats.'
   }
 ]

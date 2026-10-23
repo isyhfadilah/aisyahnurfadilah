@@ -8,6 +8,7 @@ export const ContactForm = () => {
     <section
       className="motion-rise relative isolate overflow-hidden bg-sage py-16 text-dark sm:py-24"
       data-scroll-reveal
+      suppressHydrationWarning
       id="contact">
       <Container className="relative">
         <div className="grid items-start gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">

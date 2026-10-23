@@ -6,7 +6,11 @@ import { awards } from '@/data/experience'
 
 export const ResumeTimeline = () => {
   return (
-    <section className="motion-rise bg-dark py-16 text-white sm:py-24" data-scroll-reveal id="experience">
+    <section
+      className="motion-rise bg-dark py-16 text-white sm:py-24"
+      data-scroll-reveal
+      suppressHydrationWarning
+      id="experience">
       <Container className="space-y-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="border-l-4 border-secondary pl-5">
