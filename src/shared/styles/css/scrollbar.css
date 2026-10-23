@@ -1,7 +1,7 @@
 body {
-  --sb-track-color: #f7f7f2;
-  --sb-thumb-color: #f36f3d;
-  --sb-size: 10px;
+  --sb-track-color: #f5d76e;
+  --sb-thumb-color: #262321;
+  --sb-size: 12px;
 }
 
 body::-webkit-scrollbar {
@@ -14,8 +14,11 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   border: 2px solid var(--sb-track-color);
-  border-radius: 999px;
   background: var(--sb-thumb-color);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #f28b82;
 }
 
 @supports not selector(::-webkit-scrollbar) {
