@@ -5,10 +5,10 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 const menuItems = [
-  { label: 'Work', link: '/#portfolio' },
+  { label: 'Projects', link: '/#portfolio' },
   { label: 'About', link: '/#about' },
   {
-    label: 'CV',
+    label: 'Resume',
     link: 'https://drive.google.com/file/d/13mBLNId3XDFgChvwQzpe2ucCyanq6TLj/view',
     external: true
   },
