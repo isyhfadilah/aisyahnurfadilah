@@ -1,24 +1,27 @@
 export const projects = [
   {
     title: 'Meal Up',
-    link: undefined,
-    image: undefined,
+    action: 'View case study',
+    link: 'https://www.behance.net/gallery/240245065/Meal-Up-Digitalizing-Food-Rescue',
+    image: '/images/projects/meal-up.png',
     type: 'design',
     year: '2025',
     detail: 'A food-waste platform concept linking businesses with surplus food to communities in need.'
   },
   {
     title: 'Plantify',
-    link: undefined,
-    image: undefined,
+    action: 'View case study',
+    link: 'https://www.behance.net/gallery/234735329/Plantify-Smart-Plant-Care-App',
+    image: '/images/projects/plantify.png',
     type: 'design',
     year: '2025',
     detail: 'A plant-care app concept with daily challenges, community features, rewards, and an AI plant scanner.'
   },
   {
     title: 'Literacy Modern',
-    link: undefined,
-    image: undefined,
+    action: 'View case study',
+    link: 'https://www.behance.net/gallery/234746393/Literm-Modern-Reading-Companion-App',
+    image: '/images/projects/literm.png',
     type: 'design',
     year: '2025',
     detail: 'A digital library concept helping students build reading habits through curated books and progress goals.'

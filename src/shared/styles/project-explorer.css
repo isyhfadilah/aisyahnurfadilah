@@ -414,7 +414,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center top;
 }
 .collection-board > .collection-preview-image {
   position: absolute;
@@ -706,10 +707,12 @@
 .project-detail-preview > .collection-preview-image {
   height: auto;
   max-height: 72dvh;
-  object-fit: contain;
+  object-fit: cover;
 }
 .project-detail-preview.is-expanded > .collection-preview-image {
   max-height: none;
+  min-height: 0;
+  object-fit: contain;
 }
 .preview-size-toggle {
   position: absolute;
