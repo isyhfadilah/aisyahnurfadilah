@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { ProjectMockup } from '@/components/ui/project-mockup'
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import {
@@ -35,14 +36,7 @@ export const useProjectExplorer = () => {
 
 export const ProjectPreview = ({ project, full = false }: { project: CatalogProject; full?: boolean }) =>
   project.image ? (
-    <Image
-      src={project.image}
-      alt={project.title + ' — supplied project preview'}
-      width={1800}
-      height={1200}
-      sizes={full ? '100vw' : '(max-width: 999px) 100vw, 700px'}
-      className="collection-preview-image"
-    />
+    <ProjectMockup image={project.image} title={project.title} type={project.category} full={full} />
   ) : (
     <div className={'concept-brief concept-' + project.slug}>
       <span className="concept-eyebrow">CONCEPT BRIEF / {project.year}</span>

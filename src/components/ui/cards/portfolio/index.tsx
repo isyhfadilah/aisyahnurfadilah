@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
+import { ProjectMockup } from '@/components/ui/project-mockup'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 export interface CardProps {
@@ -20,14 +20,7 @@ export const CardPortfolio = ({ image, title, detail, link, priority = false, ty
     <>
       <div className={'project-visual' + (image ? '' : ' project-placeholder')}>
         {image ? (
-          <Image
-            src={image}
-            alt={title + ' project preview'}
-            width={1000}
-            height={750}
-            loading={priority ? 'eager' : 'lazy'}
-            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-          />
+          <ProjectMockup image={image} title={title} type={type ?? 'website'} priority={priority} />
         ) : (
           <>
             <span className="project-placeholder-label">{type === 'design' ? 'UI/UX CONCEPT' : 'WEB PROJECT'}</span>

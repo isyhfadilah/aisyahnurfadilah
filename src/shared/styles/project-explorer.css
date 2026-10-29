@@ -417,14 +417,6 @@
   object-fit: cover;
   object-position: center top;
 }
-.collection-board > .collection-preview-image {
-  position: absolute;
-  inset: 0;
-  transition: transform 0.45s ease;
-}
-.collection-board:hover > .collection-preview-image {
-  transform: scale(1.025);
-}
 .board-open {
   position: absolute;
   right: 15px;
@@ -703,16 +695,6 @@
 .project-detail-preview {
   position: relative;
   background: #e8e8ed;
-}
-.project-detail-preview > .collection-preview-image {
-  height: auto;
-  max-height: 72dvh;
-  object-fit: cover;
-}
-.project-detail-preview.is-expanded > .collection-preview-image {
-  max-height: none;
-  min-height: 0;
-  object-fit: contain;
 }
 .preview-size-toggle {
   position: absolute;
@@ -1069,7 +1051,7 @@
   }
   .collection-board {
     aspect-ratio: auto;
-    min-height: 255px;
+    min-height: 310px;
   }
   .collection-case-body {
     padding: 23px;
@@ -1180,10 +1162,6 @@
     font-size: 7px;
     line-height: 1.5;
   }
-  .project-detail-preview > .collection-preview-image {
-    max-height: 58dvh;
-    min-height: 220px;
-  }
   .preview-size-toggle {
     right: 12px;
     bottom: 12px;
@@ -1221,8 +1199,5 @@
   .collection-dialog[open],
   .project-detail-dialog[open] {
     animation: none;
-  }
-  .collection-board:hover > .collection-preview-image {
-    transform: none;
   }
 }
