@@ -33,7 +33,7 @@ export const Footer = () => {
             <p>EXPLORE</p>
             <Link href="/#services">Services</Link>
             <Link href="/#portfolio">Projects</Link>
-            <Link href="/#about">About me</Link>
+            <Link href="/#about">Workflow</Link>
             <a href="#top">Back to top ↗</a>
           </nav>
           <div className="footer-column">

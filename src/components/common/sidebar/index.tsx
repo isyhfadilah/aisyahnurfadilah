@@ -8,7 +8,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 const menuItems = [
   { label: 'Services', link: '/#services' },
   { label: 'Projects', link: '/#portfolio' },
-  { label: 'About', link: '/#about' }
+  { label: 'Workflow', link: '/#about' }
 ]
 
 export const Sidebar = () => {

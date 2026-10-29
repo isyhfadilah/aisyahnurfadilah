@@ -1,106 +1,224 @@
 'use client'
 
-import { useState } from 'react'
-import { FiArrowLeft, FiArrowRight, FiCode, FiCompass, FiGrid, FiHeart } from 'react-icons/fi'
+import { useRef, useState } from 'react'
+import {
+  FiArrowLeft,
+  FiArrowRight,
+  FiGitBranch,
+  FiLayers,
+  FiLayout,
+  FiMousePointer,
+  FiPause,
+  FiPenTool,
+  FiPlay,
+  FiRefreshCw,
+  FiSearch,
+  FiTarget
+} from 'react-icons/fi'
+import '@/shared/styles/workflow.css'
 
-const principles = [
+const steps = [
   {
-    title: 'People come first',
-    label: 'UNDERSTAND',
-    icon: FiHeart,
-    quote:
-      'I start with the people behind the screen. Understanding their needs helps me turn the right problems into useful, intuitive experiences.',
-    tag: 'User-centered design'
+    id: 'understand',
+    title: 'Understand the problem',
+    label: 'RESEARCH',
+    icon: FiSearch,
+    output: 'Problem notes',
+    description:
+      'I start by asking who will use the product and what they need to do. That gives the design a clear starting point.'
   },
   {
-    title: 'Clarity in every detail',
-    label: 'SIMPLIFY',
-    icon: FiCompass,
-    quote:
-      'I connect user needs with clear interfaces. From the first user flow to the final interaction, every decision should make the experience easier to use.',
-    tag: 'UI/UX design'
+    id: 'define',
+    title: 'Decide what matters',
+    label: 'DEFINE',
+    icon: FiTarget,
+    output: 'Design priorities',
+    description: 'I sort what I’ve learned into the problems worth solving, then decide what the design needs to cover.'
   },
   {
-    title: 'A consistent experience',
-    label: 'CONNECT',
-    icon: FiGrid,
-    quote:
-      'Thoughtful components, typography, and visual patterns help a product feel familiar and coherent from one screen to the next.',
-    tag: 'Design systems'
+    id: 'flow',
+    title: 'Map the user flow',
+    label: 'USER FLOW',
+    icon: FiGitBranch,
+    output: 'User flows',
+    description:
+      'I map the steps someone takes to finish a task, including where they might get stuck or need another way forward.'
   },
   {
-    title: 'Built with care',
-    label: 'CREATE',
-    icon: FiCode,
-    quote:
-      'My front-end background helps me bridge the gap between a design and a working product, with responsive interfaces that feel good to use.',
-    tag: 'Front-end development'
+    id: 'wireframe',
+    title: 'Sketch the structure',
+    label: 'WIREFRAME',
+    icon: FiLayout,
+    output: 'Wireframes',
+    description: 'I use wireframes to try layouts and content order before spending time on the visual details.'
+  },
+  {
+    id: 'design',
+    title: 'Design the screens',
+    label: 'UI DESIGN',
+    icon: FiPenTool,
+    output: 'Interface screens',
+    description:
+      'I work on type, spacing, and components so each screen is readable and feels like part of the same product.'
+  },
+  {
+    id: 'prototype',
+    title: 'Connect the prototype',
+    label: 'PROTOTYPE',
+    icon: FiMousePointer,
+    output: 'Clickable prototype',
+    description: 'I link the screens in Figma to walk through the main tasks and spot gaps in the flow.'
+  },
+  {
+    id: 'refine',
+    title: 'Review and refine',
+    label: 'REFINE',
+    icon: FiRefreshCw,
+    output: 'Design revisions',
+    description: 'I review the flow and interactions, then revise the parts that feel unclear or take too many steps.'
+  },
+  {
+    id: 'handoff',
+    title: 'Prepare for handoff',
+    label: 'HANDOFF',
+    icon: FiLayers,
+    output: 'Screens & interaction notes',
+    description:
+      'I organize the screens, components, and interaction notes for development. My front-end background helps me explain how the design should behave.'
   }
 ]
 
 export const AboutDesk = () => {
   const [active, setActive] = useState(0)
-  const current = principles[active]
+  const [paused, setPaused] = useState(false)
+  const [manual, setManual] = useState(false)
+  const row = useRef<HTMLDivElement>(null)
+  const current = steps[active]
   const Icon = current.icon
+
+  const showStep = (index: number, reveal = false) => {
+    const next = (index + steps.length) % steps.length
+    setActive(next)
+    setPaused(true)
+    if (reveal) {
+      setManual(true)
+      window.requestAnimationFrame(() =>
+        row.current
+          ?.querySelector<HTMLElement>('[data-workflow-step="' + next + '"]:not([aria-hidden])')
+          ?.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' })
+      )
+    }
+  }
+
+  const toggleMotion = () => {
+    setPaused(!paused)
+    setManual(false)
+    if (row.current) row.current.scrollLeft = 0
+  }
+
   return (
-    <section id="about" className="reference-section" data-scroll-reveal>
+    <section id="about" className="reference-section workflow-section" data-scroll-reveal aria-labelledby="workflow-heading">
       <div className="site-container">
         <div className="section-heading">
-          <h2>
-            A little about me.
+          <h2 id="workflow-heading">
+            How I work.
             <br />
-            <span>A lot about the details.</span>
+            <span>From questions to screens.</span>
           </h2>
-          <p>
-            I’m Aisyah, an Informatics student at SATU University based in West Java, Indonesia. Here’s what guides my work.
-          </p>
+          <p>Here’s how I work through a UI/UX project. Choose a step to see what happens along the way.</p>
         </div>
-        <div className="principle-tabs" role="group" aria-label="My design principles">
-          {principles.map((principle, index) => {
-            const TabIcon = principle.icon
-            return (
-              <button
-                key={principle.title}
-                type="button"
-                className={'principle-tab principle-' + index}
-                onClick={() => setActive(index)}
-                aria-pressed={active === index}>
-                <span className="principle-icon">
-                  <TabIcon aria-hidden="true" />
-                  <small>{principle.label}</small>
-                </span>
-                <span>{principle.title}</span>
-              </button>
-            )
-          })}
+        <div className="workflow-strip-header">
+          <p>8 STEPS / UI/UX DESIGN</p>
+          <button
+            type="button"
+            className="workflow-motion-toggle"
+            onClick={toggleMotion}
+            aria-pressed={paused}
+            aria-label={paused ? 'Play workflow animation' : 'Pause workflow animation'}>
+            {paused ? <FiPlay aria-hidden="true" /> : <FiPause aria-hidden="true" />}
+            <span>{paused ? 'Play' : 'Pause'}</span>
+          </button>
         </div>
-        <div className="principle-card" aria-live="polite" aria-atomic="true">
-          <span className="quote-mark" aria-hidden="true">
-            “
+        <div
+          ref={row}
+          className={'workflow-row' + (paused ? ' is-paused' : '') + (manual ? ' is-manual' : '')}
+          role="group"
+          aria-label="Choose a UI/UX workflow step">
+          <ol className="workflow-track">
+            {[...steps, ...steps].map((step, index) => {
+              const stepIndex = index % steps.length
+              const duplicate = index >= steps.length
+              const StepIcon = step.icon
+              return (
+                <li
+                  key={index}
+                  className={duplicate ? 'workflow-clone' : undefined}
+                  aria-hidden={duplicate ? true : undefined}>
+                  <button
+                    type="button"
+                    className={'workflow-step workflow-tone-' + stepIndex}
+                    data-workflow-step={stepIndex}
+                    aria-hidden={duplicate ? true : undefined}
+                    tabIndex={duplicate ? -1 : 0}
+                    aria-pressed={active === stepIndex}
+                    aria-controls="workflow-detail"
+                    onClick={() => showStep(stepIndex)}
+                    onFocus={(event) => {
+                      setPaused(true)
+                      if (event.currentTarget.matches(':focus-visible')) {
+                        setManual(true)
+                        const button = event.currentTarget
+                        window.requestAnimationFrame(() =>
+                          button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' })
+                        )
+                      }
+                    }}>
+                    <span className="workflow-art">
+                      <StepIcon aria-hidden="true" />
+                      <small>{step.label}</small>
+                      <span className="workflow-step-number">{String(stepIndex + 1).padStart(2, '0')}</span>
+                    </span>
+                    <span className="workflow-step-name">{step.title}</span>
+                  </button>
+                </li>
+              )
+            })}
+          </ol>
+        </div>
+        <article id="workflow-detail" className="workflow-detail" aria-labelledby="workflow-step-title">
+          <span className="workflow-watermark" aria-hidden="true">
+            {String(active + 1).padStart(2, '0')}
           </span>
-          <p className="eyebrow-label">{current.title}</p>
-          <p className="principle-quote">{current.quote}</p>
-          <div className="principle-meta">
-            <div>
-              <span className="principle-mini">
+          <div className="workflow-description" aria-live="polite" aria-atomic="true">
+            <div key={current.id} className="workflow-copy">
+              <p className="eyebrow-label">
+                STEP {String(active + 1).padStart(2, '0')} / {String(steps.length).padStart(2, '0')}
+              </p>
+              <h3 id="workflow-step-title">{current.title}</h3>
+              <p>{current.description}</p>
+            </div>
+          </div>
+          <div className="workflow-detail-footer">
+            <div className="workflow-output">
+              <span className={'workflow-mini workflow-tone-' + active}>
                 <Icon aria-hidden="true" />
               </span>
               <span className="signature">aisyah.</span>
-              <span className="principle-tag">{current.tag}</span>
+              <span className="workflow-output-tag">{current.output}</span>
             </div>
-            <div className="principle-navigation">
-              <button
-                type="button"
-                onClick={() => setActive((active + principles.length - 1) % principles.length)}
-                aria-label="Previous principle">
-                <FiArrowLeft />
+            <div className="workflow-navigation">
+              <button type="button" onClick={() => showStep(active - 1, true)} aria-label="Previous workflow step">
+                <FiArrowLeft aria-hidden="true" />
               </button>
-              <button type="button" onClick={() => setActive((active + 1) % principles.length)} aria-label="Next principle">
-                <FiArrowRight />
+              <span aria-label={'Step ' + (active + 1) + ' of ' + steps.length}>
+                {String(active + 1).padStart(2, '0')} / {String(steps.length).padStart(2, '0')}
+              </span>
+              <button type="button" onClick={() => showStep(active + 1, true)} aria-label="Next workflow step">
+                <FiArrowRight aria-hidden="true" />
               </button>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   )

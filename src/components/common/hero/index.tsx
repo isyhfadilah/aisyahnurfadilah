@@ -66,7 +66,7 @@ export const Hero = () => {
               View UI/UX work <FiArrowUpRight aria-hidden="true" />
             </Link>
             <Link href="/#about" className="text-button">
-              More about me <FiArrowRight aria-hidden="true" />
+              How I work <FiArrowRight aria-hidden="true" />
             </Link>
           </div>
           <dl className="hero-stats">
