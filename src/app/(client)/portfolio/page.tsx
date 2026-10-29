@@ -1,9 +1,9 @@
-import { PortfolioProject } from '@/components/common/sections/portfolio'
+import { AboutService } from '@/components/common/sections/about/service'
 
 export default function Portfolio() {
   return (
     <main>
-      <PortfolioProject />
+      <AboutService />
     </main>
   )
 }

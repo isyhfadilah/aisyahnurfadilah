@@ -1,60 +1,107 @@
-import Container from '../../layouts/Container'
-import { GradientText } from '@/components/ui/title/gradient'
-import { FaMapPin } from 'react-icons/fa'
+'use client'
+
+import { useState } from 'react'
+import { FiArrowLeft, FiArrowRight, FiCode, FiCompass, FiGrid, FiHeart } from 'react-icons/fi'
+
+const principles = [
+  {
+    title: 'People come first',
+    label: 'UNDERSTAND',
+    icon: FiHeart,
+    quote:
+      'I start with the people behind the screen. Understanding their needs helps me turn the right problems into useful, intuitive experiences.',
+    tag: 'User-centered design'
+  },
+  {
+    title: 'Clarity in every detail',
+    label: 'SIMPLIFY',
+    icon: FiCompass,
+    quote:
+      'I connect user needs with clear interfaces. From the first user flow to the final interaction, every decision should make the experience easier to use.',
+    tag: 'UI/UX design'
+  },
+  {
+    title: 'A consistent experience',
+    label: 'CONNECT',
+    icon: FiGrid,
+    quote:
+      'Thoughtful components, typography, and visual patterns help a product feel familiar and coherent from one screen to the next.',
+    tag: 'Design systems'
+  },
+  {
+    title: 'Built with care',
+    label: 'CREATE',
+    icon: FiCode,
+    quote:
+      'My front-end background helps me bridge the gap between a design and a working product, with responsive interfaces that feel good to use.',
+    tag: 'Front-end development'
+  }
+]
 
 export const AboutDesk = () => {
+  const [active, setActive] = useState(0)
+  const current = principles[active]
+  const Icon = current.icon
   return (
-    <section
-      className="section-surface relative isolate overflow-hidden py-16 sm:py-24"
-      data-scroll-reveal
-      suppressHydrationWarning
-      id="about">
-      <Container className="relative grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
-        <div className="neo-panel motion-rise-delay-1 p-6 sm:p-10">
-          <div className="mb-5 border-l-4 border-primary pl-5">
-            <GradientText text="A LITTLE ABOUT ME" sizes="text-3xl sm:text-4xl" />
-          </div>
-          <h2 className="display-type text-4xl leading-[0.95] text-dark sm:text-6xl">Design with clarity. Build with care.</h2>
-          <div className="mt-5 flex items-center gap-2 text-sm font-bold text-dark-gray">
-            <FaMapPin className="text-primary" />
-            <span>West Java, Indonesia</span>
-          </div>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-dark-gray sm:text-lg">
-            I connect user needs with clear interfaces, then draw on my front-end background to bring those ideas to life.
+    <section id="about" className="reference-section" data-scroll-reveal>
+      <div className="site-container">
+        <div className="section-heading">
+          <h2>
+            A little about me.
+            <br />
+            <span>A lot about the details.</span>
+          </h2>
+          <p>
+            I’m Aisyah, an Informatics student at SATU University based in West Java, Indonesia. Here’s what guides my work.
           </p>
         </div>
-
-        <aside aria-label="Design and development skills" className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
-          <div className="neo-panel relative bg-sky p-5 sm:p-6">
-            <span
-              aria-hidden="true"
-              className="absolute -right-2 -top-3 grid size-10 rotate-6 place-items-center border-2 border-dark bg-secondary text-lg shadow-[3px_3px_0_#262321]">
-              ✳
-            </span>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-dark-gray">01 / Design</p>
-            <h3 className="display-type mt-3 text-3xl leading-none text-dark sm:text-4xl">Design the flow.</h3>
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {['User flows', 'Wireframes', 'Prototypes', 'Figma'].map((skill) => (
-                <li key={skill} className="border-2 border-dark bg-paper px-2.5 py-1 text-xs font-bold text-dark">
-                  {skill}
-                </li>
-              ))}
-            </ul>
+        <div className="principle-tabs" role="group" aria-label="My design principles">
+          {principles.map((principle, index) => {
+            const TabIcon = principle.icon
+            return (
+              <button
+                key={principle.title}
+                type="button"
+                className={'principle-tab principle-' + index}
+                onClick={() => setActive(index)}
+                aria-pressed={active === index}>
+                <span className="principle-icon">
+                  <TabIcon aria-hidden="true" />
+                  <small>{principle.label}</small>
+                </span>
+                <span>{principle.title}</span>
+              </button>
+            )
+          })}
+        </div>
+        <div className="principle-card" aria-live="polite" aria-atomic="true">
+          <span className="quote-mark" aria-hidden="true">
+            “
+          </span>
+          <p className="eyebrow-label">{current.title}</p>
+          <p className="principle-quote">{current.quote}</p>
+          <div className="principle-meta">
+            <div>
+              <span className="principle-mini">
+                <Icon aria-hidden="true" />
+              </span>
+              <span className="signature">aisyah.</span>
+              <span className="principle-tag">{current.tag}</span>
+            </div>
+            <div className="principle-navigation">
+              <button
+                type="button"
+                onClick={() => setActive((active + principles.length - 1) % principles.length)}
+                aria-label="Previous principle">
+                <FiArrowLeft />
+              </button>
+              <button type="button" onClick={() => setActive((active + 1) % principles.length)} aria-label="Next principle">
+                <FiArrowRight />
+              </button>
+            </div>
           </div>
-
-          <div className="neo-panel bg-primary p-5 sm:p-6">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-dark-gray">02 / Development</p>
-            <h3 className="display-type mt-3 text-3xl leading-none text-dark sm:text-4xl">Build the interface.</h3>
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {['React', 'Next.js', 'TypeScript', 'Tailwind CSS'].map((skill) => (
-                <li key={skill} className="border-2 border-dark bg-paper px-2.5 py-1 text-xs font-bold text-dark">
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </aside>
-      </Container>
+        </div>
+      </div>
     </section>
   )
 }

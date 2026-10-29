@@ -6,16 +6,12 @@ import { awards } from '@/data/experience'
 
 export const ResumeTimeline = () => {
   return (
-    <section
-      className="motion-rise bg-dark py-16 text-white sm:py-24"
-      data-scroll-reveal
-      suppressHydrationWarning
-      id="experience">
+    <section className="bg-dark py-16 text-white sm:py-24" data-scroll-reveal suppressHydrationWarning id="experience">
       <Container className="space-y-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="border-l-4 border-secondary pl-5">
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-secondary">Experience</p>
-            <GradientText text="Work & Leadership" sizes="text-5xl sm:text-7xl" className="text-white" />
+            <GradientText text="Work & Leadership" sizes="text-5xl sm:text-7xl" className="scroll-title text-white" />
           </div>
 
           <Button
@@ -33,7 +29,11 @@ export const ResumeTimeline = () => {
 
         <div className="space-y-6 pt-8">
           <div className="border-l-4 border-secondary pl-5">
-            <GradientText text="Recognition & Awards" sizes="text-3xl sm:text-4xl" className="text-white" />
+            <GradientText
+              text="Recognition & Awards"
+              sizes="text-3xl sm:text-4xl"
+              className="scroll-title-from-right text-white"
+            />
           </div>
           <ul className="grid gap-4 md:grid-cols-2">
             {awards.map((award) => (

@@ -1,95 +1,185 @@
 'use client'
 
 import Link from 'next/link'
-import { motion, useMotionValue, useReducedMotion, useSpring } from 'framer-motion'
+import { FiArrowUpRight, FiArrowRight, FiCode, FiLayers, FiCheck, FiPenTool } from 'react-icons/fi'
+import { SiFigma, SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si'
+import { projects } from '@/data/project'
 
-export const Hero = () => {
-  const prefersReducedMotion = useReducedMotion()
-  const cardTargetX = useMotionValue(0)
-  const cardTargetY = useMotionValue(0)
-  const coinTargetX = useMotionValue(0)
-  const coinTargetY = useMotionValue(0)
-  const cardX = useSpring(cardTargetX, { stiffness: 110, damping: 20, mass: 0.6 })
-  const cardY = useSpring(cardTargetY, { stiffness: 110, damping: 20, mass: 0.6 })
-  const coinX = useSpring(coinTargetX, { stiffness: 150, damping: 18, mass: 0.4 })
-  const coinY = useSpring(coinTargetY, { stiffness: 150, damping: 18, mass: 0.4 })
-
-  const handlePointerMove = (event: React.PointerEvent<HTMLElement>) => {
-    if (event.pointerType === 'touch') return
-
-    const bounds = event.currentTarget.getBoundingClientRect()
-    const pointerX = (event.clientX - bounds.left) / bounds.width - 0.5
-    const pointerY = (event.clientY - bounds.top) / bounds.height - 0.5
-
-    cardTargetX.set(pointerX * 18)
-    cardTargetY.set(pointerY * 14)
-    coinTargetX.set(pointerX * 34)
-    coinTargetY.set(pointerY * 28)
-  }
-
-  const handlePointerLeave = () => {
-    cardTargetX.set(0)
-    cardTargetY.set(0)
-    coinTargetX.set(0)
-    coinTargetY.set(0)
-  }
-
-  return (
-    <>
-      <section
-        id="home"
-        className="portfolio-hero relative isolate overflow-hidden text-dark"
-        onPointerMove={prefersReducedMotion ? undefined : handlePointerMove}
-        onPointerLeave={handlePointerLeave}>
-        <div className="relative mx-auto flex min-h-[min(700px,calc(100svh-80px))] max-w-[1500px] items-center px-5 py-20 sm:px-8 lg:px-16">
-          <div aria-hidden="true" className="hero-art-position">
-            <motion.div
-              className="hero-mark"
-              layoutId={prefersReducedMotion ? undefined : 'portfolio-intro-mark'}
-              style={{ x: cardX, y: cardY, rotate: 4 }}>
-              A<span>.</span>
-            </motion.div>
-            <motion.div className="hero-coin" style={{ x: coinX, y: coinY, rotate: -12 }}>
-              ✳
-            </motion.div>
+export const Hero = () => (
+  <section id="home" className="reference-hero">
+    <div className="hero-grid">
+      <div className="hero-copy">
+        <p className="availability">
+          <span className="signal-bars" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </span>{' '}
+          Design thoughtfully. Build beautifully.
+        </p>
+        <h1 className="hero-wordmark">
+          aisyah<span>.</span>
+        </h1>
+        <h2 className="hero-tagline">
+          Thoughtful interfaces.
+          <br />
+          Meaningful experiences.
+        </h2>
+        <p className="hero-pitch">
+          Hi, I’m Aisyah Nur Fadilah. I bring ideas to life through user-centered design and front-end development.
+        </p>
+        <div className="hero-note">
+          <span className="initial-avatar" aria-hidden="true">
+            a.
+          </span>
+          <div>
+            <p>“Good design starts with understanding people.”</p>
+            <span className="live-status">
+              <i /> Open to projects &amp; opportunities
+            </span>
           </div>
-          <div className="relative z-10 max-w-4xl">
-            <p className="hero-enter hero-enter-one mb-5 text-xs font-bold uppercase tracking-[0.2em] text-dark-gray sm:text-sm">
-              UI/UX Designer <span className="mx-2 text-primary">/</span> Front-End Developer
-            </p>
-            <h1 className="display-type hero-enter hero-enter-two text-[clamp(3.5rem,9vw,8rem)] leading-[0.88] text-dark">
-              Hello, I&apos;m
-              <span className="block">Aisyah Nur</span>
-              <span className="block text-primary">Fadilah.</span>
-            </h1>
-            <p className="hero-enter hero-enter-three mt-8 max-w-xl text-base leading-7 text-dark-gray sm:text-lg sm:leading-8">
-              I design digital experiences around user needs.
-            </p>
-
-            <div className="hero-enter hero-enter-four mt-8 flex flex-wrap gap-3">
-              <Link href="/#portfolio" className="neo-button group">
-                View My Work
-                <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
-                  ↗
-                </span>
-              </Link>
-              <Link href="/#about" className="neo-button neo-button-secondary">
-                About Me <span aria-hidden="true">↗</span>
-              </Link>
+        </div>
+        <div className="hero-actions">
+          <Link href="/#portfolio" className="neo-button">
+            Explore my work <FiArrowUpRight aria-hidden="true" />
+          </Link>
+          <Link href="/#about" className="text-button">
+            A little about me <FiArrowRight aria-hidden="true" />
+          </Link>
+        </div>
+        <dl className="hero-stats">
+          <div>
+            <dt>Portfolio projects</dt>
+            <dd>{String(projects.length).padStart(2, '0')}</dd>
+          </div>
+          <div>
+            <dt>Design &amp; development</dt>
+            <dd>2 disciplines</dd>
+          </div>
+          <div>
+            <dt>Based in</dt>
+            <dd>Indonesia</dd>
+          </div>
+        </dl>
+      </div>
+      <div className="design-stage" aria-label="An original composition of interface designs, without portraits">
+        <div className="stage-orange" />
+        <div className="design-window" aria-hidden="true">
+          <div className="window-toolbar">
+            <span>
+              <i />
+              <i />
+              <i />
+            </span>
+            <span>ideas → experiences</span>
+            <FiLayers />
+          </div>
+          <div className="window-content">
+            <span className="window-label">DESIGNED WITH PURPOSE</span>
+            <div className="window-monogram">
+              a<span>.</span>
+              <span className="monogram-orbit" />
+            </div>
+            <div className="window-bottom">
+              <span>
+                A little clarity.
+                <br />A lot of possibility.
+              </span>
+              <span className="window-arrow">
+                <FiArrowUpRight />
+              </span>
             </div>
           </div>
         </div>
-      </section>
-      <div aria-hidden="true" className="overflow-hidden border-y border-dark bg-dark py-2.5 text-paper">
-        <div className="ticker-track flex w-max gap-8 whitespace-nowrap text-sm font-bold uppercase tracking-[0.12em] sm:text-base">
-          {[0, 1, 2, 3].map((item) => (
-            <span key={item} className="flex items-center gap-8">
-              UI/UX Designer <span className="text-secondary">✳</span> Front-End Developer{' '}
-              <span className="text-secondary">✳</span>
-            </span>
-          ))}
+        <Link href="/#portfolio" className="stage-float stage-projects">
+          <FiLayers aria-hidden="true" />
+          <span className="float-arrow">
+            <FiArrowUpRight />
+          </span>
+          <strong>{String(projects.length).padStart(2, '0')}</strong>
+          <span>Portfolio projects</span>
+        </Link>
+        <div className="stage-bubbles">
+          <span>
+            <FiPenTool aria-hidden="true" /> Made for real people.
+          </span>
+          <span>
+            <FiCode aria-hidden="true" /> Built with care.
+          </span>
+          <span className="typing-dots" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </span>
         </div>
+        <span className="stage-hand hand-left" aria-hidden="true">
+          from the first sketch
+          <br />
+          <span>to the final pixel ↗</span>
+        </span>
+        <div className="stage-profile">
+          <div className="mini-interface" aria-hidden="true">
+            <div className="mini-interface-head">
+              <span />
+              <i />
+            </div>
+            <div className="mini-interface-art">
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="mini-interface-lines">
+              <i />
+              <i />
+            </div>
+            <span className="mini-check">
+              <FiCheck />
+            </span>
+          </div>
+          <p>Clarity in every detail.</p>
+          <span>UI/UX meets front-end.</span>
+          <Link href="/#contact">
+            Let’s collaborate <FiArrowUpRight aria-hidden="true" />
+          </Link>
+        </div>
+        <span className="stage-hand hand-right" aria-hidden="true">
+          a little design magic ✧
+        </span>
       </div>
-    </>
-  )
-}
+    </div>
+    <div className="hero-tools">
+      <p className="tools-label">
+        THE TOOLS
+        <br />
+        BEHIND THE WORK
+      </p>
+      <ul aria-label="Design and development tools">
+        <li>
+          <SiFigma className="tool-figma" aria-hidden="true" /> Figma
+        </li>
+        <li>
+          <SiReact className="tool-react" aria-hidden="true" /> React
+        </li>
+        <li>
+          <SiNextdotjs aria-hidden="true" /> Next.js
+        </li>
+        <li>
+          <SiTypescript className="tool-typescript" aria-hidden="true" /> TypeScript
+        </li>
+        <li>
+          <SiTailwindcss className="tool-tailwind" aria-hidden="true" /> Tailwind CSS
+        </li>
+      </ul>
+      <Link href="/#contact" className="tools-end">
+        <span>
+          Your next idea.
+          <br />
+          Let’s make it happen.
+        </span>
+        <span className="round-button">
+          <FiArrowUpRight aria-hidden="true" />
+        </span>
+      </Link>
+    </div>
+  </section>
+)
