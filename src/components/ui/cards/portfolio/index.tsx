@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ProjectMockup } from '@/components/ui/project-mockup'
+import { ProjectMockup, type MockupDevice } from '@/components/ui/project-mockup'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 export interface CardProps {
@@ -11,16 +11,17 @@ export interface CardProps {
   link?: string
   priority?: boolean
   type?: string
+  mockup?: MockupDevice
   year?: string
   action?: string
 }
 
-export const CardPortfolio = ({ image, title, detail, link, priority = false, type, year, action }: CardProps) => {
+export const CardPortfolio = ({ image, title, detail, link, priority = false, type, year, action, mockup }: CardProps) => {
   const content = (
     <>
       <div className={'project-visual' + (image ? '' : ' project-placeholder')}>
         {image ? (
-          <ProjectMockup image={image} title={title} type={type ?? 'website'} priority={priority} />
+          <ProjectMockup image={image} title={title} type={type ?? 'website'} device={mockup} priority={priority} />
         ) : (
           <>
             <span className="project-placeholder-label">{type === 'design' ? 'UI/UX CONCEPT' : 'WEB PROJECT'}</span>

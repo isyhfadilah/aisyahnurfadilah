@@ -75,6 +75,7 @@ export const HomePortfolio = ({ featuredOnly = false }: HomePortfolioProps) => {
             detail={item.detail}
             link={item.link}
             type={item.type}
+            mockup={item.mockup}
             year={item.year}
             action={item.action}
             priority={index === 0}

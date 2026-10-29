@@ -36,7 +36,7 @@ export const useProjectExplorer = () => {
 
 export const ProjectPreview = ({ project, full = false }: { project: CatalogProject; full?: boolean }) =>
   project.image ? (
-    <ProjectMockup image={project.image} title={project.title} type={project.category} full={full} />
+    <ProjectMockup image={project.image} title={project.title} type={project.category} device={project.mockup} full={full} />
   ) : (
     <div className={'concept-brief concept-' + project.slug}>
       <span className="concept-eyebrow">CONCEPT BRIEF / {project.year}</span>

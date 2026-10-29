@@ -250,3 +250,70 @@
     transform: none;
   }
 }
+
+/* Portrait preview for the E-Voting mobile website. */
+.mockup-phone {
+  --mockup-color: #8db7ad;
+  --mockup-glow: #d1e7dc;
+  padding: 30px 24px 56px;
+}
+.mockup-phone .project-mockup-device {
+  padding: 16px 6px 10px;
+  border: 1px solid #5c616b;
+  border-radius: 27px;
+  background: #20232a;
+  box-shadow:
+    0 25px 40px -20px #15202e99,
+    0 2px 2px #ffffff40 inset;
+}
+.mockup-phone .project-mockup-chrome {
+  position: absolute;
+  inset: 0 0 auto;
+  justify-content: center;
+  height: 16px;
+  padding: 0;
+  border: 0;
+}
+.mockup-phone-speaker {
+  width: 26px;
+  height: 4px;
+  border-radius: 99px;
+  background: #090b10;
+  box-shadow: 0 1px 0 #ffffff15;
+}
+.mockup-phone .project-mockup-device::after {
+  position: absolute;
+  bottom: 4px;
+  left: 35%;
+  width: 30%;
+  height: 2px;
+  border-radius: 99px;
+  background: #aeb3bd;
+  content: '';
+}
+.mockup-phone .project-mockup-screen {
+  border-radius: 16px;
+}
+.mockup-phone .project-mockup-screen > .collection-preview-image {
+  max-height: calc(100cqh - 28px);
+}
+.collection-board:has(> .mockup-phone) {
+  min-height: 520px;
+}
+.project-detail-preview.is-expanded > .mockup-phone .project-mockup-device {
+  width: min(100%, 390px);
+}
+.project-detail-preview.is-expanded > .mockup-phone .collection-preview-image {
+  max-height: none;
+}
+@media (max-width: 599px) {
+  .collection-board:has(> .mockup-phone) {
+    min-height: 420px;
+  }
+  .project-detail-preview > .mockup-phone {
+    height: 480px;
+  }
+  .project-detail-preview.is-expanded > .mockup-phone {
+    height: auto;
+  }
+}
