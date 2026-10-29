@@ -28,30 +28,14 @@ export const Hero = () => {
               <i />
               <i />
             </span>{' '}
-            UI/UX Designer
+            Open to projects
           </p>
-          <h1 className="hero-wordmark" aria-label="Aisyah Nur Fadilah — UI/UX Designer">
-            aisyah<span>.</span>
-          </h1>
-          <h2 className="hero-tagline">
-            I design apps that
+          <h1 className="hero-tagline">
+            Good design
             <br />
-            make sense to people.
-          </h2>
-          <p className="hero-pitch">
-            I’m Aisyah Nur Fadilah, a UI/UX designer. I turn user needs into flows, wireframes, and clickable prototypes.
-          </p>
-          <div className="hero-note">
-            <span className="initial-avatar" aria-hidden="true">
-              a.
-            </span>
-            <div>
-              <p>My front-end background helps me design with development in mind.</p>
-              <span className="live-status">
-                <i /> Open to UI/UX projects
-              </span>
-            </div>
-          </div>
+            feels simple.
+          </h1>
+          <p className="hero-pitch">I work on the details that make apps easier to use.</p>
           <div className="hero-actions">
             <Link
               href="/#uiux"
@@ -63,26 +47,12 @@ export const Hero = () => {
                   openCategory('design')
                 }
               }}>
-              View UI/UX work <FiArrowUpRight aria-hidden="true" />
+              Explore my work <FiArrowUpRight aria-hidden="true" />
             </Link>
             <Link href="/#about" className="text-button">
               How I work <FiArrowRight aria-hidden="true" />
             </Link>
           </div>
-          <dl className="hero-stats">
-            <div>
-              <dt>UI/UX projects</dt>
-              <dd>{String(projects.filter((project) => project.type === 'design').length).padStart(2, '0')}</dd>
-            </div>
-            <div>
-              <dt>Additional experience</dt>
-              <dd>Front-end</dd>
-            </div>
-            <div>
-              <dt>Based in</dt>
-              <dd>Indonesia</dd>
-            </div>
-          </dl>
         </div>
         <div className="design-stage" aria-label="An original composition of interface designs, without portraits">
           <div className="stage-orange" />
@@ -97,7 +67,7 @@ export const Hero = () => {
               <FiLayers />
             </div>
             <div className="window-content">
-              <span className="window-label">UI/UX DESIGN</span>
+              <span className="window-label">FLOWS &amp; SCREENS</span>
               <div className="window-monogram">
                 a<span>.</span>
                 <span className="monogram-orbit" />
@@ -124,10 +94,7 @@ export const Hero = () => {
           </Link>
           <div className="stage-bubbles">
             <span>
-              <FiPenTool aria-hidden="true" /> User flows &amp; wireframes
-            </span>
-            <span>
-              <FiMousePointer aria-hidden="true" /> Clickable prototypes
+              <FiPenTool aria-hidden="true" /> Flows &amp; prototypes
             </span>
             <span className="typing-dots" aria-hidden="true">
               <i />
@@ -160,14 +127,10 @@ export const Hero = () => {
               </span>
             </div>
             <p>A flow you can follow.</p>
-            <span>Flows. Screens. Prototypes.</span>
             <Link href="/#contact">
-              Let’s talk design <FiArrowUpRight aria-hidden="true" />
+              Let’s talk <FiArrowUpRight aria-hidden="true" />
             </Link>
           </div>
-          <span className="stage-hand hand-right" aria-hidden="true">
-            what happens next? ↗
-          </span>
         </div>
       </div>
       <div className="hero-tools">
