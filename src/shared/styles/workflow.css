@@ -12,25 +12,6 @@
   letter-spacing: 0.11em;
   color: var(--color-dark-gray);
 }
-.workflow-motion-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 11px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: transparent;
-  font-size: 10px;
-  color: var(--color-dark-gray);
-}
-.workflow-motion-toggle:hover {
-  background: white;
-  color: var(--color-dark);
-}
-.workflow-motion-toggle svg {
-  width: 12px;
-  height: 12px;
-}
 .workflow-row {
   overflow: hidden;
   padding: 17px 0 8px;
@@ -45,22 +26,22 @@
   list-style: none;
   animation: workflow-scroll 55s linear infinite;
 }
-.workflow-row:hover .workflow-track,
-.workflow-row:focus-within .workflow-track,
-.workflow-row.is-paused .workflow-track {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .workflow-row:hover .workflow-track {
+    animation-play-state: paused;
+  }
 }
-.workflow-row.is-manual {
+.workflow-row:has(.workflow-step:focus-visible) {
   overflow-x: auto;
   scrollbar-width: thin;
   mask-image: none;
   padding-bottom: 15px;
 }
-.workflow-row.is-manual .workflow-track {
+.workflow-row:has(.workflow-step:focus-visible) .workflow-track {
   animation: none;
   transform: none;
 }
-.workflow-row.is-manual .workflow-clone {
+.workflow-row:has(.workflow-step:focus-visible) .workflow-clone {
   display: none;
 }
 .workflow-step {
@@ -313,9 +294,6 @@
   .workflow-strip-header > p {
     font-size: 8px;
   }
-  .workflow-motion-toggle {
-    font-size: 9px;
-  }
   .workflow-step {
     width: 118px;
     gap: 12px;
@@ -404,7 +382,7 @@
   .workflow-navigation > span {
     font-size: 9px;
   }
-  .workflow-row:not(.is-manual) .workflow-track {
+  .workflow-row:not(:has(.workflow-step:focus-visible)) .workflow-track {
     animation-duration: 55s;
   }
   @keyframes workflow-scroll {
@@ -423,8 +401,7 @@
   .workflow-copy {
     animation: none;
   }
-  .workflow-clone,
-  .workflow-motion-toggle {
+  .workflow-clone {
     display: none;
   }
   .workflow-step:hover .workflow-art {

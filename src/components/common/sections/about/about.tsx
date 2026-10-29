@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import {
   FiArrowLeft,
   FiArrowRight,
@@ -8,9 +8,7 @@ import {
   FiLayers,
   FiLayout,
   FiMousePointer,
-  FiPause,
   FiPenTool,
-  FiPlay,
   FiRefreshCw,
   FiSearch,
   FiTarget
@@ -90,30 +88,11 @@ const steps = [
 
 export const AboutDesk = () => {
   const [active, setActive] = useState(0)
-  const [paused, setPaused] = useState(false)
-  const [manual, setManual] = useState(false)
-  const row = useRef<HTMLDivElement>(null)
   const current = steps[active]
   const Icon = current.icon
 
-  const showStep = (index: number, reveal = false) => {
-    const next = (index + steps.length) % steps.length
-    setActive(next)
-    setPaused(true)
-    if (reveal) {
-      setManual(true)
-      window.requestAnimationFrame(() =>
-        row.current
-          ?.querySelector<HTMLElement>('[data-workflow-step="' + next + '"]:not([aria-hidden])')
-          ?.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' })
-      )
-    }
-  }
-
-  const toggleMotion = () => {
-    setPaused(!paused)
-    setManual(false)
-    if (row.current) row.current.scrollLeft = 0
+  const showStep = (index: number) => {
+    setActive((index + steps.length) % steps.length)
   }
 
   return (
@@ -129,21 +108,8 @@ export const AboutDesk = () => {
         </div>
         <div className="workflow-strip-header">
           <p>8 STEPS / UI/UX DESIGN</p>
-          <button
-            type="button"
-            className="workflow-motion-toggle"
-            onClick={toggleMotion}
-            aria-pressed={paused}
-            aria-label={paused ? 'Play workflow animation' : 'Pause workflow animation'}>
-            {paused ? <FiPlay aria-hidden="true" /> : <FiPause aria-hidden="true" />}
-            <span>{paused ? 'Play' : 'Pause'}</span>
-          </button>
         </div>
-        <div
-          ref={row}
-          className={'workflow-row' + (paused ? ' is-paused' : '') + (manual ? ' is-manual' : '')}
-          role="group"
-          aria-label="Choose a UI/UX workflow step">
+        <div className="workflow-row" role="group" aria-label="Choose a UI/UX workflow step">
           <ol className="workflow-track">
             {[...steps, ...steps].map((step, index) => {
               const stepIndex = index % steps.length
@@ -164,9 +130,7 @@ export const AboutDesk = () => {
                     aria-controls="workflow-detail"
                     onClick={() => showStep(stepIndex)}
                     onFocus={(event) => {
-                      setPaused(true)
                       if (event.currentTarget.matches(':focus-visible')) {
-                        setManual(true)
                         const button = event.currentTarget
                         window.requestAnimationFrame(() =>
                           button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' })
@@ -207,13 +171,13 @@ export const AboutDesk = () => {
               <span className="workflow-output-tag">{current.output}</span>
             </div>
             <div className="workflow-navigation">
-              <button type="button" onClick={() => showStep(active - 1, true)} aria-label="Previous workflow step">
+              <button type="button" onClick={() => showStep(active - 1)} aria-label="Previous workflow step">
                 <FiArrowLeft aria-hidden="true" />
               </button>
               <span aria-label={'Step ' + (active + 1) + ' of ' + steps.length}>
                 {String(active + 1).padStart(2, '0')} / {String(steps.length).padStart(2, '0')}
               </span>
-              <button type="button" onClick={() => showStep(active + 1, true)} aria-label="Next workflow step">
+              <button type="button" onClick={() => showStep(active + 1)} aria-label="Next workflow step">
                 <FiArrowRight aria-hidden="true" />
               </button>
             </div>
