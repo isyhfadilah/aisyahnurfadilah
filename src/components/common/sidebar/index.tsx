@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 const menuItems = [
-  { label: 'Services', link: '/#services' },
   { label: 'Projects', link: '/#portfolio' },
   { label: 'Workflow', link: '/#about' }
 ]

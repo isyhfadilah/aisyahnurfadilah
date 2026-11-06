@@ -31,7 +31,6 @@ export const Footer = () => {
           </div>
           <nav className="footer-column" aria-label="Footer navigation">
             <p>EXPLORE</p>
-            <Link href="/#services">Services</Link>
             <Link href="/#portfolio">Projects</Link>
             <Link href="/#about">Workflow</Link>
             <a href="#top">Back to top ↗</a>
