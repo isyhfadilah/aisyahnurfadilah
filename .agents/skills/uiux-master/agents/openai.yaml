@@ -1,0 +1,4 @@
+interface:
+  display_name: "UIUX Master"
+  short_description: "Portfolio UX, information architecture, and clear copy"
+  default_prompt: "Gunakan $uiux-master untuk meninjau struktur informasi, kegunaan, dan copy portofolioku berdasarkan bukti yang tersedia."
