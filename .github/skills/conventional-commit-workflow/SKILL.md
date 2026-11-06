@@ -45,6 +45,8 @@ After completing an implementation or other requested workspace change:
 
 7. Verify the commit succeeded and check that unrelated changes remain unstaged.
 
+Stop after the local commit. The user handles pushes manually; do not fetch or push unless explicitly requested for the task.
+
 Do not create a commit if the user explicitly asks not to, if the change contains secrets or sensitive data, or if ownership of pending changes is unclear. Ask before committing ambiguous pre-existing changes.
 
 ## Examples
