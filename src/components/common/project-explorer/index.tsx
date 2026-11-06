@@ -1,23 +1,10 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { ProjectMockup } from '@/components/ui/project-mockup'
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import {
-  FiArrowLeft,
-  FiArrowRight,
-  FiArrowUpRight,
-  FiCheck,
-  FiCode,
-  FiGrid,
-  FiMaximize2,
-  FiMinimize2,
-  FiPenTool,
-  FiSearch,
-  FiX
-} from 'react-icons/fi'
+import { FiArrowLeft, FiArrowRight, FiArrowUpRight, FiCheck, FiMaximize2, FiMinimize2, FiX } from 'react-icons/fi'
 import {
   CatalogProject,
   ProjectCategoryId,
@@ -26,7 +13,10 @@ import {
   projectsInCategory
 } from '@/data/project-catalog'
 
-const ExplorerContext = createContext<{ openCategory: (id: ProjectCategoryId) => void } | null>(null)
+const ExplorerContext = createContext<{
+  openCategory: (id: ProjectCategoryId) => void
+  openProject: (slug: string) => void
+} | null>(null)
 
 export const useProjectExplorer = () => {
   const context = useContext(ExplorerContext)
@@ -56,8 +46,6 @@ export const ProjectPreview = ({ project, full = false }: { project: CatalogProj
       <span className="concept-footnote">UI/UX DESIGN EXPLORATION</span>
     </div>
   )
-
-const ProcessIcons = [FiSearch, FiGrid, FiPenTool, FiCheck]
 
 const ProjectDetails = ({ project }: { project: CatalogProject }) => {
   const [expanded, setExpanded] = useState(false)
@@ -105,6 +93,20 @@ const ProjectDetails = ({ project }: { project: CatalogProject }) => {
           )}
         </div>
         <div className="project-detail-notes">
+          {project.contribution && (
+            <>
+              <h3>My contribution.</h3>
+              <p>{project.contribution.collaboration}</p>
+              <ul className="detail-note-list">
+                {project.contribution.responsibilities.map((responsibility) => (
+                  <li key={responsibility}>
+                    <FiCheck aria-hidden="true" />
+                    <span>{responsibility}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
           <h3>Project focus.</h3>
           <ul className="collection-tags">
             {project.focus.map((item) => (
@@ -173,6 +175,13 @@ export const ProjectExplorerProvider = ({ children }: { children: React.ReactNod
     else navigate('services', true)
   }
 
+  const openProject = useCallback(
+    (slug: string) => {
+      if (findProject(slug)) navigate('project-' + slug, false, 'project')
+    },
+    [navigate]
+  )
+
   const closeProject = () => {
     if (!category) return
     if (window.history.state?.portfolioExplorer === 'project') window.history.back()
@@ -219,7 +228,7 @@ export const ProjectExplorerProvider = ({ children }: { children: React.ReactNod
   }, [hasCategory])
 
   return (
-    <ExplorerContext.Provider value={{ openCategory }}>
+    <ExplorerContext.Provider value={{ openCategory, openProject }}>
       {children}
       <dialog
         ref={categoryDialog}
@@ -244,15 +253,13 @@ export const ProjectExplorerProvider = ({ children }: { children: React.ReactNod
               </Link>
             </header>
             <div className="collection-wrap">
-              <div className="collection-hero">
+              <div className="collection-hero collection-hero-compact">
                 <div>
                   <p className="eyebrow-label">
                     {category.title} / {collection.length} projects
                   </p>
                   <h2 ref={categoryTitle} id="collection-title" tabIndex={-1}>
-                    {category.headline}
-                    <br />
-                    <span>{category.accent}</span>
+                    {category.title} projects.
                   </h2>
                   <p className="collection-lede">{category.introduction}</p>
                   <ul className="collection-tags">
@@ -260,57 +267,8 @@ export const ProjectExplorerProvider = ({ children }: { children: React.ReactNod
                       <li key={tag}>{tag}</li>
                     ))}
                   </ul>
-                  <a
-                    href="#collection-projects"
-                    className="neo-button"
-                    onClick={(event) => {
-                      event.preventDefault()
-                      categoryDialog.current?.querySelector('#collection-projects')?.scrollIntoView({
-                        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
-                      })
-                    }}>
-                    Explore {collection.length} projects <FiArrowRight aria-hidden="true" />
-                  </a>
-                </div>
-                <div className={'collection-stage collection-stage-' + category.id} aria-hidden="true">
-                  {category.previewSlugs.map((slug, index) => {
-                    const project = findProject(slug)
-                    return project?.image ? (
-                      <div key={slug} className={'collection-stage-window stage-window-' + index}>
-                        <div className="collection-browser-bar">
-                          <span>● ● ●</span>
-                          <span>{project.title}</span>
-                        </div>
-                        <Image src={project.image} alt="" width={700} height={480} sizes="(max-width: 999px) 80vw, 500px" />
-                      </div>
-                    ) : null
-                  })}
-                  <span className="collection-stage-badge">
-                    {category.id === 'design' ? <FiPenTool /> : <FiCode />}
-                    <span>Ideas → experiences</span>
-                  </span>
                 </div>
               </div>
-              <section className="collection-section" aria-labelledby="collection-process-title">
-                <h3 id="collection-process-title">From context to interface.</h3>
-                <ol className="collection-process">
-                  {category.steps.map((step, index) => {
-                    const Icon = ProcessIcons[index]
-                    return (
-                      <li key={step.title}>
-                        <span className="process-icon">
-                          <Icon aria-hidden="true" />
-                        </span>
-                        <h4>
-                          <span>{String(index + 1).padStart(2, '0')}</span>
-                          {step.title}
-                        </h4>
-                        <p>{step.text}</p>
-                      </li>
-                    )
-                  })}
-                </ol>
-              </section>
               <section className="collection-section" id="collection-projects" aria-labelledby="collection-projects-title">
                 <div className="collection-section-heading">
                   <h3 id="collection-projects-title">

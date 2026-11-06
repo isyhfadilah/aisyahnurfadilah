@@ -2,33 +2,59 @@
 
 import { FiArrowUpRight } from 'react-icons/fi'
 import { projectCatalog, projectCategories, projectsInCategory } from '@/data/project-catalog'
-import { useProjectExplorer } from '@/components/common/project-explorer'
+import { ProjectPreview, useProjectExplorer } from '@/components/common/project-explorer'
 
 export const AboutService = () => {
-  const { openCategory } = useProjectExplorer()
+  const { openCategory, openProject } = useProjectExplorer()
   return (
     <section id="services" className="reference-section project-category-section" data-scroll-reveal>
       <span id="portfolio" className="portfolio-section-anchor" aria-hidden="true" />
       <div className="site-container">
         <div className="section-heading">
           <h2>
-            From a good idea to
+            Explore my
             <br />
-            <span>an intuitive experience.</span>
+            <span>projects.</span>
           </h2>
           <p>
-            All {projectCatalog.length} projects, organized by discipline. Choose a collection to explore the work, the ideas
-            behind it, and the details.
+            Start with a selected project, or browse all {projectCatalog.length} UI/UX concepts and front-end projects by
+            discipline.
           </p>
         </div>
+        <div className="selected-project-grid" aria-label="Selected projects">
+          {projectCatalog
+            .filter((project) => project.featured)
+            .map((project) => (
+              <button
+                key={project.slug}
+                type="button"
+                className="project-card selected-project-card"
+                onClick={() => openProject(project.slug)}
+                aria-haspopup="dialog"
+                aria-label={'View ' + project.title + ' project details'}>
+                <div className="selected-project-preview">
+                  <ProjectPreview project={project} />
+                </div>
+                <div className="project-details">
+                  <p className="eyebrow-label">{project.category === 'design' ? 'UI/UX concept' : 'Front-end project'}</p>
+                  <h3>{project.title}</h3>
+                  <p>{project.summary}</p>
+                  <span className="selected-project-action">
+                    View project details <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </div>
+              </button>
+            ))}
+        </div>
+        <h3 className="browse-project-heading">Browse all projects by discipline</h3>
         <div className="service-grid collection-category-grid">
           <div className="service-intro">
             <p>
-              Different ideas.
+              UI/UX concepts.
               <br />
-              One thoughtful
+              Front-end
               <br />
-              approach.
+              projects.
             </p>
             <span className="count-pill">
               ••• &nbsp; {projectCatalog.length} projects / {projectCategories.length} collections

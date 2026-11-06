@@ -1693,7 +1693,15 @@ a {
     font-size: 32px;
   }
   .resume-link {
-    display: none;
+    font-size: 12px;
+    min-height: 44px;
+  }
+  .topbar-actions {
+    gap: 12px;
+  }
+  .topbar {
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 10px;
   }
   .header-cta {
     font-size: 12px;

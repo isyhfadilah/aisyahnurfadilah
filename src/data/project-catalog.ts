@@ -9,6 +9,10 @@ interface ProjectStory {
   focus: string[]
   context: string
   notes: string[]
+  contribution?: {
+    collaboration: string
+    responsibilities: string[]
+  }
 }
 
 const stories: Record<string, ProjectStory> = {

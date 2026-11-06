@@ -2,6 +2,55 @@
 .project-category-section {
   position: relative;
 }
+.selected-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.selected-project-card {
+  width: 100%;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+}
+.selected-project-preview {
+  height: 280px;
+  overflow: hidden;
+  background: #fff0e5;
+}
+.selected-project-preview > * {
+  height: 100%;
+}
+.selected-project-card h3 {
+  margin-block: 12px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.selected-project-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.browse-project-heading {
+  margin-block: 44px 24px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.collection-hero.collection-hero-compact {
+  display: block;
+  padding-bottom: 0;
+}
+@media (max-width: 899px) {
+  .selected-project-grid {
+    grid-template-columns: 1fr;
+  }
+  .selected-project-preview {
+    height: 320px;
+  }
+}
 .portfolio-section-anchor {
   position: absolute;
   top: 0;

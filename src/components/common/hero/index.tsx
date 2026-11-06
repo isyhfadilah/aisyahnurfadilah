@@ -14,10 +14,8 @@ import {
 } from 'react-icons/fi'
 import { SiFigma } from 'react-icons/si'
 import { projects } from '@/data/project'
-import { useProjectExplorer } from '@/components/common/project-explorer'
 
 export const Hero = () => {
-  const { openCategory } = useProjectExplorer()
   return (
     <section id="home" className="reference-hero">
       <div className="hero-grid">
@@ -31,23 +29,15 @@ export const Hero = () => {
             Open to projects
           </p>
           <h1 className="hero-tagline">
-            Good design
-            <br />
-            feels simple.
+            I’m Aisyah,
+            <br />a UI/UX designer.
           </h1>
-          <p className="hero-pitch">I work on the details that make apps easier to use.</p>
+          <p className="hero-pitch">
+            I design user flows, interfaces, and interactive prototypes, with a background in front-end development.
+          </p>
           <div className="hero-actions">
-            <Link
-              href="/#uiux"
-              className="neo-button"
-              aria-haspopup="dialog"
-              onClick={(event) => {
-                if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
-                  event.preventDefault()
-                  openCategory('design')
-                }
-              }}>
-              Explore my work <FiArrowUpRight aria-hidden="true" />
+            <Link href="/#portfolio" className="neo-button">
+              View my projects <FiArrowRight aria-hidden="true" />
             </Link>
             <Link href="/#about" className="text-button">
               How I work <FiArrowRight aria-hidden="true" />
