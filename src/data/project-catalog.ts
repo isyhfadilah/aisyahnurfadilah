@@ -1,4 +1,5 @@
 import { projects } from './project'
+import { projectDocumentation } from './project-documentation'
 
 export type ProjectCategoryId = 'design' | 'website'
 
@@ -28,7 +29,7 @@ const stories: Record<string, ProjectStory> = {
       'Meal Up is a food-rescue platform concept connecting businesses with surplus food to communities that can use it. It explores redistribution as a shared activity between the people offering food and the people looking for it.',
     audience: 'Businesses with surplus food and communities looking for access to that food.',
     goal: 'Give food providers and recipients a shared place to discover surplus food and take part in redistribution.',
-    materials: 'A project cover and a full case study on Behance.',
+    materials: 'A project cover and a linked case study on Behance.',
     notes: [
       'The platform connects two sides of the same activity: businesses offering surplus food and communities that can use it.',
       'Food discovery and business participation are the central parts of the concept.',
@@ -44,7 +45,7 @@ const stories: Record<string, ProjectStory> = {
       'Plantify is a plant-care app concept that brings daily challenges, a community, rewards, and an AI plant scanner into one experience. It combines the practical side of caring for plants with activities that encourage people to return to the app.',
     audience: 'People caring for plants who want a place for daily activities, learning, and community participation.',
     goal: 'Bring plant-care activities and opportunities to learn from others into a single app concept.',
-    materials: 'A project cover and a full case study on Behance.',
+    materials: 'A project cover and a linked case study on Behance.',
     notes: [
       'Daily challenges give plant-care activities a recurring place in the experience, with rewards as part of the concept.',
       'Community features introduce a social side to plant care alongside individual activities.',
@@ -60,7 +61,7 @@ const stories: Record<string, ProjectStory> = {
       'Literacy Modern, also presented as LiTerm, is a digital library concept for students. It combines book discovery with progress goals so that finding something to read and developing a reading routine belong to the same experience.',
     audience: 'Students exploring books and working toward a regular reading habit.',
     goal: 'Connect curated book discovery with reading goals, giving students a reason to keep reading after finding a book.',
-    materials: 'A project cover and a full case study on Behance.',
+    materials: 'A project cover and a linked case study on Behance.',
     notes: [
       'Curated books form the discovery side of the digital library.',
       'Progress goals connect individual reading sessions to a longer-term habit.',
@@ -250,7 +251,9 @@ const stories: Record<string, ProjectStory> = {
 export const projectCatalog = projects.map((project) => {
   const story = stories[project.title]
   if (!story) throw new Error('Missing project details: ' + project.title)
-  return { ...project, ...story, category: project.type as ProjectCategoryId }
+  const documentation = projectDocumentation[story.slug]
+  if (!documentation) throw new Error('Missing project documentation: ' + story.slug)
+  return { ...project, ...story, documentation, category: project.type as ProjectCategoryId }
 })
 
 export type CatalogProject = (typeof projectCatalog)[number]

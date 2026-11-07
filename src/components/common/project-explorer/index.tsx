@@ -49,8 +49,32 @@ export const ProjectPreview = ({ project, full = false }: { project: CatalogProj
 
 const ProjectDetails = ({ project }: { project: CatalogProject }) => {
   const [expanded, setExpanded] = useState(false)
+  const showSection = (id: string) => {
+    const target = document.getElementById(id)
+    const dialog = target?.closest('dialog')
+    if (!target || !dialog) return
+    const scrollTarget = target.closest('.project-process') ?? target
+    const headerHeight = dialog.querySelector('.project-detail-topbar')?.getBoundingClientRect().height ?? 0
+    dialog.scrollTo({
+      top:
+        dialog.scrollTop + scrollTarget.getBoundingClientRect().top - dialog.getBoundingClientRect().top - headerHeight - 20,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+    })
+    target.focus({ preventScroll: true })
+  }
   return (
     <>
+      <nav className="project-section-nav" aria-label="Project sections">
+        <button type="button" onClick={() => showSection('project-overview-' + project.slug)}>
+          Overview
+        </button>
+        <button type="button" onClick={() => showSection('project-process-' + project.slug)}>
+          Activities
+        </button>
+        <button type="button" onClick={() => showSection('project-materials-' + project.slug)}>
+          Materials
+        </button>
+      </nav>
       <div className={'project-detail-preview' + (expanded ? ' is-expanded' : '')}>
         <ProjectPreview project={project} full />
         {project.image && (
@@ -67,7 +91,9 @@ const ProjectDetails = ({ project }: { project: CatalogProject }) => {
       <div className="project-detail-body">
         <div className="project-detail-intro">
           <p className="eyebrow-label">{project.domain}</p>
-          <h3>About the project.</h3>
+          <h3 id={'project-overview-' + project.slug} tabIndex={-1}>
+            About the project.
+          </h3>
           <p>{project.context}</p>
           <h3>Who it’s for.</h3>
           <p>{project.audience}</p>
@@ -89,7 +115,9 @@ const ProjectDetails = ({ project }: { project: CatalogProject }) => {
               </div>
             )}
           </dl>
-          <h3>Project materials.</h3>
+          <h3 id={'project-materials-' + project.slug} tabIndex={-1}>
+            Project materials.
+          </h3>
           <p>{project.materials}</p>
           {project.link && (
             <a href={project.link} target="_blank" rel="noreferrer" className="neo-button">
@@ -130,6 +158,30 @@ const ProjectDetails = ({ project }: { project: CatalogProject }) => {
           </ul>
         </div>
       </div>
+      <section className="project-process" aria-labelledby={'project-process-' + project.slug}>
+        <header className="project-process-heading">
+          <p className="eyebrow-label">{project.documentation.basis}</p>
+          <h3 id={'project-process-' + project.slug} tabIndex={-1}>
+            {project.documentation.basis === 'Concept outline' ? 'Product activities.' : 'Interface task paths.'}
+          </h3>
+          <p>{project.documentation.scope}</p>
+        </header>
+        <ul className="project-activity-grid">
+          {project.documentation.activities.map((activity) => (
+            <li key={activity.title}>
+              <p className="project-activity-actor">{activity.actor}</p>
+              <h4>{activity.title}</h4>
+              <p>{activity.description}</p>
+            </li>
+          ))}
+        </ul>
+        {project.documentation.interfaceReading && (
+          <div className="project-interface-reading">
+            <h3>Interface analysis.</h3>
+            <p>{project.documentation.interfaceReading}</p>
+          </div>
+        )}
+      </section>
     </>
   )
 }
