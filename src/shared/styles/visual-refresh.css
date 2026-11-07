@@ -1,10 +1,10 @@
 /* Visual direction: johnaiui reference, with original interface artwork instead of portraits. */
 :root {
-  --page-bg: var(--color-oat);
-  --surface: var(--color-cream);
-  --line: color-mix(in srgb, var(--color-burgundy) 16%, transparent);
+  --page-bg: var(--color-paper);
+  --surface: var(--color-paper);
+  --line: color-mix(in srgb, var(--color-dark) 12%, transparent);
   --accent-text: var(--color-burgundy);
-  --accent-soft: color-mix(in srgb, var(--color-rose) 14%, var(--color-cream));
+  --accent-soft: color-mix(in srgb, var(--color-rose) 4%, var(--color-paper));
 }
 body {
   background: var(--page-bg);
@@ -40,9 +40,9 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border: 1px solid var(--color-dark);
+  border: 1px solid var(--color-primary);
   border-radius: 999px;
-  background: var(--color-dark);
+  background: var(--color-primary);
   padding: 16px 25px;
   color: var(--color-paper);
   font-size: 14px;
@@ -180,9 +180,7 @@ a {
   border: 1px solid var(--color-paper);
   border-top: 0;
   border-radius: 0 0 34px 34px;
-  background:
-    radial-gradient(55% 55% at 78% 30%, var(--color-paper), transparent 70%),
-    linear-gradient(var(--color-paper), var(--color-oat));
+  background: var(--color-paper);
   box-shadow: 0 30px 70px -55px color-mix(in srgb, var(--color-dark) 35%, transparent);
 }
 .hero-grid {
@@ -334,7 +332,7 @@ a {
   bottom: 5%;
   height: 73%;
   border-radius: 28px;
-  background: radial-gradient(100% 70% at 15% 0%, var(--accent-soft), transparent 65%), var(--color-rose);
+  background: radial-gradient(100% 70% at 15% 0%, var(--color-rose), transparent 75%), var(--color-burgundy);
 }
 .design-window {
   position: absolute;
@@ -646,6 +644,7 @@ a {
   left: -3%;
   bottom: 12%;
   transform: rotate(-8deg);
+  background: var(--color-paper);
 }
 .hand-left > span {
   margin-left: 10px;
@@ -1351,9 +1350,9 @@ a {
   align-items: center;
   overflow: hidden;
   padding: clamp(30px, 5vw, 68px);
-  border: 1px solid var(--color-paper);
+  border: 1px solid var(--line);
   border-radius: 32px;
-  background: var(--color-oat);
+  background: var(--color-paper);
 }
 .contact-banner h2 {
   margin-top: 17px;

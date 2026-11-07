@@ -12,14 +12,14 @@
   --color-rose: #d45060;
   --color-primary: var(--color-burgundy);
   --color-secondary: var(--color-oat);
-  --color-dark: var(--color-burgundy);
-  --color-dark-gray: color-mix(in srgb, var(--color-burgundy) 78%, var(--color-cream));
-  --color-sage: var(--color-oat);
-  --color-sky: color-mix(in srgb, var(--color-oat) 80%, var(--color-rose));
-  --color-paper: var(--color-cream);
-  --color-white: var(--color-cream);
-  --color-black: var(--color-burgundy);
-  --color-stoke: var(--color-burgundy);
+  --color-dark: #242127;
+  --color-dark-gray: #68616a;
+  --color-sage: #faf9fa;
+  --color-sky: #f2f0f2;
+  --color-paper: #ffffff;
+  --color-white: #ffffff;
+  --color-black: #242127;
+  --color-stoke: #242127;
   --color-danger: var(--color-burgundy);
   --color-success: var(--color-burgundy);
 }
