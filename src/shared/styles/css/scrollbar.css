@@ -1,18 +1,18 @@
 html {
-  scrollbar-color: #b9b9c2 #ececef;
+  scrollbar-color: var(--color-dark-gray) var(--color-oat);
   scrollbar-width: thin;
 }
 body::-webkit-scrollbar {
   width: 8px;
 }
 body::-webkit-scrollbar-track {
-  background: #ececef;
+  background: var(--color-oat);
 }
 body::-webkit-scrollbar-thumb {
-  border: 2px solid #ececef;
+  border: 2px solid var(--color-oat);
   border-radius: 999px;
-  background: #b9b9c2;
+  background: var(--color-dark-gray);
 }
 body::-webkit-scrollbar-thumb:hover {
-  background: #f6742a;
+  background: var(--color-rose);
 }

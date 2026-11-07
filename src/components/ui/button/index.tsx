@@ -70,7 +70,7 @@ export const Button: React.FC<ButtonProps> = ({
       classNames.push('text-white bg-primary')
       break
     case 'secondary':
-      classNames.push('text-white bg-secondary')
+      classNames.push('text-dark bg-secondary')
       break
     case 'dark':
       classNames.push('text-white bg-dark')
