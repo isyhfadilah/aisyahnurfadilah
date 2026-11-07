@@ -69,6 +69,10 @@ const ProjectDetails = ({ project }: { project: CatalogProject }) => {
           <p className="eyebrow-label">{project.domain}</p>
           <h3>About the project.</h3>
           <p>{project.context}</p>
+          <h3>Who it’s for.</h3>
+          <p>{project.audience}</p>
+          <h3>Project goal.</h3>
+          <p>{project.goal}</p>
           <dl className="project-facts">
             <div>
               <dt>Discipline</dt>
@@ -85,6 +89,8 @@ const ProjectDetails = ({ project }: { project: CatalogProject }) => {
               </div>
             )}
           </dl>
+          <h3>Project materials.</h3>
+          <p>{project.materials}</p>
           {project.link && (
             <a href={project.link} target="_blank" rel="noreferrer" className="neo-button">
               {project.action ?? 'Visit website'}
@@ -113,7 +119,7 @@ const ProjectDetails = ({ project }: { project: CatalogProject }) => {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <h3>A closer look.</h3>
+          <h3>Project highlights.</h3>
           <ul className="detail-note-list">
             {project.notes.map((note) => (
               <li key={note}>
@@ -352,6 +358,12 @@ export const ProjectExplorerProvider = ({ children }: { children: React.ReactNod
           closeProject()
         }}
         onKeyDown={(event) => {
+          if (event.key === 'Escape') {
+            event.preventDefault()
+            event.stopPropagation()
+            closeProject()
+            return
+          }
           if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
             event.preventDefault()
             moveProject(event.key === 'ArrowRight' ? 1 : -1)

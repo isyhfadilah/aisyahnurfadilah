@@ -788,6 +788,15 @@
   font-size: 14px;
   line-height: 1.8;
 }
+.project-detail-intro > p + h3 {
+  margin-top: 28px;
+}
+.project-detail-notes > p {
+  margin-top: 17px;
+  color: var(--color-dark-gray);
+  font-size: 14px;
+  line-height: 1.8;
+}
 .project-facts {
   display: flex;
   flex-wrap: wrap;
