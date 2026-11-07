@@ -1,6 +1,7 @@
 export const projects = [
   {
     title: 'Meal Up',
+    featured: true,
     action: 'View case study',
     link: 'https://www.behance.net/gallery/240245065/Meal-Up-Digitalizing-Food-Rescue',
     image: '/images/projects/meal-up.png',
@@ -10,6 +11,7 @@ export const projects = [
   },
   {
     title: 'Plantify',
+    featured: true,
     action: 'View case study',
     link: 'https://www.behance.net/gallery/234735329/Plantify-Smart-Plant-Care-App',
     image: '/images/projects/plantify.png',
@@ -19,6 +21,7 @@ export const projects = [
   },
   {
     title: 'Literacy Modern',
+    featured: true,
     action: 'View case study',
     link: 'https://www.behance.net/gallery/234746393/Literm-Modern-Reading-Companion-App',
     image: '/images/projects/literm.png',
@@ -28,7 +31,6 @@ export const projects = [
   },
   {
     title: 'Smart Waste',
-    featured: true,
     action: 'View prototype',
     link: 'https://www.figma.com/proto/chOcG5bmYyrHTwCjS9VHjt/Smart-Waste?node-id=147-1130&p=f&t=AxhP0PaVbpwNV3ao-1&scaling=scale-down&content-scaling=fixed&page-id=139%3A2&starting-point-node-id=167%3A145',
     image: '/images/projects/smartwaste.png',
@@ -95,7 +97,6 @@ export const projects = [
   },
   {
     title: 'Grow Junior (GROJUNIO)',
-    featured: true,
     action: 'View design',
     link: 'https://www.figma.com/design/H1PAY2zMseOFKEfkf59uEb/ITDRI?node-id=0-1&t=l20ao9mXUgadSWaP-0',
     image: '/images/projects/grojunio.png',
@@ -104,7 +105,6 @@ export const projects = [
   },
   {
     title: 'JanGi',
-    featured: true,
     action: 'View prototype',
     link: 'https://www.figma.com/proto/cZ236dzljCpn4JxnMlGj3m/dinamik17?scaling=min-zoom&page-id=0%3A1&node-id=48-10211',
     image: '/images/projects/jangi.png',
